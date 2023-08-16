@@ -1,0 +1,150 @@
+
+/***********Papelería*******/
+
+.left_flex{
+    flex-direction: row-reverse
+}
+.sectionPaleria{
+    max-width: 1321px;
+}
+
+
+.papeleria__title--containter h3{
+    margin-top: 3em;
+    font-size: 3em;
+    color: var(--gris);
+}
+.textIntroPaleleria--container{
+    padding: 15px;
+}
+
+.papeleria--container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.videoNoel_container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+
+.videoNoel_container p{
+    margin-left: 10px;
+    max-width: 660px;
+}
+
+
+.videoNoel{
+    border-radius: 25px;
+    
+}
+
+
+.papeleria__gesthor{
+    width: 100%;
+}
+
+
+
+
+.imgCorporativa__section2{
+    width: 100%;
+    max-width: 1321px;
+}
+
+.imgPapeleria{
+    border-radius: 50px;
+    object-fit: cover;
+    width: 100%;
+
+}
+.papeleria__div2--textAnimg{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.papeleria__imgContainer img {
+    border-radius: 25px;
+    object-fit: cover;
+    width: 600px;
+}
+.textPapeleria{
+    width: 40%;
+    padding: 25px;
+}
+
+@media only screen and (max-width: 1200px){
+    .videoNoel_container{
+        flex-direction: column;
+    }
+    .videoNoel{
+        margin-bottom: 50px;
+        width: 100%;
+
+    }
+    .videoNoel_container p{
+        
+        margin-left: 10px;
+        max-width: 660px;
+    }
+}
+@media only screen and (max-width: 1244px){
+    .papeleria__div2--textAnimg{
+        flex-direction: column;
+        width: inherit;
+
+    }
+    .textPapeleria {
+        width: 80%;
+        text-align: justify;
+    }
+
+};
+@media only screen and (max-width: 999px){
+    .videoNoel_container p{
+            
+        font-size:20px ;
+
+    }
+    .papeleria__div2--textAnimg{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:600px){
+    
+    .imgCorporativa__title--containter h3 {
+        margin-top:3em;
+    }
+    .papeleria__title--containter h3 {
+        margin-top: 1em;
+    }
+    .papeleria__imgContainer img{
+        width: 100%;
+    }
+    .LogoItem img{
+        width: 100%;
+    }
+    .imgPapeleria {
+        border-radius: 0;
+    }
+    .videoNoel{
+        border-radius: 0;
+    }
+    .papeleria__imgContainer img{
+        border-radius: 0;
+    }
+}
+@media only screen and (max-width:400px){ 
+    .imgCorporativa__title--containter h3 {
+        margin-top:0em;
+    }
+}

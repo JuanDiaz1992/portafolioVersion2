@@ -1,0 +1,231 @@
+
+.container{
+    width: 100%;    
+    height: 100vh;
+    position: absolute;
+    background-color: black;
+    z-index: -3;
+    
+}
+.Portafolio{
+    width: 100%;    
+    height: 100vh;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    position: relative;
+
+    margin-bottom: 100vh;
+    transition: background-color 1s linear;
+    
+    
+
+    
+    
+
+
+}
+/*Desaparecer fondo del portafolio con hover*/
+.Activo{
+    background-color: black;   
+    
+    
+}
+
+.Noactivo{
+    background-color: rgba(0, 0, 0, 0.596);
+    
+    
+}
+
+/************************************/
+
+
+
+
+
+.portafolio__div__container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    
+    
+}
+
+.portafolio__div__container--h2{    
+    font-size: 50px;
+    transition: color 1s; 
+    color: rgb(255, 255, 255);
+}
+
+
+
+.colortext1{
+    color: #32AE00;
+}
+
+.colortext2{
+    color: #635fff;
+}
+
+.colortext3{
+    color: #90FFFC;
+}
+
+
+.listElementFull{
+    
+    
+    list-style: none;
+    
+    font-size: 7.0112359551em;
+    cursor: pointer;
+    width:fit-content;
+    transition: color 1s; 
+    font-weight: bold;   
+
+    margin-left: -0.05em;
+
+
+}
+
+.textActive{
+    color: white;
+}
+
+.textNoActive{
+    color: rgba(255, 255, 255, 0.158);
+}
+
+
+
+/**********************elementos que aparecen con hover*********************/
+
+.video {
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    transform: translateX(calc((100% - 100vw) / 2));
+    transition: all 1s linear;
+    object-fit: cover;
+    
+
+}
+
+
+.videoNoActive{
+    opacity: 0;
+    transition: opacity 1s linear;
+
+
+}
+
+.videoActive{
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+
+
+.img1{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    transform: translateX(calc((100% - 100vw) / 2)); 
+    object-fit: cover;
+    transition: opacity 1s linear;
+}
+
+
+
+.imgActive{
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+
+.imgNoActive{
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+
+
+
+/**************Detalles de la página*************/
+
+.Portafolio::after{
+	content: '<section>';
+    display: block;
+	cursor: default;
+	color: rgb(134, 134, 134);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+
+.Portafolio::before{
+	content: '</section>';
+    display: block;
+	cursor: default;
+	color: rgb(134, 134, 134);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: absolute;
+    top: 95%;
+    left: 15px;
+    
+}
+
+
+
+
+@media only screen and (max-width: 720px){
+    .listElementFull{
+        font-size: 82px;
+        
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 457px){
+    .listElementFull{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-height: 600px){
+    .Portafolio{
+        height: 100%;
+    }
+
+}
+
+@media only screen and (max-height: 630px){
+
+    .container{
+        height: fit-content;
+    }
+    .portafolio__div__container{        
+        margin: 25px 0 25px 0;
+
+    }
+}

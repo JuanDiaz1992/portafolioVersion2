@@ -1,0 +1,273 @@
+.about{
+    width: 100%;
+    height: 100vh;
+    min-height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+
+
+}
+
+.sobremi{
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 770px;
+    width: 100%;
+    font-size: 70px;
+}
+
+
+
+.about__div--container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 770px;
+    width: 100%;
+}
+
+
+.div__container--info{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    width: 50%;
+    padding: 10px;
+}
+
+
+.div__container--icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    
+}
+
+.div__container__icons--ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+} 
+
+
+
+.iconoc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    transition: all .5s;
+    
+}
+
+.iconoc:hover{
+    transform: scale(105%);
+}
+
+.iconoc p{
+    margin: 5px;
+}
+
+.experiencia{
+    font-size: 20px;    
+    text-align: start;
+    margin-bottom: 15px;
+}
+
+.disenador{
+    font-size: 40px;
+}
+
+
+
+/**************Detalles de la página*************/
+
+.about::after{
+	content: '<section>';
+    display: block;
+	cursor: default;
+	color: rgba(0, 0, 0, 0.568);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: absolute;
+    top: 105%;
+    left: 15px;
+}
+
+
+.about::before{
+	content: '</section>';
+    display: block;
+	cursor: default;
+	color: rgba(0, 0, 0, 0.568);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: absolute;
+    top: 195%;
+    left: 15px;
+    
+}
+
+
+
+
+
+
+
+.experiencia::before{
+	content: '<p>';
+	cursor: default;
+	color: rgba(0, 0, 0, 0.301);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: relative;
+	top: -3rem;
+    left: -1rem;
+}
+
+
+
+.experiencia::after{
+	content: '</p>';
+	cursor: default;
+	color: rgba(0, 0, 0, 0.301);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: relative;
+	left: 0rem;
+
+}
+
+
+
+
+.boton{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 30px;
+	background: #007a84;
+	border:none;	
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.documentDownload, .boton span h4{
+	color: white;
+
+}
+
+.boton span{
+	position: relative;
+	display: inline-flex;
+	gap: 10px;
+	font-family: 'Roboto', sans-serif;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.boton::after{
+	content: "";
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 30px);
+	transition: .3s ease-in-out all;
+	border-right: 30px solid transparent ;
+	border-bottom: 30px solid #00588d ;
+
+}
+
+.boton:hover::after{
+	left:0;
+}
+
+
+
+
+@media only screen and (max-width: 626px){
+
+    .about{
+
+        height: fit-content;
+    }
+
+
+    .about__div--container{
+        flex-direction: column;
+    }
+
+    .div__container--info{
+        width: 95%;
+    }
+
+    .div__container--icons{
+        width: 95%;
+        
+    }
+
+    .iconoc{
+        flex: 1 1 auto;
+    }
+
+
+    .sobremi{
+        margin-top: 80px;
+    }
+
+
+
+    .experiencia::before{
+        display: none;
+
+
+    }
+    
+    
+    
+    .experiencia::after{
+        display: none;
+    
+    }
+
+    .about::before{
+        display: none;
+
+        
+    }
+}
+
+
+
+@media only screen and (max-height: 630px){
+
+
+
+
+    .about::before{
+        display: none;
+
+    }
+
+    .about{
+        height: 100%;
+        padding: 15px 0 15px 0;
+    }
+}

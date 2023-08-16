@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Monserrat';
+  src: url('../fuentes/Monserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.home{
+    height: 100vh;
+    min-height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(0,122,132);
+    background: linear-gradient(323deg, rgba(0,122,132,1) 0%, rgba(0,88,141,1) 100%);
+
+
+    
+}
+
+
+@property --gradient-start {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false;
+  }
+  
+  @property --gradient-end {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false;
+  }
+
+/**************************************************/     
+
+
+
+
+main{
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/*************************************Detalles página******/
+
+body:before{
+	content: "<body>";
+	position: absolute;
+	cursor: default;
+	color: rgb(255, 255, 255);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+  top: 1rem;
+	left: 15px;
+
+
+
+}
+
+
+main:first-of-type:before{
+	content: '<main>';
+	cursor: default;
+	color: rgb(255, 255, 255);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: absolute;
+    top:  5rem;
+    left: 40px;
+
+}
+
+main:last-of-type:after{
+	content: '</main>';
+	cursor: default;
+	color: rgb(255, 255, 255);
+	font-family: 'Meow Script', cursive;
+	font-size: 20px;
+	position: absolute;
+    bottom:  2rem;
+    left: 40px;
+}
+
+  
+.scrollDown{
+    position: absolute;
+    height: 110px;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    User-select: none;
+    justify-content: space-evenly;
+    color: white;
+    animation: subeYBaja 3s infinite;  
+
+}
+
+@keyframes subeYBaja {
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 15px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+  }
+
+  
+
+.scrollDown p{
+	transform: rotate(90deg);
+    color: white;
+    font-weight: bold;
+}
+
+
+
+/*********************************Contenido Banner*****/
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    max-width: 770px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Juan{
+  font-family: 'Monserrat';
+}
+
+.first-title{
+    font-size:25px ;
+    width: fit-content;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: white;
+    background: rgba( 127, 231, 143, 0.25 );
+    box-shadow: 0 8px 10px 0 #00639d;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.titulo1{
+    color: white;
+    font-size: 60px;
+    margin: 0 0 15px 0;
+    
+
+}
+
+/************************Efecto maquina de escribir*************/
+
+.second-title{
+    color: white;
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    white-space: nowrap;    
+    width: 31ch; /* el ancho será el número de caracteres que tiene nuestra línea */
+    animation: escribiendo 2s steps(20);          
+    overflow: hidden;
+}
+
+.cursor{
+    
+    animation: 0.6s parpadeo-cursor infinite;
+  }
+
+  @keyframes escribiendo {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes parpadeo-cursor {
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+/**********************Opciones moviles*****************/
+
+  @media only screen and (max-width: 626px){
+    .body:before{
+      left: 2rem;
+    }
+
+
+
+
+
+
+    .main-content{
+        flex-direction: column-reverse;
+    }
+
+    .titulo1{
+        font-size: 50px;
+    }
+
+
+    .first-title{
+        text-align: center;
+    }
+
+  }
+
+
