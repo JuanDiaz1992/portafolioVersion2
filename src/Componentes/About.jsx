@@ -7,7 +7,6 @@ import hv from "../Documentos/Juan Camilo Diaz Valencia HV .pdf"
 
 import Illustrator from "../img/AboutMe/Illustrator.webp"
 import Photoshop from "../img/AboutMe/PhotoShop.webp"
-import AdobeXD from "../img/AboutMe/AdobeXd.webp"
 import Figma from "../img/AboutMe/Figma.webp"
 import django from "../img/AboutMe/django.png"
 import Cinema4D from "../img/AboutMe/Cinema4D.webp"
