@@ -3,14 +3,14 @@ import logo from "../img/Imginicio/Logo-JuanDiaz-4.png";
 import logoFondo from "../img/Imginicio/LogofondoClaro.png";
 import { Tooltip, Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import estiloDani from "../img/newHome/stiloDani.jpg"
-import logo1 from "../img/newHome/cardsLogos/logo1.png"
-import logo2 from "../img/newHome/cardsLogos/logo2.png"
-import logo3 from "../img/newHome/cardsLogos/logo3.png"
-import logo4 from "../img/newHome/cardsLogos/logo4.png"
-import logo5 from "../img/newHome/cardsLogos/logo5.png"
-import logo6 from "../img/newHome/cardsLogos/logo6.png"
-import logo7 from "../img/newHome/cardsLogos/logo7.png"
+import arte from "../img/newHome/stiloDani.jpg";
+import logo1 from "../img/newHome/cardsLogos/logo1.png";
+import logo2 from "../img/newHome/cardsLogos/logo2.png";
+import logo3 from "../img/newHome/cardsLogos/logo3.png";
+import logo4 from "../img/newHome/cardsLogos/logo4.png";
+import logo5 from "../img/newHome/cardsLogos/logo5.png";
+import logo6 from "../img/newHome/cardsLogos/logo6.png";
+import logo7 from "../img/newHome/cardsLogos/logo7.png";
 import {
   FaPython,
   FaJs,
@@ -131,14 +131,14 @@ function NewHome() {
             <div className="section_container-div4--cards_container">
               {logosFull.map((logo)=>(
                 <motion.img className="logoCards" src={logo[0]} alt=""
-                initial={{ opacity: 0, y: 8, size:0.5}}
-                animate={{ opacity: 1, y: 0, size:1}}
-                exit={{ opacity: 0 }}
-                transition={{
-                  delay: logo[1],
-                  duration: .5,
-                  ease: "linear",
-                }}/>
+                            initial={{ opacity: 0, y: 8, size:0.5}}
+                            animate={{ opacity: 1, y: 0, size:1}}
+                            exit={{ opacity: 0 }}
+                            transition={{
+                              delay: logo[1],
+                              duration: .5,
+                              ease: "linear",
+                            }}/>
               ))}
             </div>
 
@@ -146,7 +146,7 @@ function NewHome() {
 
         </div>
         <div className="section_container-div5">
-          <img className="imgStiloDani" src={estiloDani} alt="EstiloDani" />
+          <img className="imgStiloDani" src={arte} alt="EstiloDani" />
         </div>
 
         <div className="section_container-div6">
