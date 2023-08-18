@@ -9,6 +9,17 @@ import { motion } from "framer-motion";
 
 
 function NewHome(){
+    const skills =[
+        [<FaJs />,"JavaScript"],
+        [<FaReact />,"React JS"],
+        [<FaPhp />,"PHP"],
+        [<FaPython />,"Python"],
+        [<SiDjango />,"Django"],
+        [<SiCinema4D />,"Cinema 4D"],
+        [<FaFigma />,"Figma"],
+        [<SiAdobephotoshop />,"Photoshop"],
+        [<SiAdobeillustrator />,"Illustrator"],
+    ]
 
     return(
         <>
@@ -51,69 +62,15 @@ function NewHome(){
                         <h3 className="div__container-div3--icons--h3">Habilidades</h3>  
 
                         <div className="div__container__icons--container">    
-                            <div className="iconoc">
-                                <Tooltip content="JavaScript" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <FaJs />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="React Js" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <FaReact />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="PHP" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <FaPhp />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="Python" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <FaPython  />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="Django" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <SiDjango />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="Cinema 4D" color="default">
-                                    <Button color="foreground" variant="flat">
-                                    <SiCinema4D />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="Figma" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <FaFigma />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="Photo Shop" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <SiAdobephotoshop />
-                                    </Button>
-                                </Tooltip>
-                            </div>
-                            <div className="iconoc">
-                                <Tooltip content="Illustrator" color="default">
-                                    <Button color="foreground" variant="flat">
-                                        <SiAdobeillustrator />
-                                    </Button>
-                                </Tooltip>
-                            </div>
+                            {skills.map((skill)=>(
+                                <div className="iconoc" key={skill} >
+                                    <Tooltip  content={skill[1]} color="default">
+                                        <Button color="foreground" variant="flat">
+                                            {skill[0]}
+                                        </Button>
+                                    </Tooltip>
+                                </div>
+                            ))}
                         </div>                     
                     </div>
                 </div>
@@ -123,18 +80,19 @@ function NewHome(){
                 <div className="section_container-div6">
                     <div className="section_container-div6-icons_container">
                         <div className="contact_icons">
-                            <FaLinkedin  />
+                            <a href="https://www.linkedin.com/in/juan-camilo-diaz-valencia-020840141" target="blank"><FaLinkedin  /></a>
+                            
                         </div>
                         <div className="contact_icons">
                             <a href="mailto:juannavegante2010@gmail.com?subject=Greetings"  ><SiGmail /></a>
+                        </div>
+                        <div className="contact_icons">
+                            <a href="https://api.whatsapp.com/send?phone=573008080525&text=Hola%20Juan%20D%C3%ADaz%2C%20vi%20tu%20web" target="blank"><SiWhatsapp /></a>
                             
-                            {/* <a href="mailto:juannavegante2010@gmail.com?subject=Greetings">correo</a> */}
                         </div>
                         <div className="contact_icons">
-                            <SiWhatsapp />
-                        </div>
-                        <div className="contact_icons">
-                            <FaGithub />
+                            <a href="https://github.com/JuanDiaz1992" target="blank"><FaGithub /></a>
+                            
                         </div>
                     </div>
 
