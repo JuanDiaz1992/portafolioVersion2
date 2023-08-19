@@ -62,7 +62,6 @@ function NewHome() {
 
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
-    /* Optional options */
     threshold: 0.10,
   });
   useEffect(()=>{
@@ -153,8 +152,8 @@ function NewHome() {
 
           </div>
           
-          <div className="section_container-div4--principalContainer">
-            <div className="section_container-div4--cards_container" ref={ref}    >
+          <div className="section_container-div4--principalContainer"ref={ref}>
+            <div className="section_container-div4--cards_container">
               {logosFull.map((logo)=>(
                 <motion.div className="logoCards"  key={logo}                             
                             initial={isVisible ? {}: { opacity: 0, y: 5, size:0.1}}
