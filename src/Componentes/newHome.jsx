@@ -1,16 +1,17 @@
 import "../stylesheets/newHome.css";
 import logo from "../img/Imginicio/Logo-JuanDiaz-4.png";
 import logoFondo from "../img/Imginicio/LogofondoClaro.png";
-import { Tooltip, Button } from "@nextui-org/react";
+import { Tooltip, Button, Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import arte from "../img/newHome/stiloDani.jpg";
-import logo1 from "../img/newHome/cardsLogos/logo1.png";
-import logo2 from "../img/newHome/cardsLogos/logo2.png";
-import logo3 from "../img/newHome/cardsLogos/logo3.png";
-import logo4 from "../img/newHome/cardsLogos/logo4.png";
-import logo5 from "../img/newHome/cardsLogos/logo5.png";
-import logo6 from "../img/newHome/cardsLogos/logo6.png";
-import logo7 from "../img/newHome/cardsLogos/logo7.png";
+import { NavLink } from 'react-router-dom';
+
+import logo1 from "../img/newHome/logos/logo1.jpg";
+import logo2 from "../img/newHome/logos/logo2.jpg";
+import logo3 from "../img/newHome/logos/logo3.jpg";
+import logo4 from "../img/newHome/logos/logo4.jpg";
+import logo5 from "../img/newHome/logos/logo5.jpg";
+import logo6 from "../img/newHome/logos/logo6.jpg";
+import logo7 from "../img/newHome/logos/logo7.jpg";
 import {
   FaPython,
   FaJs,
@@ -28,6 +29,7 @@ import {
   SiGmail,
   SiWhatsapp,
 } from "react-icons/si";
+import Slider from "./componentesNewHome/slider"
 
 
 function NewHome() {
@@ -43,15 +45,15 @@ function NewHome() {
     [<SiAdobeillustrator />, "Illustrator"],
   ];
   const logosFull = [
-    [logo1,.3],
-    [logo2,.4],
-    [logo3,.5],
-    [logo4,.6],
-    [logo5,.7],
-    [logo6,.8],
-    [logo3,.9],
-    [logo1,.1],
-    [logo7,.12],
+    [logo1,.3,"Haddy"],
+    [logo2,.4,"Palacios"],
+    [logo3,.5,"Paola Leon"],
+    [logo4,.6,"Gesthor"],
+    [logo5,.7,"Astracol"],
+    [logo6,.8,"Estilo Dani"],
+    [logo3,.9,"Paola Leon"],
+    [logo1,.1,"Haddy"],
+    [logo7,.12,"Corma"],
 
   ]
 
@@ -125,20 +127,40 @@ function NewHome() {
             <p>
               Aquí encontrarás una colección de logos y otros tabajos que eh relizado a lo largo de mi carrera.
             </p>
+            <NavLink to="/ImgCorporativa">
+              <Link isBlock showAnchorIcon  color="success">
+                Ver más
+              </Link>
+            </NavLink>
           </div>
           
           <div className="section_container-div4--principalContainer">
             <div className="section_container-div4--cards_container">
               {logosFull.map((logo)=>(
-                <motion.img className="logoCards" src={logo[0]} alt=""
-                            initial={{ opacity: 0, y: 8, size:0.5}}
+                <motion.div className="logoCards"  key={logo}                           initial={{ opacity: 0, y: 8, size:0.5}}
                             animate={{ opacity: 1, y: 0, size:1}}
                             exit={{ opacity: 0 }}
                             transition={{
                               delay: logo[1],
                               duration: .5,
                               ease: "linear",
-                            }}/>
+                            }}>
+                        <Card className="py-4 cardlogo" color="primary">
+                          <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                            <p className="text-tiny uppercase font-bold text-white ">{logo[2]}</p>
+                            <br/>
+                            
+                            </CardHeader>
+                            <CardBody className="overflow-visible py-2">
+                              <Image
+                                alt="Card background"
+                                className="object-cover rounded-xl logosImg"
+                                src={logo[0]}
+                                width={270}
+                              />
+                          </CardBody>
+                        </Card>
+                </motion.div>
               ))}
             </div>
 
@@ -146,7 +168,8 @@ function NewHome() {
 
         </div>
         <div className="section_container-div5">
-          <img className="imgStiloDani" src={arte} alt="EstiloDani" />
+          <Slider/>
+          {/* <img className="imgStiloDani" src={arte} alt="EstiloDani" /> */}
         </div>
 
         <div className="section_container-div6">

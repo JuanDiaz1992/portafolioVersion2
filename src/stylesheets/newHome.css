@@ -176,13 +176,30 @@ place-items: center;
 }
 
 .section_container-div4--principalContainer{
+  background: rgb(58,56,36);
+  background: linear-gradient(309deg, rgba(58,56,36,1) 0%, rgba(0,0,0,1) 70%);
     width: 100%;
     height: 80%;
     overflow: hidden;
+
 }
 .section_container-div4--text_container{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     color:rgba(255, 255, 255, 0.651);
-    padding: 25px 25px 0 25px;
+    padding: 25px;
+}
+.cardlogo{
+  height: 100%;
+  box-shadow: 0 2.75px 2.21px rgba(0,0,0,.07), 0 6.65px 5.32px rgba(0,0,0,.043), 0 12.5px 10px rgba(0,0,0,.03), 0 22px 18px rgba(0,0,0,.03), 0 42px 33.4px rgba(0,0,0,.02), 0 100px 80px rgba(0,0,0,.017) !important;
+  background-color: #2a3036;
+}
+
+.logosImg{
+  border-radius: 5px;
 }
 
 /***********************Iconos card section_container-div5***************/
@@ -191,6 +208,10 @@ place-items: center;
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
+}
+.slider{
+  border-radius: 16px;
+  background-color: #22AAC5;
 }
 /***********************Iconos card section_container-div6***************/
 .section_container-div6 {
