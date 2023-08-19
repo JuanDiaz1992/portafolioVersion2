@@ -1,9 +1,11 @@
+import React, { useRef, useEffect, useState } from 'react';
 import "../stylesheets/newHome.css";
 import logo from "../img/Imginicio/Logo-JuanDiaz-4.png";
 import logoFondo from "../img/Imginicio/LogofondoClaro.png";
 import { Tooltip, Button, Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 
 import logo1 from "../img/newHome/logos/logo1.jpg";
 import logo2 from "../img/newHome/logos/logo2.jpg";
@@ -33,6 +35,7 @@ import Slider from "./componentesNewHome/slider"
 
 
 function NewHome() {
+  const navigateTo = useNavigate()
   const skills = [
     [<FaJs />, "JavaScript"],
     [<FaReact />, "React JS"],
@@ -50,12 +53,28 @@ function NewHome() {
     [logo3,.5,"Paola Leon"],
     [logo4,.6,"Gesthor"],
     [logo5,.7,"Astracol"],
-    [logo6,.8,"Estilo Dani"],
+    [logo6,.8,"Dani"],
     [logo3,.9,"Paola Leon"],
     [logo1,.1,"Haddy"],
     [logo7,.12,"Corma"],
 
   ]
+
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0.10,
+  });
+  useEffect(()=>{
+    if (inView && !isVisible) {
+      // Realizar la acción que deseas ejecutar
+      console.log('Ejecutando acción adicional');
+      setIsVisible(true); // Marcar que la acción se ha ejecutado
+    }else{
+      setIsVisible(false);
+    }
+  },[inView])
+
 
   return (
     <>
@@ -127,24 +146,25 @@ function NewHome() {
             <p>
               Aquí encontrarás una colección de logos y otros tabajos que eh relizado a lo largo de mi carrera.
             </p>
-            <NavLink to="/ImgCorporativa">
-              <Link isBlock showAnchorIcon  color="success">
+
+              <Link onClick={()=>{navigateTo("/ImgCorporativa")}}  isBlock showAnchorIcon  color="success">
                 Ver más
               </Link>
-            </NavLink>
+
           </div>
           
           <div className="section_container-div4--principalContainer">
-            <div className="section_container-div4--cards_container">
+            <div className="section_container-div4--cards_container" ref={ref}    >
               {logosFull.map((logo)=>(
-                <motion.div className="logoCards"  key={logo}                           initial={{ opacity: 0, y: 8, size:0.5}}
-                            animate={{ opacity: 1, y: 0, size:1}}
+                <motion.div className="logoCards"  key={logo}                             
+                            initial={isVisible ? {}: { opacity: 0, y: 5, size:0.1}}
+                            animate={isVisible ? { opacity: 1, y: 0, size:1 } : {}}
                             exit={{ opacity: 0 }}
                             transition={{
                               delay: logo[1],
-                              duration: .5,
+                              duration: .3,
                               ease: "linear",
-                            }}>
+                            }}>{inView}
                         <Card className="py-4 cardlogo" color="primary">
                           <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                             <p className="text-tiny uppercase font-bold text-white ">{logo[2]}</p>

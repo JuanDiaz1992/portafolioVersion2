@@ -12,7 +12,7 @@ function Portafolio(){
 
     const [isShown, setIsShown] = useState(false);
     const [isShownP, setIsShownP] = useState(false);
-    // const [isShownR, setIsShownR] = useState(false);
+    const [isShownR, setIsShownR] = useState(false);
 
 
     

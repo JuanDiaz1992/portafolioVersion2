@@ -163,6 +163,7 @@ transform: rotate(-50deg)scale(170%);
 grid-row-gap: 15px;
 grid-column-gap: 15px;
 place-items: center;
+width: fit-content;
 
 }
 .logoCards{
@@ -178,7 +179,7 @@ place-items: center;
 .section_container-div4--principalContainer{
   background: rgb(58,56,36);
   background: linear-gradient(309deg, rgba(58,56,36,1) 0%, rgba(0,0,0,1) 70%);
-    width: 100%;
+    width: fit-content;
     height: 80%;
     overflow: hidden;
 
@@ -194,24 +195,51 @@ place-items: center;
 }
 .cardlogo{
   height: 100%;
+  width: 100%;
   box-shadow: 0 2.75px 2.21px rgba(0,0,0,.07), 0 6.65px 5.32px rgba(0,0,0,.043), 0 12.5px 10px rgba(0,0,0,.03), 0 22px 18px rgba(0,0,0,.03), 0 42px 33.4px rgba(0,0,0,.02), 0 100px 80px rgba(0,0,0,.017) !important;
   background-color: #2a3036;
+  border: .2px rgba(255, 255, 255, 0.219) solid;
 }
 
 .logosImg{
   border-radius: 5px;
+  transform: scale(120%);
 }
 
 /***********************Iconos card section_container-div5***************/
-.imgStiloDani{
+.imgSlider{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 16px;
 }
 .slider{
+  height: 100%;
   border-radius: 16px;
   background-color: #22AAC5;
+}
+.header_card_slider{
+  height: 40%;
+  padding: 40px 60px 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.img_slider_container{
+  display: flex;
+  align-items: flex-end;
+  height: 60%;
+}
+.header_card_slider h4{
+  font-size: 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: #070F1C;
+  color: white;
+  font-weight: bold;
+}
+.header_card_slider h3{
+  font-size: 40px;
+  font-weight: bold;
 }
 /***********************Iconos card section_container-div6***************/
 .section_container-div6 {
@@ -277,6 +305,10 @@ place-items: center;
   }
   .section_container-div6 {
     grid-area: 3 / 1 / 4 / 2;
+  }
+  .logosImg{
+    border-radius: 5px;
+    transform: scale(100%);
   }
 }
 
