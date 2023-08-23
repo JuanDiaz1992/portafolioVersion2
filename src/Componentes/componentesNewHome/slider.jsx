@@ -1,5 +1,7 @@
-import slider1 from "../../img/newHome/sliders/slider1.png";
-import slider2 from "../../img/newHome/sliders/slider2.jpg";
+import slider1 from "../../img/newHome/sliders/slider1.webp";
+import slider2 from "../../img/newHome/sliders/slider2.webp";
+import slider3 from "../../img/newHome/sliders/slider3.webp";
+import slider4 from "../../img/newHome/sliders/slider4.webp";
 import { Button } from "@nextui-org/react"
 import { motion } from "framer-motion";
 import { BiStore } from "react-icons/bi";
@@ -15,15 +17,22 @@ import "../../stylesheets/newHome.css";
 import { Navigation } from 'swiper/modules';
 
 function Slider (){
+
+    const navigate = () => {
+        const url = "https://gesthor.com.co/arte/";
+        setTimeout(() => {
+          window.open(url, "_blank");
+        }, 600);
+      };
     return(
         <>
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper slider">
-                    <SwiperSlide>
+                    <SwiperSlide className="first_slider_container">
                         <div className="header_card_slider">
                             <h4>ARTE & PINTURA</h4>
                             <h3>Tienda de arte</h3>
-                            <p>Se creo implemento una tienda en linea con el fin <br/>de mejorar la presencia en linea de la marca,<br/> incrementando sus ingresos.</p>
-                            <Button color="default" endContent={<BiStore/>}>Visita la tienda</Button>
+                            <p>Se implementó una tienda en línea con el fin <br/> de mejorar la presencia en línea de la marca.</p>
+                            <Button onClick={navigate} color="default" endContent={<BiStore/>}>Visita la tienda</Button>
                         </div>
                         <div className="img_slider_container">
                             <motion.img className="imgSlider" src={slider1} alt=""
@@ -31,14 +40,15 @@ function Slider (){
                                       animate={{ y: 1 }}
                                       exit={{ y: 50 }}
                                       transition={{
-                                        delay: 0.5,
+                                        delay: 1,
                                         duration: 1,
                                         ease: "linear",
                                       }} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide><img className="imgSlider" src={slider2} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className="imgSlider" src={slider2} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="imgSlider" src={slider3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className="imgSlider" src={slider4} alt="" /></SwiperSlide>
                 </Swiper>
 
         </>

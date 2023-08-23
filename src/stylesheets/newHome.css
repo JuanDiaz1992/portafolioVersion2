@@ -1,6 +1,7 @@
 /***********************Página Grid***************/
 
 .section_container {
+
   width: 95%;
   max-width: 1600px;
   grid-column-gap: 32px;
@@ -37,7 +38,7 @@
 }
 .section_container-div3 {
   grid-area: 1 / 3 / 2 / 5;
-  background-image: url(../img/newHome/Background3.jpg);
+  background-image: url(../img/newHome/Background3.webp);
   background-size: cover;
   border-radius: 16px;
   display: grid;
@@ -51,7 +52,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 4px solid #7d7d7d;
+
 
 }
 .section_container-div5 {
@@ -91,40 +92,14 @@
 
 .div__container__icons--container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   place-items: center;
 }
 
-.div__container__icons--container:nth-child(1) {
-  grid-area: 1 / 1 / 2 / 2;
-}
-.div__container__icons--container:nth-child(2) {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.div__container__icons--container:nth-child(3) {
-  grid-area: 1 / 3 / 2 / 4;
-}
-.div__container__icons--container:nth-child(4) {
-  grid-area: 2 / 1 / 3 / 2;
-}
-.div__container__icons--container:nth-child(5) {
-  grid-area: 2 / 2 / 3 / 3;
-}
-.div__container__icons--container:nth-child(6) {
-  grid-area: 2 / 3 / 3 / 4;
-}
-.div__container__icons--container:nth-child(7) {
-  grid-area: 3 / 1 / 4 / 2;
-}
-.div__container__icons--container:nth-child(8) {
-  grid-area: 3 / 2 / 4 / 3;
-}
-.div__container__icons--container:nth-child(9) {
-  grid-area: 3 / 3 / 4 / 4;
-}
+
 
 .div__container-div3--icons {
   display: flex;
@@ -205,11 +180,18 @@ width: fit-content;
   border-radius: 5px;
   transform: scale(120%);
 }
+.buttom_logo_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /***********************Iconos card section_container-div5***************/
 .imgSlider{
-    width: 100%;
-    object-fit: contain;
+
+    width: 99.9%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 16px;
 }
 .slider{
@@ -217,6 +199,7 @@ width: fit-content;
   border-radius: 16px;
   background-color: #22AAC5;
 }
+
 .header_card_slider{
   height: 40%;
   padding: 40px 60px 0 25px;
@@ -278,6 +261,8 @@ width: fit-content;
   color: rgb(0, 225, 255);
 }
 
+
+
 /*******************************************Estilos moviles *******************************/
 /*Modo Tableta*/
 @media only screen and (max-width: 1100px) {
@@ -308,7 +293,7 @@ width: fit-content;
   }
   .logosImg{
     border-radius: 5px;
-    transform: scale(100%);
+
   }
 }
 
@@ -344,4 +329,12 @@ width: fit-content;
   .header_card_slider{
     height:50% ;
   }
+
 }
+
+@media only screen and (max-width: 487px) {
+  .first_slider_container{
+    height: fit-content !important;
+  }
+}
+

@@ -35,6 +35,8 @@ import video7 from "../../img/Portafolio/Web/video7.mp4"
 import video8 from "../../img/Portafolio/Web/video8.mp4"
 import video9 from "../../img/Portafolio/Web/video9.mp4"
 
+import { motion } from "framer-motion";
+
 import "../../stylesheets/Portafolio/DisenoWeb.css"
 
 function DisenoWeb(props){
@@ -43,7 +45,15 @@ function DisenoWeb(props){
     const navigate = useNavigate(); 
 
     return(
-        <div className="disenoWeb__container">  
+        <motion.div className="disenoWeb__container"
+                    initial={{ x: -100 }}
+                    animate={{ x: 0 }}
+                    exit={{ x: 100 }}
+                    transition={{
+                    delay: 0.5,
+                    duration: 1,
+                    ease: "linear",
+                    }}>  
             <button className="nav_toggle fixed" onClick={() => navigate(-1)}>
                 <div className="icon nav-icon-5 open">
                                     <span></span>
@@ -221,7 +231,7 @@ function DisenoWeb(props){
 
 
         
-        </div>
+        </motion.div>
 
     )
 }

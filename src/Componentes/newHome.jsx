@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import "../stylesheets/newHome.css";
-import logo from "../img/newHome/Logo-JuanDiaz-4.png";
-import logoFondo from "../img/newHome/LogofondoClaro.png";
-import { Tooltip, Button, Card, CardHeader, CardBody, Image, Link } from "@nextui-org/react";
+import logo from "../img/newHome/Logo-JuanDiaz-4.webp";
+import logoFondo from "../img/newHome/LogofondoClaro.webp";
+import { Tooltip, Button, Card, CardBody, Image, Link, CardFooter } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 
-import logo1 from "../img/newHome/logos/logo1.jpg";
-import logo2 from "../img/newHome/logos/logo2.jpg";
-import logo3 from "../img/newHome/logos/logo3.jpg";
-import logo4 from "../img/newHome/logos/logo4.jpg";
-import logo5 from "../img/newHome/logos/logo5.jpg";
-import logo6 from "../img/newHome/logos/logo6.jpg";
-import logo7 from "../img/newHome/logos/logo7.jpg";
+import logo1 from "../img/newHome/logos/logo1.webp";
+import logo2 from "../img/newHome/logos/logo2.webp";
+import logo3 from "../img/newHome/logos/logo3.webp";
+import logo4 from "../img/newHome/logos/logo4.webp";
+import logo5 from "../img/newHome/logos/logo5.webp";
+import logo6 from "../img/newHome/logos/logo6.webp";
+import logo7 from "../img/newHome/logos/logo7.webp";
 import {
   FaPython,
   FaJs,
@@ -22,14 +22,17 @@ import {
   FaFigma,
   FaLinkedin,
   FaGithub,
+  FaWordpress,
+  FaCss3,
+  FaHtml5
 } from "react-icons/fa";
 import {
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiDjango,
-  SiCinema4D,
   SiGmail,
   SiWhatsapp,
+  
 } from "react-icons/si";
 import Slider from "./componentesNewHome/slider"
 
@@ -42,7 +45,10 @@ function NewHome() {
     [<FaPhp />, "PHP"],
     [<FaPython />, "Python"],
     [<SiDjango />, "Django"],
-    [<SiCinema4D />, "Cinema 4D"],
+    [<FaWordpress />, "Wordpress"],
+    [<FaGithub />, "GitHub"],
+    [<FaHtml5 />, "HTML 5"],
+    [<FaCss3 />, "CSS3"],
     [<FaFigma />, "Figma"],
     [<SiAdobephotoshop />, "Photoshop"],
     [<SiAdobeillustrator />, "Illustrator"],
@@ -51,9 +57,9 @@ function NewHome() {
     [logo1,.3,"Haddy"],
     [logo2,.4,"Palacios"],
     [logo3,.5,"Paola Leon"],
-    [logo4,.6,"Gesthor"],
+    [logo4,.6,"Gesthor", "https://gesthor.com.co/"],
+    [logo6,.8,"Dani","https://gesthor.com.co/spa/"],
     [logo5,.7,"Astracol"],
-    [logo6,.8,"Dani"],
     [logo3,.9,"Paola Leon"],
     [logo1,.1,"Haddy"],
     [logo7,.12,"Corma"],
@@ -71,12 +77,48 @@ function NewHome() {
     }
   },[inView])
 
+  const visiteWeb =(url)=>{
+    if(url){
+      setTimeout(() => {
+        window.open(url, "_blank");
+      }, 600);
+    }
+
+  }
+
+  const [changePage,setChangePage] = useState(false)
+  const openNewPage=()=>{
+      setChangePage(true)
+      setTimeout(() => {
+        navigateTo("/ImgCorporativa")
+      }, 1000);
+      
+  }
+  const animationVariants = {
+    initial: {
+      opacity:0,
+      x: -100,
+    },
+    animate: {
+      opacity:1,
+      x: 0,
+    },
+  };
 
   return (
+
     <>
-      <section className="section_container">
-        <motion.div
-          className="section_container-div1"
+      <motion.section 
+        className="section_container" 
+        initial="initial"
+        animate={changePage === true ?  "initial" : "animate"}
+        variants={animationVariants}
+        transition={{ 
+          duration: 0.5,
+          ease: "linear", }}
+        
+        >
+        <motion.div className="section_container-div1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -140,10 +182,10 @@ function NewHome() {
         <div className="section_container-div4">
           <div className="section_container-div4--text_container">
             <p>
-              Aquí encontrarás una colección de logos y otros tabajos que eh relizado a lo largo de mi carrera.
+              Aquí encontrarás una colección de proyectos en los que e participado como diseñador gráfico.
             </p>
 
-              <Link onClick={()=>{navigateTo("/ImgCorporativa")}}  isBlock showAnchorIcon  color="success">
+              <Link onClick={()=>{openNewPage()}}  isBlock showAnchorIcon  color="success">
                 Ver más
               </Link>
 
@@ -158,15 +200,10 @@ function NewHome() {
                             exit={{ opacity: 0 }}
                             transition={{
                               delay: logo[1],
-                              duration: .3,
+                              duration: .5,
                               ease: "linear",
                             }}>{inView}
                         <Card className="py-4 cardlogo" color="primary">
-                          <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                            <p className="text-tiny uppercase font-bold text-white ">{logo[2]}</p>
-                            <br/>
-                            
-                            </CardHeader>
                             <CardBody className="overflow-visible py-2">
                               <Image
                                 alt="Card background"
@@ -174,7 +211,11 @@ function NewHome() {
                                 src={logo[0]}
                                 width={270}
                               />
+                              
                           </CardBody>
+                          <CardFooter className='buttom_logo_container' >
+                            <Button onClick={()=>{visiteWeb(logo[3])}} radius="small" size="sm">{logo[2]}</Button>
+                          </CardFooter>
                         </Card>
                 </motion.div>
               ))}
@@ -185,7 +226,6 @@ function NewHome() {
         </div>
         <div className="section_container-div5">
           <Slider/>
-          {/* <img className="imgStiloDani" src={arte} alt="EstiloDani" /> */}
         </div>
 
         <div className="section_container-div6">
@@ -218,7 +258,7 @@ function NewHome() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

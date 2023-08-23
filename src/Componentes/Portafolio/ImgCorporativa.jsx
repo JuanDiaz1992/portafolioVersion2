@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../stylesheets/Portafolio/ImgCorp.css"
 import { useNavigate } from "react-router-dom";
 import GoToTop from "../funciones/OnTop.js"
@@ -23,21 +23,59 @@ import img3 from "../../img/Portafolio/Diseño de imagen/img3.2.jpg"
 import img4 from "../../img/Portafolio/Diseño de imagen/img4.jpg"
 import img4_3 from "../../img/Portafolio/Diseño de imagen/img4.3.jpg"
 import img5 from "../../img/Portafolio/Diseño de imagen/img4.2.jpg"
+import { motion } from "framer-motion";
 
 function ImgCorporativa(){
+    const [handleClick,setHandleClick] = useState(false)
     const navigate = useNavigate(); 
+    const goToBack=()=>{
+        setHandleClick(true)
+        setTimeout(() => {
+            navigate(-1)
+          }, 1000);
+        
+    }
+    const animationVariants = {
+        initial: {
+          opacity:0,
+          y: -100,
+        },
+        animate: {
+          opacity:1,
+          y: 0,
+        },
+      };
+    
 
     return(
         <>
         
-        <div className="imgCorporativa__container">
-            <button className="nav_toggle fixed" onClick={() => navigate(-1)}>
-                    <div className="icon nav-icon-5 open">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                    </div>            
+        <motion.div className="imgCorporativa__container "
+                    initial="initial"
+                    animate={handleClick === true ?  "initial" : "animate"}
+                    variants={animationVariants}
+                    transition={{ 
+                      duration: 0.3,
+                      ease: "linear", }}
+        >
+            <motion.div className="button_close_container"
+                        initial={{ y: -100 }}
+                        animate={{ y: 0 }}
+                        exit={{ y: 100 }}
+                        transition={{
+                        delay: 0.5,
+                        duration: .5,
+                        ease: "linear",
+                        }}>
+                <button className="nav_toggle open" onClick={() => goToBack()}>
+                        <div className="icon nav-icon-5 open">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                        </div>            
                 </button>
+            </motion.div>
+
 
             
 
@@ -141,7 +179,7 @@ function ImgCorporativa(){
             <h3>Aun faltan más proyectos por subir, pagina en construcción</h3>
 
 
-        </div>
+        </motion.div>
         <GoToTop/>
         </>
     )
