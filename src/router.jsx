@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate,} from 'react-router-dom';
 import ComponentePadre from './Componentes/ComponentePadre';
-import Home from './Componentes/newHome';
+import Home from './Componentes/Home';
 import ImgCorporativa from "./Componentes/Portafolio/ImgCorporativa"
 import Renders3d from "./Componentes/Portafolio/Renders3d"
 import DisenoWeb from "./Componentes/Portafolio/DisenoWeb"

@@ -1,0 +1,72 @@
+.section_container {
+
+    width: 95%;
+    max-width: 1600px;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    grid-auto-rows: minmax(328px, max-content);
+    grid-auto-columns: 1fr;
+    margin: 0 auto 0 auto;
+    padding: 35px 0 0 0;
+    display: grid;
+  }
+
+  .section_container--div1{
+    grid-area: 1 / 1 / 3 / 6;
+    border-radius: 16px;
+    background-image: url("../img/newHome/foodEasy.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px;
+    display: flex;
+    position: relative;
+  }
+  .section_container--div2{
+    grid-area: 3 / 1 / 5 / 4;
+    border-radius: 16px;
+    background-color: aqua;
+  }
+  .section_container--div3{
+    grid-area: 3 / 4 / 4 / 6;
+    border-radius: 16px;
+    background-color: aqua;
+  }
+  .section_container--div4{
+    grid-area: 4 / 4 / 5 / 6;
+    border-radius: 16px;
+    background-color: aqua;
+  }
+  .section_container--div5{
+    grid-area: 5 / 1 / 7 / 6;
+    border-radius: 16px;
+    background-color: aqua;
+  }
+
+
+
+  /*div1*/
+  .header_FoodEasy_container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .header_FoodEasy_container h4{
+    font-size: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: #070F1C;
+    color: white;
+    font-weight: bold;
+  }
+  .header_FoodEasy_container h3{
+    font-size: 40px;
+    font-weight: bold;
+  }

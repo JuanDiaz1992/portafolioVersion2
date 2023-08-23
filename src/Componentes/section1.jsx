@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "../stylesheets/newHome.css";
+import "../stylesheets/section1.css";
 import logo from "../img/newHome/Logo-JuanDiaz-4.webp";
 import logoFondo from "../img/newHome/LogofondoClaro.webp";
 import { Tooltip, Button, Card, CardBody, Image, Link, CardFooter } from "@nextui-org/react";
@@ -37,7 +37,7 @@ import {
 import Slider from "./componentesNewHome/slider"
 
 
-function NewHome() {
+function Section1() {
   const navigateTo = useNavigate()
   const skills = [
     [<FaJs />, "JavaScript"],
@@ -45,10 +45,10 @@ function NewHome() {
     [<FaPhp />, "PHP"],
     [<FaPython />, "Python"],
     [<SiDjango />, "Django"],
-    [<FaWordpress />, "Wordpress"],
-    [<FaGithub />, "GitHub"],
     [<FaHtml5 />, "HTML 5"],
     [<FaCss3 />, "CSS3"],
+    [<FaWordpress />, "Wordpress"],
+    [<FaGithub />, "GitHub"],
     [<FaFigma />, "Figma"],
     [<SiAdobephotoshop />, "Photoshop"],
     [<SiAdobeillustrator />, "Illustrator"],
@@ -262,4 +262,4 @@ function NewHome() {
     </>
   );
 }
-export default NewHome;
+export default Section1;
