@@ -1,4 +1,10 @@
-.section_container {
+@font-face {
+  font-family: Oswald;
+  src: url("../fuentes/Oswald/Oswald-VariableFont_wght.ttf");
+}
+
+
+.section2_container {
 
     width: 95%;
     max-width: 1600px;
@@ -11,7 +17,7 @@
     display: grid;
   }
 
-  .section_container--div1{
+  .section2_container--div1{
     grid-area: 1 / 1 / 3 / 6;
     border-radius: 16px;
     background-image: url("../img/newHome/foodEasy.jpg");
@@ -27,22 +33,27 @@
     display: flex;
     position: relative;
   }
-  .section_container--div2{
+  .section2_container--div2{
+    overflow: hidden;
+    position: relative;
+    background-color: #000000;
     grid-area: 3 / 1 / 5 / 4;
     border-radius: 16px;
-    background-color: aqua;
+    display: flex;
+
+
   }
-  .section_container--div3{
+  .section2_container--div3{
     grid-area: 3 / 4 / 4 / 6;
     border-radius: 16px;
     background-color: aqua;
   }
-  .section_container--div4{
+  .section2_container--div4{
     grid-area: 4 / 4 / 5 / 6;
     border-radius: 16px;
     background-color: aqua;
   }
-  .section_container--div5{
+  .section2_container--div5{
     grid-area: 5 / 1 / 7 / 6;
     border-radius: 16px;
     background-color: aqua;
@@ -60,13 +71,109 @@
   }
 
   .header_FoodEasy_container h4{
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px 10px 5px 10px;
-    background-color: #070F1C;
+    
     color: white;
     font-weight: bold;
   }
   .header_FoodEasy_container h3{
     font-size: 40px;
     font-weight: bold;
+  }
+
+
+  /*section2_container--div2*/
+  .picture_me_container{
+    z-index: 2;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about_container{
+    z-index: 2;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 15px 0 0 ;
+  }
+  .about_container div{
+    background-color: #ffffffa6;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .about_container p{
+    color: black;
+  }
+  .big_about_me{
+    bottom: 0px;
+    font-family: Oswald;
+    color: rgb(231, 231, 231);
+    font-weight: 900;
+    position: absolute;
+    font-size: 430px;
+    z-index: 1;
+    line-height: .9;
+    letter-spacing: -20px;
+  }
+
+
+  /*Media Querys*/
+
+  @media only screen and (max-width: 1100px) {
+
+    .section2_container--div1{
+      background-image: url("../img/newHome/foodEasyTable.jpg");
+      justify-content: flex-start;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .section2_container{
+      grid-row-gap: 24px;
+
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: minmax(300px,auto);
+      grid-auto-columns: auto;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .section2_container--div1 {
+      background-image: url("../img/newHome/foodEasyMovil.jpg");
+      grid-area: 1 / 1 / 3 / 3;
+      padding: 40px 60px 0 25px;
+
+    }
+    .section2_container--div2 {
+      grid-area: 3 / 1 / 5 / 3;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about_container{
+      width: 80%;
+      padding: 10px 0px 60px 0;
+    }
+    .about_container div{
+      background-color: #ffffffd1;
+      padding: 29px;
+      border-radius: 22px;
+      font-weight: bold;
+    }
+
+    .section2_container--div3 {
+      grid-area: 5 / 1 / 6 / 3;
+    }
+    .section2_container--div4 {
+      grid-area: 6 / 1 / 7 / 3;
+    }
+    .section2_container--div5 {
+      grid-area: 7 / 1 / 9 / 3;
+    }
+    .section2_container-div6 {
+      grid-area: 9 / 1 / 10 / 3;
+    }
   }

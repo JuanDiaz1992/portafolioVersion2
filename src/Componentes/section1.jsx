@@ -158,7 +158,7 @@ function Section1() {
         <div className="section_container-div2">
           <h1>Hola 👋</h1>
           <p>
-            En Juan Design, se crean soluciones innovadoras que inspiran y
+            Soy Juan Díaz, creo soluciones innovadoras que inspiran y
             fomentan relaciones memorables entre las marcas y sus clientes.
           </p>
         </div>
