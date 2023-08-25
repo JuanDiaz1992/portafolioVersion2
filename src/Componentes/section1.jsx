@@ -34,10 +34,10 @@ import {
   SiWhatsapp,
   
 } from "react-icons/si";
-import Slider from "./componentesNewHome/slider"
+import Slider from "./componentesNewHome/Firstslider"
 
 
-function Section1() {
+function Section1(props) {
   const navigateTo = useNavigate()
   const skills = [
     [<FaJs />, "JavaScript"],
@@ -77,14 +77,7 @@ function Section1() {
     }
   },[inView])
 
-  const visiteWeb =(url)=>{
-    if(url){
-      setTimeout(() => {
-        window.open(url, "_blank");
-      }, 600);
-    }
 
-  }
 
   const [changePage,setChangePage] = useState(false)
   const openNewPage=()=>{
@@ -114,8 +107,9 @@ function Section1() {
         animate={changePage === true ?  "initial" : "animate"}
         variants={animationVariants}
         transition={{ 
-          duration: 0.5,
-          ease: "linear", }}
+          duration: 0.7,
+          ease: "linear",
+          type: "spring", }}
         
         >
         <motion.div className="section_container-div1"
@@ -201,7 +195,7 @@ function Section1() {
                             transition={{
                               delay: logo[1],
                               duration: .5,
-                              ease: "linear",
+                              type: "spring",
                             }}>{inView}
                         <Card className="py-4 cardlogo" color="primary">
                             <CardBody className="overflow-visible py-2">
@@ -214,7 +208,7 @@ function Section1() {
                               
                           </CardBody>
                           <CardFooter className='buttom_logo_container' >
-                            <Button onClick={()=>{visiteWeb(logo[3])}} radius="small" size="sm">{logo[2]}</Button>
+                            <Button onClick={()=>{props.visiteWeb(logo[3])}} radius="small" size="sm">{logo[2]}</Button>
                           </CardFooter>
                         </Card>
                 </motion.div>
