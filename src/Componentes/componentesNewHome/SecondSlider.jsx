@@ -1,9 +1,5 @@
 import video from "../../img/newHome/Web/video1.2.1.mp4";
-import slider2 from "../../img/newHome/sliders/slider2.webp";
-import slider3 from "../../img/newHome/sliders/slider3.webp";
-import slider4 from "../../img/newHome/sliders/slider4.webp";
 import { Button } from "@nextui-org/react"
-import { motion } from "framer-motion";
 import { BiStore } from "react-icons/bi";
 import {  FaGithub } from "react-icons/fa";
 // Import Swiper React components
@@ -18,6 +14,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 function Slider (){
+
 
     const navigate = (url) => {
         setTimeout(() => {

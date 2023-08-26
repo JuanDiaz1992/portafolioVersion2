@@ -1,6 +1,29 @@
 
 
+.title h2, .title p {
+    color: #707070;
+    color: var(--gris);
+}
+.title h2 {
+    font-size: 117px;
+    margin-bottom: 10px;
 
+}
+.title {
+    align-items: center;
+    margin-bottom: 150px;
+    z-index: 15;
+}
+
+.disenoWeb__container, .title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.title__div--container {
+    max-width: 1321px;
+    width: 100%;
+}
 /* nav-icon-5 */
 .button_close_container{
     top: 0;

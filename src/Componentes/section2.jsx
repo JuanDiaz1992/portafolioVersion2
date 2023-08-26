@@ -1,19 +1,20 @@
 import "../stylesheets/section2.css";
-import { Button } from "@nextui-org/react";
+import { Button, Tooltip } from "@nextui-org/react";
 import me from "../img/newHome/Banner.webp"
 import {  FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SecondSlider from "./componentesNewHome/SecondSlider"
-
+import ThirtySlider from "./componentesNewHome/thirdSlider"
+import FourthSlider from "./componentesNewHome/fourthSlider"
 
 function Section2(props){
 
     const objects = {
         offscreen: {
-          y: 30
+          x: -30
         },
         onscreen: {
-          y: 0,
+          x: 0,
           transition: {
             type: "spring",
 
@@ -38,8 +39,13 @@ function Section2(props){
 
                             </p>
                             <div>
-                                <Button color="warning" >Próximamente</Button>
-                                <Button onClick={()=>props.visiteWeb("https://github.com/JuanDiaz1992/Gestor-Restaurante-Frontend")} isIconOnly  color="default" ><FaGithub/></Button>
+                                <Button color="warning" className="proximamente_buttom" >Próximamente</Button>
+                                <Tooltip content={"Front end"} color="default">
+                                    <Button onClick={()=>props.visiteWeb("https://github.com/JuanDiaz1992/Gestor-Restaurante-Frontend")} isIconOnly  color="default" ><FaGithub/></Button>
+                                </Tooltip>
+                                <Tooltip content={"Back end"} color="default">
+                                    <Button onClick={()=>props.visiteWeb("https://github.com/JuanDiaz1992/Gestor-Restaurante-Backend")} isIconOnly  color="default" ><FaGithub/></Button>
+                                </Tooltip>
                             </div>
                             
                     </div>
@@ -69,8 +75,12 @@ function Section2(props){
                 <div className="section2_container--div3">
                     <SecondSlider/>
                 </div>
-                <div className="section2_container--div4"></div>
-                <div className="section2_container--div5"></div>
+                <div className="section2_container--div4">
+                    <FourthSlider/>
+                </div>
+                <div className="section2_container--div5">
+                    <ThirtySlider/>
+                </div>
             </section>
         </>
     )
