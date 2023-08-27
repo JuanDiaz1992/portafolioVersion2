@@ -114,6 +114,10 @@
     background-color: #000000a6;
     padding: 23px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
   }
   .about_container p{
     font-weight: 500;

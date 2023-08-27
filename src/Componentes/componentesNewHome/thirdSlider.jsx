@@ -2,7 +2,6 @@ import img1 from "../../img/newHome/bannerf-3.png"
 import img2 from "../../img/newHome/personal.png"
 import { Button } from "@nextui-org/react"
 import { motion } from "framer-motion";
-import { BiStore } from "react-icons/bi";
 import {  FaGithub } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -41,15 +40,17 @@ import { Navigation } from 'swiper/modules';
                             <h4>Gesthor Design</h4>
                             <h3>Web Empresa Publicidad</h3>
                             <p>
-                                La página web diseñada para Gesthor Design<br/>
-                                es un logro en sí, construida desde cero con una<br/>
-                                combinación de tecnologías clave como HTML, CSS y <br/>
-                                JavaScript. Esta sinergia de lenguajes de programación<br/>
-                                dio vida a una interfaz dinámica y atractiva que refleja<br/>
+                                La página web diseñada para<br/>
+                                Gesthor Design es un logro en sí, <br/>
+                                construida desde cero con unacombinación<br/>
+                                de tecnologías clave como HTML, CSS y <br/>
+                                JavaScript. Esta sinergia de lenguajes<br/>
+                                de programación dio vida a una interfaz <br/>
+                                dinámica y atractiva que refleja<br/>
                                 la identidad y valores de la empresa.
                             </p>
                             <div>
-                              <Button onClick={()=>navigate("https://design.gesthor.com.co/")} color="danger" endContent={<BiStore/>}>Visita la web</Button>
+                              <Button onClick={()=>navigate("https://design.gesthor.com.co/")} color="danger">Visita la web</Button>
                               <Button onClick={()=>navigate("https://github.com/JuanDiaz1992/gesthor_design")} isIconOnly  color="primary" ><FaGithub/></Button>
                             </div>
                             

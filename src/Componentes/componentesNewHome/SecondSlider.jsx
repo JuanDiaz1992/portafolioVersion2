@@ -34,11 +34,11 @@ function Slider (){
                               framework Django y JavaScript. Incluye funcionalidades como 
                               gestión de usuarios, combinaciones de productos según tallas y 
                               colores, así como una pasarela de pagos y un historial de compras. 
-                              Para ponerlo a prueba, lo desplegamos en el servicio AWS. Te invito a 
+                              Para ponerlo a prueba. Te invito a 
                               explorar el código fuente y el proyecto en los siguientes enlaces.
                             </p>
                             <div>
-                              <Button onClick={()=>navigate("http://18.228.3.242/")} color="danger" endContent={<BiStore/>}>Visita la tienda</Button>
+                              <Button onClick={()=>navigate("https://juandiazv.pythonanywhere.com/")} color="danger" endContent={<BiStore/>}>Visita la tienda</Button>
                               <Button onClick={()=>navigate("https://github.com/JuanDiaz1992/eccomerce")} isIconOnly  color="primary" ><FaGithub/></Button>
                             </div>
                             

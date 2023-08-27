@@ -1,0 +1,69 @@
+import woman from "../../img/newHome/section3/dani.png";
+import plants from "../../img/newHome/section3/daniPlants.png"
+import { motion } from "framer-motion"
+import { Button } from "@nextui-org/react";
+import { BiStore } from "react-icons/bi";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Navigation } from 'swiper/modules';
+
+function Slider (){
+    const objects = {
+      offscreen: {
+        scale: 0.9
+      },
+      onscreen: {
+        scale: 1,
+        transition: { duration: 0.9 },
+
+      }
+    };
+
+
+    const navigate = (url) => {
+        setTimeout(() => {
+          window.open(url, "_blank");
+        }, 600);
+      };
+    return(
+        <>
+                <Swiper navigation={true} modules={[Navigation]} className="mySwiper fifth_slider_container" viewport={{ once: true, amount: 1 }}>
+                    <SwiperSlide className="fifth_slider_container--item1" >
+                      <div className="header_card_slider fifth_slider_container-header_card ">
+                          <h4>Estilo Dani</h4>
+                          <h3>Spa</h3>
+                          <p> 
+                              Desarrollé una web para un spa que ofrece <br/>
+                              servicios de uñas y arreglos de cabello para <br/>
+                              hombres y mujeres. Creé una interfaz<br/>
+                              atractiva con servicios de estilismo,<br/>
+                              reservas en línea y secciones informativas <br/>
+                              sobre productos y estilistas. 
+
+                          </p>
+                          <Button onClick={()=>navigate("https://gesthor.com.co/spa/")} color="warning" endContent={<BiStore/>}>Visita la tienda</Button>
+                      </div>
+                      <img src={woman} alt="" />
+                      <motion.img src={plants} alt=""
+                                      variants={objects}
+                                      initial="offscreen"
+                                      whileInView="onscreen"  />
+                     
+                    </SwiperSlide>
+                    <SwiperSlide className="fifth_slider_container--item2">
+
+                    </SwiperSlide>
+                    <SwiperSlide className="fifth_slider_container--item3">
+
+                    </SwiperSlide>
+                </Swiper>
+
+        </>
+    )
+}
+export default Slider

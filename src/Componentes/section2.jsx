@@ -1,6 +1,7 @@
 import "../stylesheets/section2.css";
 import { Button, Tooltip } from "@nextui-org/react";
 import me from "../img/newHome/Banner.webp"
+import cvJuanDiaz from "../Documentos/Juan Camilo Diaz Valencia HV .pdf"
 import {  FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SecondSlider from "./componentesNewHome/SecondSlider"
@@ -67,6 +68,7 @@ function Section2(props){
                                     Cuento con bases sólidas en HTML, CSS y JavaScript. Me emocioné al descubrir cómo estas herramientas pueden dar vida a ideas creativas en forma de hermosas y funcionales interfaces.<br/>
                                     Además, cuento con experiencia en el desarrollo utilizando PHP y Python. Estos lenguajes me han permitido abordar desafíos desde diferentes ángulos y ampliar mis capacidades como desarrollador.<br/>
                                 </p>
+                                <Button onClick={()=>props.visiteWeb(cvJuanDiaz)} color="primary" >Descargar CV</Button>
                         </div>
                         </div>
                     </div>

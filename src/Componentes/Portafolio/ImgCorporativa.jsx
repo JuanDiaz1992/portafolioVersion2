@@ -38,7 +38,7 @@ function ImgCorporativa(){
     const animationVariants = {
         initial: {
           opacity:0,
-          y: -100,
+          y: 100,
         },
         animate: {
           opacity:1,
@@ -174,11 +174,6 @@ function ImgCorporativa(){
             <img className="papeleria__gesthor"  src={img5} alt="" />
 
             </section>
-
-
-            <h3>Aun faltan más proyectos por subir, pagina en construcción</h3>
-
-
         </motion.div>
         <GoToTop/>
         </>

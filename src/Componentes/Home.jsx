@@ -1,5 +1,6 @@
-import Section1 from "./section1"
-import Section2 from "./section2"
+import Section1 from "./section1";
+import Section2 from "./section2";
+import Section3 from "./section3";
 
 function Home(){
   const visiteWeb =(url)=>{
@@ -15,6 +16,8 @@ function Home(){
       <Section1
       visiteWeb={visiteWeb}/>
       <Section2
+      visiteWeb={visiteWeb}/>
+      <Section3
       visiteWeb={visiteWeb}/>
     </>
   )
