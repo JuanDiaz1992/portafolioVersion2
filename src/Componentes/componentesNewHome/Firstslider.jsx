@@ -1,7 +1,7 @@
-import slider1 from "../../img/newHome/sliders/slider1.webp";
-import slider2 from "../../img/newHome/sliders/slider2.webp";
-import slider3 from "../../img/newHome/sliders/slider3.webp";
-import slider4 from "../../img/newHome/sliders/slider4.webp";
+import slider1 from "../../img/newHome/section1/sliders/slider1.webp";
+import slider2 from "../../img/newHome/section1/sliders/slider2.webp";
+import slider3 from "../../img/newHome/section1/sliders/slider3.webp";
+import slider4 from "../../img/newHome/section1/sliders/slider4.webp";
 import { Button } from "@nextui-org/react"
 import { motion } from "framer-motion";
 import { BiStore } from "react-icons/bi";

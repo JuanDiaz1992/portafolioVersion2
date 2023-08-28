@@ -1,14 +1,6 @@
 import "../stylesheets/footer.css";
-import {
-    FaLinkedin,
-    FaGithub,
-
-  } from "react-icons/fa";
-  import {
-    SiGmail,
-    SiWhatsapp,
-    
-  } from "react-icons/si";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiGmail, SiWhatsapp } from "react-icons/si";
 
 function Section2(props) {
   return (

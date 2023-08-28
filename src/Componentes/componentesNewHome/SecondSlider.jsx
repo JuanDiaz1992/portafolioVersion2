@@ -1,58 +1,67 @@
-import video from "../../img/newHome/Web/video1.2.1.mp4";
-import { Button } from "@nextui-org/react"
+import { Button } from "@nextui-org/react";
 import { BiStore } from "react-icons/bi";
-import {  FaGithub } from "react-icons/fa";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaGithub } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import video from "../../img/newHome/section2/video1.2.1.mp4";
+function Slider() {
+  const navigate = (url) => {
+    setTimeout(() => {
+      window.open(url, "_blank");
+    }, 600);
+  };
+  return (
+    <>
+      <Swiper
+        navigation={true}
+        modules={[Navigation]}
+        className="mySwiper second_slider_container"
+      >
+        <SwiperSlide className="second_slider_container--item"></SwiperSlide>
+        <SwiperSlide className="">
+          <div className="header_card_slider header_second_slider">
+            <h4>Romofyi</h4>
+            <h3>Tienda de ropa</h3>
+            <p>
+              Se desarrollo una tienda en línea utilizando el framework Django y
+              JavaScript. Incluye funcionalidades como gestión de usuarios,
+              combinaciones de productos según tallas y colores, así como una
+              pasarela de pagos y un historial de compras. Para ponerlo a
+              prueba. Te invito a explorar el código fuente y el proyecto en los
+              siguientes enlaces.
+            </p>
+            <div>
+              <Button
+                onClick={() =>
+                  navigate("https://juandiazv.pythonanywhere.com/")
+                }
+                color="danger"
+                endContent={<BiStore />}
+              >
+                Visita la tienda
+              </Button>
+              <Button
+                onClick={() =>
+                  navigate("https://github.com/JuanDiaz1992/eccomerce")
+                }
+                isIconOnly
+                color="primary"
+              >
+                <FaGithub />
+              </Button>
+            </div>
+          </div>
+        </SwiperSlide>
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-
-
-// import required modules
-import { Navigation } from 'swiper/modules';
-
-function Slider (){
-
-
-    const navigate = (url) => {
-        setTimeout(() => {
-          window.open(url, "_blank");
-        }, 600);
-      };
-    return(
-        <>
-                <Swiper navigation={true} modules={[Navigation]} className="mySwiper second_slider_container">
-                    <SwiperSlide className="second_slider_container--item"></SwiperSlide>
-                    <SwiperSlide className="">
-                        <div className="header_card_slider header_second_slider">
-                            <h4>Romofyi</h4>
-                            <h3>Tienda de ropa</h3>
-                            <p>
-                              Se desarrollo una tienda en línea utilizando el 
-                              framework Django y JavaScript. Incluye funcionalidades como 
-                              gestión de usuarios, combinaciones de productos según tallas y 
-                              colores, así como una pasarela de pagos y un historial de compras. 
-                              Para ponerlo a prueba. Te invito a 
-                              explorar el código fuente y el proyecto en los siguientes enlaces.
-                            </p>
-                            <div>
-                              <Button onClick={()=>navigate("https://juandiazv.pythonanywhere.com/")} color="danger" endContent={<BiStore/>}>Visita la tienda</Button>
-                              <Button onClick={()=>navigate("https://github.com/JuanDiaz1992/eccomerce")} isIconOnly  color="primary" ><FaGithub/></Button>
-                            </div>
-                            
-                        </div>
-                    </SwiperSlide>
-                      
-                    <SwiperSlide className="video-container">
-                      <video loop autoPlay muted className="fillWidth visible-lg" >
-                        <source src={video} type="video/mp4" ></source>
-                      </video>
-                    </SwiperSlide>
-                </Swiper>
-
-        </>
-    )
+        <SwiperSlide className="video-container">
+          <video loop autoPlay muted className="fillWidth visible-lg">
+            <source src={video} type="video/mp4"></source>
+          </video>
+        </SwiperSlide>
+      </Swiper>
+    </>
+  );
 }
-export default Slider
+export default Slider;
