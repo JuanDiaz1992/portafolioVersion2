@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../stylesheets/Portafolio/ImgCorp.css"
 import { useNavigate } from "react-router-dom";
 import GoToTop from "../funciones/OnTop.js"
+import { Image } from "@nextui-org/react"
 
 
 
@@ -89,7 +90,7 @@ function ImgCorporativa(){
             </section>
             
             <picture className="Banner1">
-                <img src={img1} alt="" />
+                <Image src={img1} alt="" />
             </picture>
             <div className="imgCorporativa__title--containter">
             <h3 className="">Logos</h3>

@@ -5,6 +5,7 @@ import App from './App';
 import {Providers} from "./providers";
 // src/App.js
 import "./stylesheets/normalize.css"
+import 'atropos/css'
 
 
 

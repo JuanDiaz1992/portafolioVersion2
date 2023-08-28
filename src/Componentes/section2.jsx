@@ -62,9 +62,10 @@ function Section2(props){
                         </div>
                         <div className="about_container">
                         <div>
+                                <h3>Sombre Mí</h3>
                                 <p>
                                     ¡Hola! Me llamo Juan Díaz y soy programador y desarrollador web.<br/>
-                                    Actualmente, me encuentro estudiando una ingeniería en software en CIAF, lo que me ha permitido explorar varios lenguajes de programación.
+                                    Actualmente, me encuentro estudiando una ingeniería de software en CIAF, lo que me ha permitido explorar varios lenguajes de programación.
                                     Cuento con bases sólidas en HTML, CSS y JavaScript. Me emocioné al descubrir cómo estas herramientas pueden dar vida a ideas creativas en forma de hermosas y funcionales interfaces.<br/>
                                     Además, cuento con experiencia en el desarrollo utilizando PHP y Python. Estos lenguajes me han permitido abordar desafíos desde diferentes ángulos y ampliar mis capacidades como desarrollador.<br/>
                                 </p>
