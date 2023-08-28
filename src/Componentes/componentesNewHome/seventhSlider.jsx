@@ -1,6 +1,4 @@
-import video from "../../img/newHome/section3/crediartV.mp4";
 import { Button } from "@nextui-org/react"
-import {  FaGithub } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles

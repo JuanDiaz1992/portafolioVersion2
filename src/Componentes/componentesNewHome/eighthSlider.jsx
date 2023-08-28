@@ -1,7 +1,5 @@
 import Atropos from 'atropos/react';
 import img1 from "../../img/newHome/section3/3dimg1.png"
-import { Button } from "@nextui-org/react"
-import {  FaGithub } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -14,11 +12,7 @@ import { Navigation } from 'swiper/modules';
 function Slider (){
 
 
-    const navigate = (url) => {
-        setTimeout(() => {
-          window.open(url, "_blank");
-        }, 600);
-      };
+
     return(
         <>
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper eighth_slider_container">
@@ -44,6 +38,7 @@ function Slider (){
                     </SwiperSlide>
                     <SwiperSlide className="eighth_slider_container--item2"></SwiperSlide>
                     <SwiperSlide className="eighth_slider_container--item3"></SwiperSlide>
+                    <SwiperSlide className="eighth_slider_container--item4"></SwiperSlide>
                 </Swiper>
 
         </>

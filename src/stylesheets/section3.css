@@ -144,6 +144,16 @@
   background-size:cover;
   background-position: center;
 }
+.eighth_slider_container--item3{
+  background-image: url("../img/newHome/section3/banner14.jpg");
+  background-size:cover;
+  background-position: center;
+}
+.eighth_slider_container--item4{
+  background-image: url("../img/newHome/section3/banner15.jpg");
+  background-size:cover;
+  background-position: center;
+}
 
 
 

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-@import 'atropos/scss';
+/* @import 'atropos/scss'; */
 
 body {
   margin: 0;
