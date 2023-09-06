@@ -24,7 +24,7 @@ function Slider() {
             <h3>Gestor materias</h3>
             <p>
               Software creado en Django que permite a los estudiantes de CIAF
-              matricular materas de la universidad.
+              matricular materias de la universidad.
               <br />
             </p>
             <Button
