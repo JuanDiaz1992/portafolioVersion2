@@ -24,13 +24,12 @@ function Slider() {
             <h4>Otros</h4>
             <h3>Otros proyectos</h3>
             <p>
-              Esta es la lista de otros proyectos más <br />
-              que e desarrollado, cada uno representa <br />
-              una oportunidad para aprender y crecer.
-              <br />
-              Explora esta colección que abarca <br />
-              diversos desafíos en mi trayectoria de <br />
-              desarrollo. ¡Disfruta explorando!
+            Esta es la lista de otros proyectos que he<br />
+            desarrollado, cada uno representa una <br />
+            oportunidad para aprender y crecer. <br />
+            Explora esta colección que abarca diversos <br />
+            desafíos en mi trayectoria de desarrollo. <br />
+            ¡Disfruta explorando!"
             </p>
           </div>
         </SwiperSlide>
@@ -90,12 +89,12 @@ function Slider() {
             <h4>Imanku Solutions</h4>
             <h3>Contador de votos</h3>
             <p>
-              Se ha creado un software para el conteo de <br />
-              votos de elecciones en los ultimos años para Estados <br />
-              Unidos. Procesa datos de Excel o JSON, realiza conteos y <br />
-              estadísticas específicas para el cliente. Permite ingresar <br />
-              votos individuales. para el ingreso el usuario debe estar <br />
-              registrado.
+              Se ha creado un software para el conteo de votos <br />
+              de elecciones en los últimos años para Estados Unidos. <br />
+              Procesa datos de Excel o JSON, realiza conteos y <br />
+              estadísticas específicas para el cliente. Permite <br />
+              ingresar votos individuales. Para el ingreso, el <br />
+              usuario debe estar registrado.<br />
             </p>
             <div>
               <Button
@@ -117,10 +116,10 @@ function Slider() {
             <h4>BOOCIC</h4>
             <h3>Bienestar personal</h3>
             <p>
-              Landinpage cuya finalidad es ser una plataforma <br />
-              que ofrece recursos y herramientas para mejorar <br />
-              el bienestar personal y ayudar a los usuarios a <br />
-              alcanzar sus objetivos.
+            Landing page cuya finalidad es ser una plataforma <br />
+            que ofrece recursos y herramientas para mejorar <br />
+            el bienestar personal y ayudar a los usuarios a <br />
+            alcanzar sus objetivos.<br />
             </p>
             <Button
               onClick={() => navigate("https://github.com/JuanDiaz1992/BOOCIC")}

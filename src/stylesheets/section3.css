@@ -40,7 +40,7 @@
 /*section3_container--div1*/
 
 .seventh_slider_container--item1{
-
+  height: 400px;
   background-image: url("../img/newHome/section3/banner9.jpg");
   background-size: cover;
   background-position: bottom;

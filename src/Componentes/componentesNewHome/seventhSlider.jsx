@@ -23,7 +23,8 @@ function Slider() {
             <h3>Cooperativa</h3>
             <p>
               Un diseño desactualizado y poco intuitivo <br />
-              se fusionó en un lenguaje de diseño coherente que resulta moderno,
+              se fusionó en un lenguaje de diseño <br />
+              coherente que resulta moderno,<br />
               flexible y elegante.
             </p>
             <Button
