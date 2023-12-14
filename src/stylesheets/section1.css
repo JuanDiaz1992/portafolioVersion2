@@ -187,8 +187,6 @@ width: fit-content;
 
 /***********************Iconos card section_container-div5***************/
 .imgSlider{
-
-    width: 99.9%;
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
@@ -196,10 +194,16 @@ width: fit-content;
 .slider{
   height: 100%;
   border-radius: 16px;
-  background-color: #22AAC5;
+  background: rgb(0,1,25);
+  background: -moz-linear-gradient(180deg, rgba(0,1,25,1) 0%, rgba(4,50,73,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(0,1,25,1) 0%, rgba(4,50,73,1) 100%);
+  background: linear-gradient(180deg, rgba(0,1,25,1) 0%, rgba(4,50,73,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000119",endColorstr="#043249",GradientType=1);
+
 }
 
 .header_card_slider{
+  color: white;
   height: 40%;
   padding: 40px 60px 0 25px;
   display: flex;
@@ -211,18 +215,27 @@ width: fit-content;
   display: flex;
   align-items: flex-end;
   height: 60%;
+  justify-content: flex-end;
 }
 .header_card_slider h4{
   font-size: 10px;
   padding: 5px 10px 5px 10px;
-  background-color: #070F1C;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   font-weight: bold;
+}
+.header_card_slider p{
+  max-width: 400px;
 }
 .header_card_slider h3{
   font-size: 40px;
   font-weight: bold;
 }
+
+.video-container--firstSlider{
+  background-color: #02243B;
+}
+
 /***********************Iconos card section_container-div6***************/
 .section_container-div6 {
   display: flex;

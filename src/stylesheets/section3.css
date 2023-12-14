@@ -70,7 +70,9 @@
 }
 .fifth_slider_container-header_card {
   height: fit-content;
+  color: black;
 }
+
 .fifth_slider_container--item1 img{
   padding-top: 25px;
   position: absolute;
@@ -91,6 +93,9 @@
 
 
 /*section3_container--div3*/
+.sixth_slider_container-header_card-item1{
+  color: rgb(27, 27, 27);
+}
 
 .sixth_slider_container--item1{
   background-image: url("../img/newHome/section3/banner4.jpg");

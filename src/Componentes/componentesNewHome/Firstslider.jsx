@@ -1,10 +1,10 @@
-import slider1 from "../../img/newHome/section1/sliders/slider1.webp";
-import slider2 from "../../img/newHome/section1/sliders/slider2.webp";
-import slider3 from "../../img/newHome/section1/sliders/slider3.webp";
-import slider4 from "../../img/newHome/section1/sliders/slider4.webp";
-import { Button } from "@nextui-org/react"
+import slider1 from "../../img/newHome/section1/sliders/slider1.png";
+import slider2 from "../../img/newHome/section1/sliders/slider2.jpg";
+import slider3 from "../../img/newHome/section1/sliders/video2.mp4";
+import { Button, Tooltip } from "@nextui-org/react"
 import { motion } from "framer-motion";
-import { BiStore } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa"
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -18,8 +18,7 @@ import { Navigation } from 'swiper/modules';
 
 function Slider (){
 
-    const navigate = () => {
-        const url = "https://gesthor.com.co/arte/";
+    const navigate = (url) => {
         setTimeout(() => {
           window.open(url, "_blank");
         }, 600);
@@ -29,10 +28,22 @@ function Slider (){
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper slider">
                     <SwiperSlide className="first_slider_container">
                         <div className="header_card_slider">
-                            <h4>ARTE & PINTURA</h4>
-                            <h3>Tienda de arte</h3>
-                            <p>Se implementó una tienda en línea con el fin <br/> de mejorar la presencia en línea de la marca.</p>
-                            <Button onClick={navigate} color="default" endContent={<BiStore/>}>Visita la tienda</Button>
+                            <h4>ALDÍA</h4>
+                            <h3>Asistente financiero</h3>
+                            <p>ALDÍA es una plataforma web que registra los ingresos y gastos del usuario, organizándolos mensual y anualmente, con estos datos genera gráficas con promedios. Actualmente se está desarrollando un módulo para determinar la obligación de presentar declaración de renta según los datos ingresados.</p>
+                            <Tooltip content={"Front end"} color="default">
+                              <Button
+                                onClick={() =>
+                                  navigate(
+                                    "https://github.com/JuanDiaz1992/alDiaFront"
+                                  )
+                                }
+                                isIconOnly
+                                color="default"
+                              >
+                                <FaGithub />
+                              </Button>
+                            </Tooltip>
                         </div>
                         <div className="img_slider_container">
                             <motion.img className="imgSlider" src={slider1} alt=""
@@ -47,8 +58,11 @@ function Slider (){
                         </div>
                     </SwiperSlide>
                     <SwiperSlide><img className="imgSlider" src={slider2} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className="imgSlider" src={slider3} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className="imgSlider" src={slider4} alt="" /></SwiperSlide>
+                    <SwiperSlide className="video-container--firstSlider">
+                      <video loop autoPlay muted className="fillWidth visible-lg">
+                        <source src={slider3} type="video/mp4"></source>
+                      </video>
+                    </SwiperSlide>
                 </Swiper>
 
         </>

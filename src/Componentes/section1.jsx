@@ -153,8 +153,7 @@ function Section1(props) {
         <div className="section_container-div2">
           <h1>Hola 👋</h1>
           <p>
-            Soy Juan Díaz, creo soluciones innovadoras que inspiran y fomentan
-            relaciones memorables entre las marcas y sus clientes.
+            Soy Juan Díaz, construyo experiencias digitales, excepcionales y accesibles para la web.
           </p>
         </div>
         <div className="section_container-div3">
