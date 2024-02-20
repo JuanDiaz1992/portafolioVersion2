@@ -34,27 +34,23 @@ function Slider() {
       >
         <SwiperSlide className="fifth_slider_container--item1">
           <div className="header_card_slider fifth_slider_container-header_card ">
-            <h4>Estilo Dani</h4>
-            <h3>Spa</h3>
+            <h4>Mango Biche Mía</h4>
+            <h3>Franquicia</h3>
             <p>
-              Desarrollé una web para un spa que ofrece <br />
-              servicios de uñas y arreglos de cabello para <br />
-              hombres y mujeres. Creé una interfaz
-              <br />
-              atractiva con servicios de estilismo,
-              <br />
-              reservas en línea y secciones informativas <br />
-              sobre productos y estilistas.
+              Desarrollé una web para un la empresa
+              Mango Biche Mía, con la finalizad de dar a
+              conocer los servicios que presta la franquicia
+              e invitar al visitante a ser parte de la franquicia.
             </p>
             <Button
-              onClick={() => navigate("https://gesthor.com.co/spa/")}
+              onClick={() => navigate("https://www.mangobichemia.com/")}
               color="warning"
               endContent={<BiStore />}
             >
-              Visita la tienda
+              Visita la web
             </Button>
           </div>
-          <img src={woman} alt="" />
+          <img className="principal_img" src={woman} alt="" />
           <motion.img
             src={plants}
             alt=""

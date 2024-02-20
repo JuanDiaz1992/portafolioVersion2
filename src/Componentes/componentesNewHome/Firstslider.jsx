@@ -1,6 +1,7 @@
 import slider1 from "../../img/newHome/section1/sliders/slider1.png";
 import slider2 from "../../img/newHome/section1/sliders/slider2.jpg";
-import slider3 from "../../img/newHome/section1/sliders/video2.mp4";
+import slider3 from "../../img/newHome/section1/sliders/video1.mp4";
+import video2 from "../../img/newHome/section1/sliders/video3.mp4";
 import { Button, Tooltip } from "@nextui-org/react"
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa"
@@ -27,7 +28,7 @@ function Slider (){
         <>
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper slider">
                     <SwiperSlide className="first_slider_container">
-                        <div className="header_card_slider">
+                        <div className="header_card_slider header_card_slide_padding">
                             <h4>ALDÍA</h4>
                             <h3>Asistente financiero</h3>
                             <p>ALDÍA es una plataforma web que registra los ingresos y gastos del usuario, organizándolos mensual y anualmente, con estos datos genera gráficas con promedios. Actualmente se está desarrollando un módulo para determinar la obligación de presentar declaración de renta según los datos ingresados.</p>
@@ -57,10 +58,17 @@ function Slider (){
                                       }} />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide><img className="imgSlider" src={slider2} alt="" /></SwiperSlide>
+                    <SwiperSlide>
+                      <div className="img_slider_container--2">
+                        <img className="imgSlider_2" src={slider2} alt="" />
+                      </div>
+                    </SwiperSlide>
                     <SwiperSlide className="video-container--firstSlider">
-                      <video loop autoPlay muted className="fillWidth visible-lg">
+                      <video  autoplay="autoplay" loop="loop" muted playsinline preload="auto" className="fillWidth visible-lg desktop">
                         <source src={slider3} type="video/mp4"></source>
+                      </video>
+                      <video  autoplay="autoplay" loop="loop" muted playsinline preload="auto" className="fillWidth visible-lg movil">
+                        <source src={video2} type="video/mp4"></source>
                       </video>
                     </SwiperSlide>
                 </Swiper>

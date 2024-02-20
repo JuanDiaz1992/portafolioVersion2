@@ -33,16 +33,19 @@ import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import logo from "../img/newHome/section1/Logo-JuanDiaz-4.webp";
 import logoFondo from "../img/newHome/section1/LogofondoClaro.webp";
-import logo1 from "../img/newHome/section1/logos/logo1.webp";
-import logo2 from "../img/newHome/section1/logos/logo2.webp";
-import logo3 from "../img/newHome/section1/logos/logo3.webp";
-import logo4 from "../img/newHome/section1/logos/logo4.webp";
-import logo5 from "../img/newHome/section1/logos/logo5.webp";
-import logo6 from "../img/newHome/section1/logos/logo6.webp";
-import logo7 from "../img/newHome/section1/logos/logo7.webp";
+import logo1 from "../img/newHome/section1/logosFlotantes/1.png";
+import logo2 from "../img/newHome/section1/logosFlotantes/2.png";
+import logo3 from "../img/newHome/section1/logosFlotantes/3.png";
+import logo4 from "../img/newHome/section1/logosFlotantes/4.png";
+import logo5 from "../img/newHome/section1/logosFlotantes/5.png";
+import logo6 from "../img/newHome/section1/logosFlotantes/6.png";
+import logo7 from "../img/newHome/section1/logosFlotantes/7.png";
 import Slider from "./componentesNewHome/Firstslider";
 
 function Section1(props) {
+  const logos = [
+    logo1,logo2,logo3,logo4,logo5,logo6,logo7
+  ]
   const navigateTo = useNavigate();
   const skills = [
     [<FaJs />, "JavaScript"],
@@ -174,7 +177,16 @@ function Section1(props) {
           </div>
         </div>
         <div className="section_container-div4">
+          <div className="section_container-div4--principalContainer" ref={ref}>
+              {logos.map((logo,index)=>
+                <img src={logo} alt="logo1" className={"logo_design"+index} />
+              )}
+          </div>
           <div className="section_container-div4--text_container">
+            <div className="text_container--title_container">
+              <h3>Diseño</h3>
+              <h4>Gráfico</h4>
+            </div>
             <p>
               Aquí encontrarás una colección de proyectos en los que e
               participado como diseñador gráfico.
@@ -190,48 +202,6 @@ function Section1(props) {
             >
               Ver más
             </Link>
-          </div>
-
-          <div className="section_container-div4--principalContainer" ref={ref}>
-            <div className="section_container-div4--cards_container">
-              {logosFull.map((logo) => (
-                <motion.div
-                  className="logoCards"
-                  key={logo}
-                  initial={isVisible ? {} : { opacity: 0, y: 5, size: 0.1 }}
-                  animate={isVisible ? { opacity: 1, y: 0, size: 1 } : {}}
-                  exit={{ opacity: 0 }}
-                  transition={{
-                    delay: logo[1],
-                    duration: 0.5,
-                    type: "spring",
-                  }}
-                >
-                  {inView}
-                  <Card className="py-4 cardlogo" color="primary">
-                    <CardBody className="overflow-visible py-2">
-                      <Image
-                        alt="Card background"
-                        className="object-cover rounded-xl logosImg"
-                        src={logo[0]}
-                        width={270}
-                      />
-                    </CardBody>
-                    <CardFooter className="buttom_logo_container">
-                      <Button
-                        onClick={() => {
-                          props.visiteWeb(logo[3]);
-                        }}
-                        radius="small"
-                        size="sm"
-                      >
-                        {logo[2]}
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
         <div className="section_container-div5">

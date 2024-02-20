@@ -56,7 +56,7 @@ function Slider() {
         </SwiperSlide>
 
         <SwiperSlide className="video-container">
-          <video loop autoPlay muted className="fillWidth visible-lg">
+          <video autoplay="autoplay" loop="loop" muted playsinline preload="auto"  className="fillWidth visible-lg">
             <source src={video} type="video/mp4"></source>
           </video>
         </SwiperSlide>

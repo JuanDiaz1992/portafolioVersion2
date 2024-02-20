@@ -28,7 +28,6 @@ function Section2(props) {
           <NineSlider />
         </div>
         <div className="section2_container--div2">
-          <h4 className="big_about_me">ABOUT ME.</h4>
           <div
             className="section2_container--div2--container"
             viewport={{ once: true, amount: 1 }}
@@ -43,10 +42,14 @@ function Section2(props) {
               />
             </div>
             <div className="about_container">
-              <div>
-                <h3>Un poco de Juan Díaz.</h3>
+              <div className="about_container--div--container">
+                <div className="about_container--div--title--container">
+                  <h3 className="about_container--h3">SOY JUAN </h3>
+                  <h4 className="lastname">DIAZ.</h4>
+                </div>
                 <p>
                   Antes de adentrarme en el mundo de la programación era diseñador gráfico, pero en un momento de mi vida quise llevar mis diseños a algo más funcional, por lo que caí de cabeza a la madriguera de la programación y el desarrollo web. Ahora tengo la habilidad de dar solución a problemas de la vida real con código, pero siempre añadiendo ese toque único de estilos a cada proyecto. <br />
+                  <br />
                   Siempre disfruto de un buen café en mi casa con mis mascotas y un buen videojuego.
                   <br />
                 </p>

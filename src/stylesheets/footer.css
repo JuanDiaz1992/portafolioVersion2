@@ -16,9 +16,10 @@
 }
 
 .footer_container--div {
+  backdrop-filter: blur(20px) saturate(1.7);
   grid-area: 1 / 1 / 2 / 2;
   border-radius: 16px 16px 0 0 ;
-  background-color: #ffffff;
+  background-color: #ffffffa8;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;

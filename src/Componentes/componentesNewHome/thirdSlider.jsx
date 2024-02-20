@@ -40,21 +40,17 @@ function Slider() {
             <h3>Web Empresa Publicidad</h3>
             <p>
               La página web diseñada para
-              <br />
-              Gesthor Design es un logro en sí, <br />
+              Gesthor Design es un logro en sí,
               construida desde cero con unacombinación
-              <br />
-              de tecnologías clave como HTML, CSS y <br />
+              de tecnologías clave como HTML, CSS y
               JavaScript. Esta sinergia de lenguajes
-              <br />
-              de programación dio vida a una interfaz <br />
+              de programación dio vida a una interfaz
               dinámica y atractiva que refleja
-              <br />
               la identidad y valores de la empresa.
             </p>
             <div>
               <Button
-                onClick={() => navigate("https://design.gesthor.com.co/")}
+                onClick={() => navigate("https://gesthordesign.com")}
                 color="danger"
               >
                 Visita la web
