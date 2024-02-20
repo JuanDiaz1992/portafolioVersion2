@@ -37,9 +37,9 @@ function Slider() {
             <h4>Mango Biche Mía</h4>
             <h3>Franquicia</h3>
             <p>
-              Desarrollé una web para un la empresa
+              Desarrollé una web para la franquicia
               Mango Biche Mía, con la finalizad de dar a
-              conocer los servicios que presta la franquicia
+              conocer los servicios que presta la misma
               e invitar al visitante a ser parte de la franquicia.
             </p>
             <Button
