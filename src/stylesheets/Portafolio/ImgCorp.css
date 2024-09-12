@@ -1,0 +1,230 @@
+
+
+.title h2, .title p {
+    color: #707070;
+    color: var(--gris);
+}
+.title h2 {
+    font-size: 117px;
+    margin-bottom: 10px;
+
+}
+.title {
+    align-items: center;
+    margin-bottom: 150px;
+    z-index: 15;
+}
+
+.disenoWeb__container, .title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.title__div--container {
+    max-width: 1321px;
+    width: 100%;
+}
+/* nav-icon-5 */
+.button_close_container{
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 100;
+}
+.nav_toggle{
+    position: relative;
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .nav_toggle span{
+    background-color:black;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+    transition-duration: 500ms
+  }
+  .nav_toggle span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  .nav_toggle span:nth-child(2){
+    top:13px;
+    left: 0px;
+    opacity:1;
+  }
+  .nav_toggle span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+
+  .nav_toggle.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .nav_toggle.open span:nth-child(2){
+    opacity:0;
+  }
+  .nav_toggle.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 13px;
+  }
+
+
+
+
+.imgCorporativa__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.corpo{
+    max-width: 660px;
+}
+
+.Banner1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1321px;
+}
+
+.Banner1 img{
+    border-radius: 25px;
+    object-fit: cover;
+    width: inherit;
+    height: fit-content;
+    margin-bottom: 50px;
+}
+
+.textIntros--p{
+    margin: 15px;
+    width: 50%;
+    color: var(--gris);
+}
+
+
+.imgCorporativa__title--containter{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1321px;
+    flex-direction: column;
+
+}
+
+.imgCorporativa__title--containter h3{
+    margin: 2em 0 0 0;
+    font-size: 5em;
+    color: var(--gris);
+}
+
+.section2__logos{
+    width: 100%;
+    max-width: 1321px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.logo_containerItem{
+
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.LogoItem{
+    width: 100%;
+}
+
+.LogoItem img{
+    border-radius: 25px;
+    object-fit: cover;
+    width: inherit;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 50px;
+}
+
+
+
+@media only screen and (max-width: 1200px){
+    .videoNoel_container{
+        flex-direction: column;
+    }
+    .videoNoel{
+        margin-bottom: 50px;
+        width: 100%;
+
+    }
+    .videoNoel_container p{
+        
+        margin-left: 10px;
+        max-width: 660px;
+
+    }
+    
+    
+
+
+}
+@media only screen and (max-width: 999px){
+    .imgCorporativa__titleLogo--containter{
+        margin: 33px 0;
+    }
+    .imgCorporativa__titleLogo--containter h3{
+        font-size: 3em;
+    }
+
+    .logo_containerItem{
+        flex-direction: column;
+        margin-bottom: 0;
+        align-items: center;
+    }
+    .LogoItem {
+        width: fit-content;
+    }
+
+    .LogoItem img{
+        margin-bottom: 0;
+        height: auto;
+        width: 500px;
+    }
+
+/***********Papelería*******/
+
+.videoNoel_container p{
+        
+    font-size:20px ;
+
+}
+}
+
+
+@media only screen and (max-width:600px){
+    .LogoItem img{
+        width: 100%;
+    }
+    .textIntros--p {
+        width: 90%;
+    }
+    .imgCorporativa__title--containter h3 {
+        margin: 0;
+    }
+    .Banner1 img{
+        border-radius:0;
+    }
+}

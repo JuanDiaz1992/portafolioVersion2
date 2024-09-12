@@ -1,0 +1,38 @@
+@font-face {
+  font-family: Oswald;
+  src: url("../fuentes/Oswald/Oswald-VariableFont_wght.ttf");
+}
+
+.footer_container {
+  width: 95%;
+  max-width: 1600px;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  grid-auto-rows: minmax(328px, max-content);
+  grid-auto-columns: 1fr;
+  margin: 0 auto 0 auto;
+  padding: 35px 0 0 0;
+  display: grid;
+}
+
+.footer_container--div {
+  backdrop-filter: blur(20px) saturate(1.7);
+  grid-area: 1 / 1 / 2 / 2;
+  border-radius: 16px 16px 0 0 ;
+  background-color: #ffffffa8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  text-align: center;
+
+}
+.footer_container--div div{
+  display: flex;
+  gap: 15px;
+}

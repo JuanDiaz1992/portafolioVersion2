@@ -1,0 +1,413 @@
+@font-face {
+  font-family: Oswald;
+  src: url("../fuentes/Oswald/Oswald-VariableFont_wght.ttf");
+}
+
+
+.section2_container {
+    width: 95%;
+    max-width: 1600px;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    grid-auto-rows: minmax(328px, max-content);
+    grid-auto-columns: 1fr;
+    margin: 0 auto 0 auto;
+    padding: 35px 0 0 0;
+    display: grid;
+  }
+.header_FoodEasy_container p{
+  width: 300px;
+}
+  .section2_container--div1{
+    grid-area: 1 / 1 / 3 / 6;
+    border-radius: 16px;
+    display: flex;
+    position: relative;
+  }
+  /*Sliders*/
+  .nine_slider_container{
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+  }
+  .nine_slider_container--item1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px;
+    background-image: url("../img/newHome/section2/foodEasy.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .nine_slider_container--item2{
+    background-image: url("../img/newHome/section2/foto1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .video-container--nineSlider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /************************/
+  .section2_container--div2{
+    overflow: hidden;
+    position: relative;
+    background-image: url("../img/newHome/section2/banner3.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-area: 3 / 1 / 5 / 4;
+    border-radius: 16px;
+  }
+  .section2_container--div3{
+    grid-area: 3 / 4 / 4 / 6;
+    border-radius: 16px;
+
+  }
+  .section2_container--div4{
+    grid-area: 4 / 4 / 5 / 6;
+    border-radius: 16px;
+  }
+  .section2_container--div5{
+    grid-area: 5 / 1 / 7 / 6;
+    border-radius: 16px;
+    background-color: rgb(219, 219, 219);
+  }
+
+
+
+  /*div1*/
+  .header_FoodEasy_container{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .header_FoodEasy_container h4{
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+  }
+  .header_FoodEasy_container h3{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .header_FoodEasy_container div{
+    display: flex;
+    gap: 5px;
+  }
+
+  .proximamente_buttom{
+    cursor: not-allowed;
+  }
+
+  /*section2_container--div2*/
+  .section2_container--div2--container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .picture_me_container{
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .picture_me_container img{
+    display: none;
+  }
+
+  .about_container{
+    z-index: 2;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 0 0 ;
+  }
+  .about_container--h3{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.9px;
+  }
+  .lastname{
+    background: rgb(255,255,255);
+    background: linear-gradient(141deg, rgba(255,255,255,1) 59%, rgba(0,170,255,1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    font-size: 60px;
+    font-weight: bold;
+    text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: moveGradient 5s infinite alternate;
+  }
+  @keyframes moveGradient {
+    0% {
+      background-position: 10% 50%; /* Comienza la animación con la posición inicial */
+    }
+    100% {
+      background-position: 100% 50%; /* Termina la animación con la posición final */
+    }
+  }
+
+  .about_container--div--container{
+    background: rgba(10, 23, 36, 0.67);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(10, 23, 36, 0.28);
+    padding: 40px 23px 23px 23px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .about_container p{
+    font-weight: 300;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+
+  }
+
+  /*section2_container--div3*/
+
+  .second_slider_container{
+    border-radius: 16px;
+    height: 100%;
+  }
+  .second_slider_container--item:nth-child(1){
+    background-image: url("../img/newHome/section2/img3.jpg");
+    background-size: cover;
+  }
+  .header_second_slider{
+    height: 100%;
+    padding: 25px;
+    background-color: #f1c119;
+  }
+  .header_second_slider div{
+    display: flex;
+    gap: 15px;
+   
+  }
+  .video-container {
+    background: rgb(19,56,108);
+    background: linear-gradient(180deg, rgba(19,56,108,1) 50%, rgba(241,241,241,1) 50%);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .fillWidth {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+    /*section2_container--div4*/
+    .fourth_slider_container{
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+    }
+    .fourth_slider_container--item1{
+      background-image: url("../img/newHome/section2/sliders/slider7.jpg");
+      background-size: cover;
+      background-position: bottom;
+    }
+    .header_fourth_slider--item1{
+      padding: 20px 15px 0 25px;
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header_fourth_slider--item1 h4{
+      font-size: 10px;
+      padding: 5px 10px 5px 10px;
+      background-color: #070F1C;
+      color: white;
+      font-weight: bold;
+    }
+    .header_fourth_slider--item1 h3{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .fourth_slider_container--item2{
+      background-image: url("../img/newHome/section2/sliders/slider8.jpg");
+
+      background-size: cover;
+    }
+    .fourth_slider_container--item3 {
+      background: #37559f;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+
+
+
+  /*section2_container--div5*/
+    .firstSliderOf_thirty_slider{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .firstSliderOf_thirty_slider--div1{
+    color: #000000;
+    width: fit-content;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+  }
+  .firstSliderOf_thirty_slider--div1 p{
+    color: #000000;
+  }
+  .firstSliderOf_thirty_slider--div2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .firstSliderOf_thirty_slider--div1 div{
+    display: flex;
+    gap: 10px;
+  }
+  .firstSliderOf_thirty_slider--div2 img{
+    width: 60%;
+  }
+
+  .img_slider3_first_slider{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  .secondSliderOf_thirty_slider{
+    background-image: url("../img/newHome/section2/sliders/slider5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .thirtySliderOf_thirty_slider{
+    background-image: url("../img/newHome/section2/sliders/slider6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*Media Querys*/
+
+  @media only screen and (max-width: 1100px) {
+
+    .nine_slider_container--item1{
+      background-image: url("../img/newHome/section2/foodEasyTable.jpg");
+      justify-content: flex-start;
+    }
+    .section2_container--div2--container{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 500px 0 0 0;
+    }
+    .about_container{
+      width: 90%;
+      padding: 0 0 25px 0;
+    }
+  }
+
+  @media only screen and (max-width: 955px) {
+
+    .section2_container{
+      grid-row-gap: 24px;
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      grid-auto-rows: minmax(300px,auto);
+      grid-auto-columns: auto;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .section2_container--div1 {
+      grid-area: 1 / 1 / 3 / 5;
+      height: 670px;
+    }
+    .nine_slider_container--item1{
+      background-image: url("../img/newHome/section2/foodEasyMovil.jpg");
+      padding: 40px 60px 0 25px;
+    }
+    .video-container--nineSlider{
+      background-image: url("../img/newHome/section2/backgroundMenu.jpg");
+    }
+    .section2_container--div2 {
+      grid-area: 3 / 1 / 5 / 5;
+    }
+    .about_container{
+      width: 90%;
+    }
+    .about_container div{
+    border-radius: 22px;
+    }
+
+    .section2_container--div3 {
+      grid-area: 5 / 1 / 6 / 3;
+    }
+    .section2_container--div4 {
+      grid-area: 5 / 3 / 6 / 5;
+    }
+    .section2_container--div5 {
+      grid-area: 6 / 1 / 7 / 5;
+    }
+
+    /*div 5*/
+    .firstSliderOf_thirty_slider--div1{
+      position: relative;
+      padding: 20px;
+    }
+    .firstSliderOf_thirty_slider--div2 img{
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 734px) {
+    .section2_container{
+      margin-top: 0;
+    }
+    .section2_container--div3 {
+      grid-area: 5 / 1 / 6 / 5;
+    }
+    .section2_container--div4 {
+      grid-area: 6 / 1 / 7 / 5;
+    }
+    .section2_container--div5 {
+      grid-area: 7 / 1 / 9 / 5;
+    }
+
+    .firstSliderOf_thirty_slider{
+      justify-content: space-between;
+    }
+    .thirtySliderOf_thirty_slider{
+      background-position:-285px;
+    }
+
+  }

@@ -1,0 +1,130 @@
+
+
+:root{
+
+	--gris: #707070;;
+}
+
+.fixed{
+    position: fixed;
+    z-index: 100;
+}
+
+
+
+/****Titulo***/
+
+.disenoWeb__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(231, 231, 231);;
+
+    
+}
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 150px;
+    z-index: 15;
+}
+.title__div--container{
+    width: 100%;
+    max-width: 1321px;
+
+}
+
+.title2{
+    margin-top: 12vh;
+    margin-bottom: -15px;
+}
+
+
+
+.title h2{
+    font-size: 117px;    
+    color: var(--gris);
+    margin-bottom: 10px;
+
+}
+.title p{
+    font-size: 19px;
+    color: var(--gris);
+    margin-left: 10px;
+}
+
+
+/***links***/
+
+
+.logoGesthor{
+    width: 20px;
+}
+
+
+.figmaLogo{
+    width: 20px;
+}
+
+
+
+/**********estilos generales*******/
+
+.iconoLink{
+    width: 50px;
+    font-size: 50px;
+    color: var(--gris);
+    transition: all .1s linear;
+}
+
+
+.iconoLink:hover{
+    transform: scale(110%);
+    color: #32AE00;
+}
+
+
+
+.gracias{
+    text-align: center;
+    margin: 100px 0 15px 0;
+}
+
+
+
+/****Modo movil***/
+
+@media only screen and (max-width: 912px){
+    .title{
+
+        margin:80px 0 30px 0;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 595px){
+
+    .title h2{
+        font-size: 90px;
+    }
+
+}
+
+@media only screen and (max-width: 440px){
+    .title h2{
+        
+        font-size: 75px;
+    }
+
+    .title p{
+        font-size: 20px;
+    }
+}

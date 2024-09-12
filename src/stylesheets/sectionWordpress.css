@@ -1,0 +1,156 @@
+/***********************Página Grid***************/
+
+.sectionWordpress_container{
+  width: 95%;
+  max-width: 1600px;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  margin: 0 auto 0 auto;
+  padding: 35px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4);
+}
+
+/***********************div1***********************/
+.sectionWordpress_container--div1{
+  grid-area: 1 / 1 / 2 / 4;
+  overflow: hidden;
+  background-color: #0E2E52;
+  border-radius: 16px;
+  padding: 27px 32px 0 36px;
+}
+.sectionWordpress_container--div1 div:nth-child(1){
+  padding-bottom: 32px;
+}
+.sectionWordpress_container--div1 img{
+  height: 220px !important;
+}
+
+/***********************div2***********************/
+
+.sectionWordpress_container--div2{
+  background-color: #FFFCF3;
+  grid-area: 2 / 1 / 5 / 2;
+  padding: 40px 32px 60px 36px;
+  background-color: #FFFCF3;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.sectionWordpress_container--div2 .h4_title{
+  background-color: black;
+}
+
+/***********************div3***********************/
+.sectionWordpress_container--div3{
+  grid-area: 2 / 2 / 5 / 4;
+  padding: 40px 0px 39px 26px;
+  background-color: #EBB481;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.sectionWordpress_container--div3 img:nth-child(2){
+  width: 484px;
+  height: 389px;
+}
+.sectionWordpress_container--div3 img:nth-child(3){
+  width: 198px;
+  height: 179px;
+  border-radius: 10px;
+
+}
+.sectionWordpress_container--div3 img:nth-child(4){
+  width: 146px;
+  height: 95px;
+  border-radius: 10px;
+}
+.sectionWordpress_container--div3 img:nth-child(5){
+  width: 222px;
+  height: 144px;
+  border-radius: 10px;
+}
+.sectionWordpress_container--div3 img:nth-child(6){
+  width: 84px;
+  height: 83px;
+  border-radius: 10px;
+}
+.sectionWordpress_container--div3 .h4_title{
+  background-color: black;
+}
+
+/***********************div4***********************/
+.sectionWordpress_container--div4{
+  grid-area: 1 / 4 / 5 / 5;
+  padding: 77px 30px 48px 26px;
+  background-color: #252A2F;
+  border-radius: 16px;
+  overflow: hidden;
+}
+/*******************************************Estilos moviles *******************************/
+/*Modo Tableta*/
+@media only screen and (max-width: 1290px) {
+  .sectionWordpress_container{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5);
+  }
+  .sectionWordpress_container--div1{
+    grid-area: 1 / 1 / 2 / 4;
+    padding: 27px 24px 0 24px;
+  }
+  .sectionWordpress_container--div2{
+    grid-area: 2 / 1 / 5 / 2;
+    padding: 27px 24px 80px 24px;
+  }
+  .sectionWordpress_container--div3{
+    grid-area: 2 / 2 / 5 / 4;
+  }
+  .sectionWordpress_container--div4{
+    grid-area: 5 / 1 / 6 / 4;
+  }
+
+  .sectionWordpress_container--div4{
+    flex-direction: row;
+    padding: 27px 32px 20px 36px;
+  }
+  .sectionWordpress_container--div4 img{
+    object-fit: contain;
+    height: 280px;
+  }
+
+}
+
+/*Modo Movil*/
+
+@media only screen and (max-width: 755px) {
+
+  .sectionWordpress_container{
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+  .sectionWordpress_container--div1{
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .sectionWordpress_container--div2{
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .sectionWordpress_container--div3{
+    grid-area: 2 / 1 / 4 / 2;
+  }
+  .sectionWordpress_container--div4{
+    grid-area: 5 / 1 / 6 / 2;
+    flex-direction: column;
+  }
+
+  .sectionWordpress_container--div1 img {
+    height: 167px !important;
+  }
+  .sectionWordpress_container--div3 img:nth-child(2) {
+    height: 252px;
+  }
+}
+
