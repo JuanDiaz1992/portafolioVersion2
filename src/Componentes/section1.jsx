@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../stylesheets/section1.css";
 import {
   Tooltip,
@@ -29,16 +29,16 @@ import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import logo from "../img/newHome/section1/Logo-JuanDiaz-4.webp";
 import logoFondo from "../img/newHome/section1/LogofondoClaro.webp";
-import logo1 from "../img/newHome/section1/logosFlotantes/1.png";
-import logo2 from "../img/newHome/section1/logosFlotantes/2.png";
-import logo3 from "../img/newHome/section1/logosFlotantes/3.png";
-import logo4 from "../img/newHome/section1/logosFlotantes/4.png";
-import logo5 from "../img/newHome/section1/logosFlotantes/5.png";
-import logo6 from "../img/newHome/section1/logosFlotantes/6.png";
-import logo7 from "../img/newHome/section1/logosFlotantes/7.png";
+import logo1 from "../img/newHome/section1/logosFlotantes/1.webp";
+import logo2 from "../img/newHome/section1/logosFlotantes/2.webp";
+import logo3 from "../img/newHome/section1/logosFlotantes/3.webp";
+import logo4 from "../img/newHome/section1/logosFlotantes/4.webp";
+import logo5 from "../img/newHome/section1/logosFlotantes/5.webp";
+import logo6 from "../img/newHome/section1/logosFlotantes/6.webp";
+import logo7 from "../img/newHome/section1/logosFlotantes/7.webp";
 import Slider from "./componentesNewHome/Firstslider";
 
-function Section1(props) {
+function Section1({visiteWeb}) {
   const logos = [
     logo1,logo2,logo3,logo4,logo5,logo6,logo7
   ]
@@ -57,28 +57,11 @@ function Section1(props) {
     [<SiAdobephotoshop />, "Photoshop"],
     [<SiAdobeillustrator />, "Illustrator"],
   ];
-  const logosFull = [
-    [logo1, 0.3, "Haddy"],
-    [logo2, 0.4, "Palacios"],
-    [logo3, 0.5, "Paola Leon"],
-    [logo4, 0.6, "Gesthor", "https://gesthor.com.co/"],
-    [logo6, 0.8, "Dani", "https://gesthor.com.co/spa/"],
-    [logo5, 0.7, "Astracol"],
-    [logo3, 0.9, "Paola Leon"],
-    [logo1, 0.1, "Haddy"],
-    [logo7, 0.12, "Corma"],
-  ];
 
-  const [isVisible, setIsVisible] = useState(false);
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     threshold: 0.1,
   });
-  useEffect(() => {
-    if (inView) {
-      // Realizar la acción que deseas ejecutar
-      setIsVisible(true); // Marcar que la acción se ha ejecutado
-    }
-  }, [inView]);
+
 
   const [changePage, setChangePage] = useState(false);
   const openNewPage = () => {
@@ -158,11 +141,10 @@ function Section1(props) {
         <div className="section_container-div3">
           <div className="div__container-div3--icons">
             <h3 className="div__container-div3--icons--h3">Tecnologías</h3>
-
             <div className="div__container__icons--container">
               {skills.map((skill) => (
-                <div className="iconoc" key={skill}>
-                  <Tooltip content={skill[1]} color="default">
+                <div className="iconoc" key={skill[1]}>
+                  <Tooltip content={skill[1]} color="default" >
                     <Button color="foreground" variant="flat">
                       {skill[0]}
                     </Button>
@@ -175,7 +157,7 @@ function Section1(props) {
         <div className="section_container-div4">
           <div className="section_container-div4--principalContainer" ref={ref}>
               {logos.map((logo,index)=>
-                <img src={logo} alt="logo1" className={"logo_design"+index} />
+                <img src={logo} alt="logo1" className={"logo_design"+index} key={index}/>
               )}
           </div>
           <div className="section_container-div4--text_container">
@@ -201,7 +183,7 @@ function Section1(props) {
           </div>
         </div>
         <div className="section_container-div5">
-          <Slider />
+          <Slider visiteWeb={visiteWeb} />
         </div>
 
         <div className="section_container-div6">

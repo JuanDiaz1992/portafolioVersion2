@@ -6,12 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import video from "../../img/newHome/section2/video1.2.1.mp4";
-function Slider() {
-  const navigate = (url) => {
-    setTimeout(() => {
-      window.open(url, "_blank");
-    }, 600);
-  };
+function Slider({visiteWeb}) {
+
   return (
     <>
       <Swiper
@@ -24,7 +20,7 @@ function Slider() {
           <div className="header_card_slider header_second_slider">
             <h4 className="h4_title bg-black text-white">Romofyi</h4>
             <h3 className="h3_hiper_small_title">Tienda de ropa</h3>
-            <p>
+            <p className="max-w-[500px] w-[100%] mb-[25px]">
               Se desarrollo una tienda en línea utilizando el framework Django y
               JavaScript. Incluye funcionalidades como gestión de usuarios,
               combinaciones de productos según tallas y colores, así como una
@@ -35,7 +31,7 @@ function Slider() {
             <div>
               <Button
                 onClick={() =>
-                  navigate("https://juandiazv.pythonanywhere.com/")
+                  visiteWeb("https://juandiazv.pythonanywhere.com/")
                 }
                 color="danger"
                 endContent={<BiStore />}
@@ -45,7 +41,7 @@ function Slider() {
                 <Tooltip content={"Django"} color="default">
                 <Button
                   onClick={() =>
-                    navigate("https://github.com/JuanDiaz1992/eccomerce")
+                    visiteWeb("https://github.com/JuanDiaz1992/eccomerce")
                   }
                   isIconOnly
                   color="primary"
@@ -58,7 +54,7 @@ function Slider() {
         </SwiperSlide>
 
         <SwiperSlide className="video-container">
-          <video autoplay="autoplay" loop="loop" muted playsinline preload="auto"  className="fillWidth visible-lg">
+          <video autoPlay="autoplay" loop="loop" muted playsInline preload="auto"  className="fillWidth visible-lg">
             <source src={video} type="video/mp4"></source>
           </video>
         </SwiperSlide>

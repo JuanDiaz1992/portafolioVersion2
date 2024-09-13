@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import img1 from "../../img/newHome/section3/3dimg1.png";
+import img1 from "../../img/newHome/section3/3dimg1.webp";
 function Slider() {
   return (
     <>
@@ -24,12 +24,8 @@ function Slider() {
             <div className="header_fourth_slider--item1">
               <h4 data-atropos-offset="3">Interfaces</h4>
               <h3 data-atropos-offset="10">Diseño web</h3>
-              <p data-atropos-offset="1">
-                Aquí están algunos proyectos en Figma donde
-                <br />
-                me encargaron diseñar exclusivamente la interfaz gráfica.
-                <br />
-                <br />
+              <p data-atropos-offset="1" className="max-w-[290px] w-[100%] text-black mb-[15px]">
+                Aquí están algunos proyectos en Figma donde me encargaron diseñar exclusivamente la interfaz gráfica.
               </p>
             </div>
             <div

@@ -61,23 +61,21 @@
 .sectionWordpress_container--div3 img:nth-child(3){
   width: 198px;
   height: 179px;
-  border-radius: 10px;
+
 
 }
 .sectionWordpress_container--div3 img:nth-child(4){
   width: 146px;
   height: 95px;
-  border-radius: 10px;
+
 }
 .sectionWordpress_container--div3 img:nth-child(5){
   width: 222px;
   height: 144px;
-  border-radius: 10px;
 }
 .sectionWordpress_container--div3 img:nth-child(6){
   width: 84px;
   height: 83px;
-  border-radius: 10px;
 }
 .sectionWordpress_container--div3 .h4_title{
   background-color: black;

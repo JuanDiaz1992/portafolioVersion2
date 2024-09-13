@@ -7,9 +7,9 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
 
-import img1 from "../../img/newHome/section2/bannerf-3.png";
-import img2 from "../../img/newHome/section2/personal.png";
-function Slider() {
+import img1 from "../../img/newHome/section2/bannerf-3.webp";
+import img2 from "../../img/newHome/section2/personal.webp";
+function Slider({visiteWeb}) {
   const objects = {
     offscreen: {
       y: 30,
@@ -20,11 +20,6 @@ function Slider() {
         type: "spring",
       },
     },
-  };
-  const navigate = (url) => {
-    setTimeout(() => {
-      window.open(url, "_blank");
-    }, 600);
   };
   return (
     <>
@@ -38,10 +33,10 @@ function Slider() {
           <div className="header_card_slider firstSliderOf_thirty_slider--div1">
             <h4 className="h4_title bg-black text-white">Gesthor Design</h4>
             <h3 className="h3_small_title">Empresa Servicios Web</h3>
-            <p>
+            <p className="max-w-[400px] w-[100%] mb-[25px]">
               La página web diseñada para
               Gesthor Design es un logro en sí,
-              construida desde cero con unacombinación
+              construida desde cero con una combinación
               de tecnologías clave como HTML, CSS y
               JavaScript. Esta sinergia de lenguajes
               de programación dio vida a una interfaz
@@ -50,14 +45,14 @@ function Slider() {
             </p>
             <div>
               <Button
-                onClick={() => navigate("https://gesthordesign.com")}
+                onClick={() => visiteWeb("https://gesthordesign.com")}
                 color="danger"
               >
                 Visita la web
               </Button>
               <Button
                 onClick={() =>
-                  navigate("https://github.com/JuanDiaz1992/gesthor_design")
+                  visiteWeb("https://github.com/JuanDiaz1992/gesthor_design")
                 }
                 isIconOnly
                 color="primary"
@@ -67,14 +62,15 @@ function Slider() {
             </div>
           </div>
           <div className="firstSliderOf_thirty_slider--div2">
-            <img src={img1} alt="" />
+            <img src={img1} alt=""  loading="lazy"/>
             <motion.img
               className="img_slider3_first_slider"
               src={img2}
-              alt=""
+              alt="Gesthor Design"
               variants={objects}
               initial="offscreen"
               whileInView="onscreen"
+
             />
           </div>
         </SwiperSlide>

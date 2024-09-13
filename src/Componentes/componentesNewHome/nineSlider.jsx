@@ -22,7 +22,7 @@ function Slider() {
         <div className="header_FoodEasy_container">
             <h4>FoodEasy</h4>
             <h3>Restaurante</h3>
-            <p>
+            <p className="mb-[15px]">
               Este software creado en React JS, PHP y Node JS
               se implemento como una solución para
               restaurantes en donde se lleva el menú diario,

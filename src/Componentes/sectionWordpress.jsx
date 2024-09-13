@@ -10,7 +10,7 @@ import kb1 from "../img/newHome/wordpressSection/eryi_6.webp";
 import kb2 from "../img/newHome/wordpressSection/Banner2.webp";
 import kb3 from "../img/newHome/wordpressSection/suzanne_howes_k_b_fine_art_5.webp";
 import kb4 from "../img/newHome/wordpressSection/suzanne_howes_k_b_fine_art_1.webp";
-function SectionWordpress(props){
+function SectionWordpress({visiteWeb}){
     const createVariants = (x, rotate,rotate_final) => ({
         offscreen: {
             x: x,
@@ -26,20 +26,19 @@ function SectionWordpress(props){
             },
         },
     });
-    const navigate = props.visiteWeb;
     return(
         <section className="sectionWordpress_container">
             <div className="sectionWordpress_container--div1 flex lg:justify-between justify-center items-end flex-wrap">
                 <div className="flex flex-col gap-2 pb-8 w-[100%] lg:w-[fit-content]">
                     <h4 className="h4_title text-black bg-white">H&C</h4>
                     <h3 className="h3_small_title text-white">Cocinas y baños</h3>
-                    <p className="max-w-xs text-white ">
+                    <p className="max-w-xs text-white mb-[15px]">
                         Desarrollo web para la empresa H&C, donde se exhiben todos sus productos. Además, se trabajó minuciosamente en el posicionamiento SEO para mejorar su visibilidad en los motores de búsqueda.
                     </p>
                     <Tooltip content={"Visitar la web"} color="default">
                         <Button className="svg_tecnology_container"
                             onClick={() =>
-                                navigate(
+                                visiteWeb(
                                 "https://hckitchenandbathllc.com/"
                                 )
                             }
@@ -50,7 +49,7 @@ function SectionWordpress(props){
                         </Button>
                     </Tooltip>
                 </div>
-                <img src={hc} alt="hc" width="550" height="220"/>
+                <img src={hc} alt="hc" width="550" height="220" loading="lazy"/>
             </div>
 
 
@@ -58,12 +57,12 @@ function SectionWordpress(props){
                 <div className="flex flex-col gap-2 pb-8">
                         <h4 className="h4_title text-white">CEPHEUS</h4>
                         <h3 className="h3_hiper_small_title text-black">Inmoviliaria</h3>
-                        <p className="max-w-xs text-black ">
+                        <p className="max-w-xs text-black mb-[15px]">
                             Desarrollo web para inmoviliaria en Whasintong, donde enseñan algunos de sus departamentos disponibles.                    </p>
                         <Tooltip content={"Visitar la web"} color="default">
                             <Button className="svg_tecnology_container"
                                 onClick={() =>
-                                    navigate(
+                                    visiteWeb(
                                     "https://alfonsoq172.sg-host.com/"
                                     )
                                 }
@@ -74,7 +73,7 @@ function SectionWordpress(props){
                             </Button>
                         </Tooltip>
                 </div>
-                <img src={cepheus} alt="cepheus" />
+                <img src={cepheus} alt="cepheus" loading="lazy" />
             </div>
 
 
@@ -82,13 +81,13 @@ function SectionWordpress(props){
                 <div className="flex flex-col gap-2 pb-8 w-full z-[4]">
                     <h4 className="h4_title text-white">KB FINE ART</h4>
                     <h3 className="h3_small_title text-black">Galería de Arte</h3>
-                    <p className="max-w-xs text-black ">
+                    <p className="max-w-xs text-black mb-[15px]">
                     Desarrollo web para una tienda de arte, diseñada para exhibir una amplia y variada colección de obras de arte originales y únicas.
                     </p>
                     <Tooltip content={"Visitar la web"} color="default">
                         <Button className="svg_tecnology_container"
                             onClick={() =>
-                                navigate(
+                                visiteWeb(
                                 "https://kbfineartgallery.com/"
                                 )
                             }
@@ -99,7 +98,7 @@ function SectionWordpress(props){
                         </Button>
                     </Tooltip>
                 </div>
-                <img src={kbFineArt} alt="kbFineArt" className="z-[2]"/>
+                <img src={kbFineArt} alt="kbFineArt" className="z-[2]" loading="lazy"/>
                 <motion.img
                     src={kb1}
                     alt=""
@@ -107,6 +106,7 @@ function SectionWordpress(props){
                     variants={createVariants(30, -18.67, -25)}
                     initial="offscreen"
                     whileInView="onscreen"
+                    loading="lazy"
                     />
 
                     <motion.img
@@ -116,6 +116,7 @@ function SectionWordpress(props){
                     variants={createVariants(50, 10, 15)}
                     initial="offscreen"
                     whileInView="onscreen"
+                    loading="lazy"
                     />
 
                     <motion.img
@@ -125,6 +126,7 @@ function SectionWordpress(props){
                     variants={createVariants(20, 30, 20)}
                     initial="offscreen"
                     whileInView="onscreen"
+                    loading="lazy"
                     />
 
                     <motion.img
@@ -134,6 +136,7 @@ function SectionWordpress(props){
                     variants={createVariants(40, -10, -8)} // Personaliza más valores
                     initial="offscreen"
                     whileInView="onscreen"
+                    loading="lazy"
                     />
 
             </div>
@@ -143,13 +146,13 @@ function SectionWordpress(props){
                 <div className="flex flex-col gap-2 pb-8">
                     <h4 className="h4_title text-black bg-white">BMA</h4>
                     <h3 className="h3_small_title text-white">Patios y piscinas</h3>
-                    <p className="max-w-xs text-white ">
+                    <p className="max-w-xs text-white mb-[15px]">
                         Desarrollo de una página web para mostrar los productos de la empresa, con un enfoque especial en su servicio destacado, la creación de piscinas.                    
                     </p>
                     <Tooltip content={"Visitar la web"} color="default">
                         <Button className="svg_tecnology_container"
                             onClick={() =>
-                                navigate(
+                                visiteWeb(
                                 "https://bmalandscaping.com/"
                                 )
                             }
@@ -160,7 +163,7 @@ function SectionWordpress(props){
                         </Button>
                     </Tooltip>
                 </div>
-                <img src={bma} alt="" />
+                <img src={bma} alt="bma" loading="lazy"/>
             </div>
 
         </section>

@@ -4,12 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-function Slider() {
-  const navigate = (url) => {
-    setTimeout(() => {
-      window.open(url, "_blank");
-    }, 600);
-  };
+function Slider({visiteWeb}) {
+
   return (
     <>
       <Swiper
@@ -21,14 +17,11 @@ function Slider() {
           <div className="header_fourth_slider--item1">
             <h4>Crediart</h4>
             <h3>Cooperativa</h3>
-            <p>
-              Un diseño desactualizado y poco intuitivo <br />
-              se fusionó en un lenguaje de diseño <br />
-              coherente que resulta moderno,<br />
-              flexible y elegante.
+            <p className="max-w-[300px] mb-[15px]">
+              Un diseño desactualizado y poco intuitivo se fusionó en un lenguaje de diseño coherente que resulta moderno, flexible y elegante.
             </p>
             <Button
-              onClick={() => navigate("https://crediar.com.co/")}
+              onClick={() => visiteWeb("https://crediar.com.co/")}
               color="primary"
             >
               Visitar web

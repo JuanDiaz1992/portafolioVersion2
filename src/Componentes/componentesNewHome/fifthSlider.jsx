@@ -6,9 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-import woman from "../../img/newHome/section3/dani.png";
-import plants from "../../img/newHome/section3/daniPlants.png";
-function Slider() {
+import woman from "../../img/newHome/section3/dani.webp";
+import plants from "../../img/newHome/section3/daniPlants.webp";
+function Slider({visiteWeb}) {
   const objects = {
     offscreen: {
       scale: 0.9,
@@ -19,11 +19,6 @@ function Slider() {
     },
   };
 
-  const navigate = (url) => {
-    setTimeout(() => {
-      window.open(url, "_blank");
-    }, 600);
-  };
   return (
     <>
       <Swiper
@@ -36,14 +31,14 @@ function Slider() {
           <div className="header_card_slider fifth_slider_container-header_card ">
             <h4 className="h4_title bg-black text-white">Mango Biche Mía</h4>
             <h3 className="h3_small_title">Franquicia</h3>
-            <p>
+            <p className="max-w-[400px] w-[100%] mb-[15px]">
               Desarrollé una web para la franquicia
               Mango Biche Mía, con la finalizad de dar a
               conocer los servicios que presta la misma
               e invitar al visitante a ser parte de la franquicia.
             </p>
             <Button
-              onClick={() => navigate("https://www.mangobichemia.com/")}
+              onClick={() => visiteWeb("https://www.mangobichemia.com/")}
               color="warning"
               endContent={<BiStore />}
             >

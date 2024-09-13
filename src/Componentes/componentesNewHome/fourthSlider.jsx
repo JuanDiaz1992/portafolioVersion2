@@ -22,7 +22,7 @@ function Slider() {
           <div className="header_fourth_slider--item1">
             <h4>CIAF</h4>
             <h3>Gestor materias</h3>
-            <p>
+            <p className="max-w-[310px] w-[100%] mb-[15px]">
               Software creado en Django que permite a los estudiantes de CIAF
               matricular materias de la universidad.
               <br />

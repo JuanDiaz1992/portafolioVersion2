@@ -36,13 +36,13 @@
     justify-content: center;
     align-items: flex-start;
     padding: 48px;
-    background-image: url("../img/newHome/section2/foodEasy.jpg");
+    background-image: url("../img/newHome/section2/foodEasy.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .nine_slider_container--item2{
-    background-image: url("../img/newHome/section2/foto1.jpg");
+    background-image: url("../img/newHome/section2/foto1.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,7 +58,7 @@
   .section2_container--div2{
     overflow: hidden;
     position: relative;
-    background-image: url("../img/newHome/section2/banner3.jpg");
+    background-image: url("../img/newHome/section2/banner3.webp");
     background-position: center;
     background-size: cover;
     grid-area: 3 / 1 / 5 / 4;
@@ -194,7 +194,7 @@
     height: 100%;
   }
   .second_slider_container--item:nth-child(1){
-    background-image: url("../img/newHome/section2/img3.jpg");
+    background-image: url("../img/newHome/section2/img3.webp");
     background-size: cover;
   }
   .header_second_slider{
@@ -229,7 +229,7 @@
       border-radius: 16px;
     }
     .fourth_slider_container--item1{
-      background-image: url("../img/newHome/section2/sliders/slider7.jpg");
+      background-image: url("../img/newHome/section2/sliders/slider7.webp");
       background-size: cover;
       background-position: bottom;
     }
@@ -253,7 +253,7 @@
       font-weight: bold;
     }
     .fourth_slider_container--item2{
-      background-image: url("../img/newHome/section2/sliders/slider8.jpg");
+      background-image: url("../img/newHome/section2/sliders/slider8.webp");
 
       background-size: cover;
     }
@@ -306,13 +306,13 @@
     z-index: 1;
   }
   .secondSliderOf_thirty_slider{
-    background-image: url("../img/newHome/section2/sliders/slider5.jpg");
+    background-image: url("../img/newHome/section2/sliders/slider5.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
   .thirtySliderOf_thirty_slider{
-    background-image: url("../img/newHome/section2/sliders/slider6.jpg");
+    background-image: url("../img/newHome/section2/sliders/slider6.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -323,7 +323,7 @@
   @media only screen and (max-width: 1100px) {
 
     .nine_slider_container--item1{
-      background-image: url("../img/newHome/section2/foodEasyTable.jpg");
+      background-image: url("../img/newHome/section2/foodEasyTable.webp");
       justify-content: flex-start;
     }
     .section2_container--div2--container{
@@ -353,11 +353,11 @@
       height: 670px;
     }
     .nine_slider_container--item1{
-      background-image: url("../img/newHome/section2/foodEasyMovil.jpg");
+      background-image: url("../img/newHome/section2/foodEasyMovil.webp");
       padding: 40px 60px 0 25px;
     }
     .video-container--nineSlider{
-      background-image: url("../img/newHome/section2/backgroundMenu.jpg");
+      background-image: url("../img/newHome/section2/backgroundMenu.webp");
     }
     .section2_container--div2 {
       grid-area: 3 / 1 / 5 / 5;
