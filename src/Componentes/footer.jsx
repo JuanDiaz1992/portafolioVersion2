@@ -13,12 +13,14 @@ function Section2(props) {
               <a
                 href="https://www.linkedin.com/in/juan-camilo-diaz-valencia-020840141"
                 target="blank"
+                aria-label="linkedin"
               >
                 <FaLinkedin />
               </a>
             </div>
             <div className="contact_icons">
-              <a href="mailto:juannavegante2010@gmail.com?subject=Greetings">
+              <a href="mailto:juannavegante2010@gmail.com?subject=Greetings"
+                  aria-label="E-mail">
                 <SiGmail />
               </a>
             </div>
@@ -26,12 +28,15 @@ function Section2(props) {
               <a
                 href="https://api.whatsapp.com/send?phone=573008080525&text=Hola%20Juan%20D%C3%ADaz%2C%20vi%20tu%20web"
                 target="blank"
+                aria-label="whatsapp"
               >
                 <SiWhatsapp />
               </a>
             </div>
             <div className="contact_icons">
-              <a href="https://github.com/JuanDiaz1992" target="blank">
+              <a href="https://github.com/JuanDiaz1992" target="blank"
+                aria-label="whatsapp"
+                >
                 <FaGithub />
               </a>
             </div>

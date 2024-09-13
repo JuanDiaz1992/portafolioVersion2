@@ -22,7 +22,7 @@ function Slider() {
             rotateYMax={3}
           >
             <div className="header_fourth_slider--item1">
-              <h4 data-atropos-offset="3">Interfaces</h4>
+              <h2 data-atropos-offset="3">Interfaces</h2>
               <h3 data-atropos-offset="10">Diseño web</h3>
               <p data-atropos-offset="1" className="max-w-[290px] w-[100%] text-black mb-[15px]">
                 Aquí están algunos proyectos en Figma donde me encargaron diseñar exclusivamente la interfaz gráfica.

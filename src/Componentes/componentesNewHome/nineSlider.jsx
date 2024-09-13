@@ -20,7 +20,7 @@ function Slider() {
       >
         <SwiperSlide className="nine_slider_container--item1">
         <div className="header_FoodEasy_container">
-            <h4>FoodEasy</h4>
+            <h2>FoodEasy</h2>
             <h3>Restaurante</h3>
             <p className="mb-[15px]">
               Este software creado en React JS, PHP y Node JS
@@ -39,6 +39,7 @@ function Slider() {
                   }
                   isIconOnly
                   color="default"
+                  aria-label="Gestor Restaurante Frontend"
                 >
                   <FaReact />
                 </Button>
@@ -52,6 +53,7 @@ function Slider() {
                   }
                   isIconOnly
                   color="default"
+                  aria-label="Gestor Restaurante Back"
                 >
                   <FaPhp />
                 </Button>

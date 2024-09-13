@@ -31,7 +31,7 @@ function Slider({visiteWeb}) {
       >
         <SwiperSlide className="firstSliderOf_thirty_slider">
           <div className="header_card_slider firstSliderOf_thirty_slider--div1">
-            <h4 className="h4_title bg-black text-white">Gesthor Design</h4>
+            <h2 className="h4_title bg-black text-white">Gesthor Design</h2>
             <h3 className="h3_small_title">Empresa Servicios Web</h3>
             <p className="max-w-[400px] w-[100%] mb-[25px]">
               La página web diseñada para
@@ -46,7 +46,8 @@ function Slider({visiteWeb}) {
             <div>
               <Button
                 onClick={() => visiteWeb("https://gesthordesign.com")}
-                color="danger"
+                color="success"
+                aria-label="gesthordesign code"
               >
                 Visita la web
               </Button>
@@ -56,6 +57,7 @@ function Slider({visiteWeb}) {
                 }
                 isIconOnly
                 color="primary"
+                aria-label="gesthordesign"
               >
                 <IoLogoJavascript />
               </Button>

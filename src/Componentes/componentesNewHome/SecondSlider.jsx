@@ -18,8 +18,8 @@ function Slider({visiteWeb}) {
         <SwiperSlide className="second_slider_container--item"></SwiperSlide>
         <SwiperSlide className="">
           <div className="header_card_slider header_second_slider">
-            <h4 className="h4_title bg-black text-white">Romofyi</h4>
-            <h3 className="h3_hiper_small_title">Tienda de ropa</h3>
+            <h2 className="h4_title bg-black text-white">Romofyi</h2>
+            <h3 className="h3_hiper_small_title text-black">Tienda de ropa</h3>
             <p className="max-w-[500px] w-[100%] mb-[25px]">
               Se desarrollo una tienda en línea utilizando el framework Django y
               JavaScript. Incluye funcionalidades como gestión de usuarios,
@@ -33,8 +33,9 @@ function Slider({visiteWeb}) {
                 onClick={() =>
                   visiteWeb("https://juandiazv.pythonanywhere.com/")
                 }
-                color="danger"
+                color="default"
                 endContent={<BiStore />}
+                aria-label="eccomerce"
               >
                 Visita la tienda
               </Button>
@@ -45,6 +46,7 @@ function Slider({visiteWeb}) {
                   }
                   isIconOnly
                   color="primary"
+                  aria-label="eccomerce django"
                 >
                   <DiDjango />
                 </Button>

@@ -30,7 +30,7 @@ function Slider() {
         </SwiperSlide>
         <SwiperSlide className="sixth_slider_container--item2">
           <div className="header_card_slider sixth_slider_container-header_card-item2 ">
-            <h4 className="h4_title bg-white text-black">WineSur</h4>
+            <h2 className="h4_title bg-white text-black">WineSur</h2>
             <h3 className="h3_hiper_small_title">Landing tienda Vinos</h3>
             <p className="max-w-[290px] w-[100%] text-white mb-[15px]">
               Proyecto de landing page para una tienda de vinos, donde el diseño y la pasión por el vino se combinan en una experiencia cautivadora.
@@ -41,6 +41,7 @@ function Slider() {
               }
               isIconOnly
               color="primary"
+              aria-label="WineSur"
             >
               <FaJs />
             </Button>
@@ -48,7 +49,7 @@ function Slider() {
         </SwiperSlide>
         <SwiperSlide className="sixth_slider_container--item3">
           <div className="header_card_slider sixth_slider_container-header_card-item3 ">
-            <h4 className="h4_title bg-black text-white">Gesthor</h4>
+            <h2 className="h4_title bg-black text-white">Gesthor</h2>
             <h3 className="h3_hiper_small_title">Ingeniería eléctrica</h3>
             <p className="max-w-[290px] w-[100%] text-white mb-[15px]">
               Web del grupo gesthor para la parte
@@ -58,6 +59,7 @@ function Slider() {
               <Button
                 onClick={() => navigate("https://gesthor.com.co/")}
                 color="danger"
+                aria-label="gesthor"
               >
                 Visita la web
               </Button>
@@ -75,7 +77,7 @@ function Slider() {
         </SwiperSlide>
         <SwiperSlide className="sixth_slider_container--item4">
           <div className="header_card_slider sixth_slider_container-header_card-item4 ">
-            <h4 className="h4_title bg-black text-white">Imanku Solutions</h4>
+            <h2 className="h4_title bg-black text-white">Imanku Solutions</h2>
             <h3 className="h3_hiper_small_title">Contador de votos</h3>
             <p className="max-w-[290px] w-[100%] text-white mb-[15px]">
               Se ha creado un software para el conteo de votos de elecciones en los últimos años para Estados Unidos. Procesa datos de Excel o JSON, realiza conteos y estadísticas específicas para el cliente. Permite ingresar votos individuales. Para el ingreso, el usuario debe estar registrado.
@@ -88,6 +90,7 @@ function Slider() {
                   )
                 }
                 isIconOnly
+                aria-label="Imanku Solutions"
                 color="primary"
               >
                 <FaPython />
@@ -97,7 +100,7 @@ function Slider() {
         </SwiperSlide>
         <SwiperSlide className="sixth_slider_container--item5">
           <div className="header_card_slider sixth_slider_container-header_card-item5 ">
-            <h4 className="h4_title bg-black text-white">BOOCIC</h4>
+            <h2 className="h4_title bg-black text-white">BOOCIC</h2>
             <h3 className="h3_hiper_small_title">Bienestar personal</h3>
             <p className="max-w-[290px] w-[100%] text-white mb-[15px]">
             Landing page cuya finalidad es ser una plataforma que ofrece recursos y herramientas para mejorar el bienestar personal y ayudar a los usuarios a alcanzar sus objetivos.
@@ -106,6 +109,7 @@ function Slider() {
               onClick={() => navigate("https://github.com/JuanDiaz1992/BOOCIC")}
               isIconOnly
               color="primary"
+              aria-label="BOOCIC"
             >
               <FaJs />
             </Button>

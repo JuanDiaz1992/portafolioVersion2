@@ -29,7 +29,7 @@ function Slider({visiteWeb}) {
       >
         <SwiperSlide className="fifth_slider_container--item1">
           <div className="header_card_slider fifth_slider_container-header_card ">
-            <h4 className="h4_title bg-black text-white">Mango Biche Mía</h4>
+            <h2 className="h4_title bg-black text-white">Mango Biche Mía</h2>
             <h3 className="h3_small_title">Franquicia</h3>
             <p className="max-w-[400px] w-[100%] mb-[15px]">
               Desarrollé una web para la franquicia
@@ -40,6 +40,7 @@ function Slider({visiteWeb}) {
             <Button
               onClick={() => visiteWeb("https://www.mangobichemia.com/")}
               color="warning"
+              aria-label="Mango Biche Mía"
               endContent={<BiStore />}
             >
               Visita la web

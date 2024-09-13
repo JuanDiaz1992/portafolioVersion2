@@ -36,7 +36,7 @@ function SectionWordpress({visiteWeb}){
                         Desarrollo web para la empresa H&C, donde se exhiben todos sus productos. Además, se trabajó minuciosamente en el posicionamiento SEO para mejorar su visibilidad en los motores de búsqueda.
                     </p>
                     <Tooltip content={"Visitar la web"} color="default">
-                        <Button className="svg_tecnology_container"
+                        <Button className="svg_tecnology_container" aria-label="hc page"
                             onClick={() =>
                                 visiteWeb(
                                 "https://hckitchenandbathllc.com/"
@@ -59,7 +59,7 @@ function SectionWordpress({visiteWeb}){
                         <h3 className="h3_hiper_small_title text-black">Inmoviliaria</h3>
                         <p className="max-w-xs text-black mb-[15px]">
                             Desarrollo web para inmoviliaria en Whasintong, donde enseñan algunos de sus departamentos disponibles.                    </p>
-                        <Tooltip content={"Visitar la web"} color="default">
+                        <Tooltip content={"Visitar la web"} color="default" >
                             <Button className="svg_tecnology_container"
                                 onClick={() =>
                                     visiteWeb(
@@ -68,6 +68,7 @@ function SectionWordpress({visiteWeb}){
                                 }
                                 isIconOnly
                                 color="default"
+                                aria-label="cepheus page"
                                 >
                                 <FaWordpress />
                             </Button>
@@ -85,7 +86,7 @@ function SectionWordpress({visiteWeb}){
                     Desarrollo web para una tienda de arte, diseñada para exhibir una amplia y variada colección de obras de arte originales y únicas.
                     </p>
                     <Tooltip content={"Visitar la web"} color="default">
-                        <Button className="svg_tecnology_container"
+                        <Button className="svg_tecnology_container" aria-label="kb fine art page"
                             onClick={() =>
                                 visiteWeb(
                                 "https://kbfineartgallery.com/"
@@ -158,6 +159,7 @@ function SectionWordpress({visiteWeb}){
                             }
                             isIconOnly
                             color="default"
+                            aria-label="BMA page"
                             >
                             <FaWordpress />
                         </Button>

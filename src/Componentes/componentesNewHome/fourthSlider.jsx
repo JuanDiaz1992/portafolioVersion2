@@ -20,7 +20,7 @@ function Slider() {
       >
         <SwiperSlide className="fourth_slider_container--item1">
           <div className="header_fourth_slider--item1">
-            <h4>CIAF</h4>
+            <h2>CIAF</h2>
             <h3>Gestor materias</h3>
             <p className="max-w-[310px] w-[100%] mb-[15px]">
               Software creado en Django que permite a los estudiantes de CIAF
@@ -36,6 +36,7 @@ function Slider() {
                 }
                 isIconOnly
                 color="warning"
+                aria-label="Gestor Ciaf"
               >
                 <DiDjango />
               </Button>

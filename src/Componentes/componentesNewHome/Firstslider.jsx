@@ -23,9 +23,9 @@ function Slider({ visiteWeb }) {
       >
         <SwiperSlide className="first_slider_container">
           <div className="header_card_slider header_card_slide_padding">
-            <h4 className="h4_title bg-white text-black">ALDÍA</h4>
-            <h3 className="h3_small_title">Asistente financiero</h3>
-            <p className="max-w-[500px] w-[100%] mb-[15px]">
+            <h2 className="h4_title bg-white text-black">ALDÍA</h2>
+            <h3 className="h3_small_title  text-black">Asistente financiero</h3>
+            <p className="max-w-[500px] w-[100%] mb-[15px] text-black">
               ALDÍA es una plataforma web que registra los ingresos y gastos del
               usuario, organizándolos mensual y anualmente, con estos datos
               genera gráficas con promedios. Actualmente se está desarrollando
@@ -40,6 +40,7 @@ function Slider({ visiteWeb }) {
                   }
                   isIconOnly
                   color="default"
+                  aria-label="Al Día Front"
                 >
                   <FaReact />
                 </Button>
@@ -51,6 +52,7 @@ function Slider({ visiteWeb }) {
                   }
                   isIconOnly
                   color="default"
+                  aria-label="Al Día Back"
                 >
                   <SiSpring />
                 </Button>

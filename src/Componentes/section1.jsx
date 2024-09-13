@@ -133,19 +133,19 @@ function Section1({visiteWeb}) {
           />
         </motion.div>
         <div className="section_container-div2">
-          <h1>Hola 👋</h1>
+          <h1 className="text-2xl">Desarrollador de software</h1>
           <p>
-            Soy Juan Díaz, construyo experiencias digitales, excepcionales y accesibles para la web.
+            ¡Hola👋! Bienvenido a mi portafolio. Soy <strong>Juan Díaz</strong>, un desarrollador de software especializado en crear experiencias digitales excepcionales y accesibles.
           </p>
         </div>
         <div className="section_container-div3">
           <div className="div__container-div3--icons">
-            <h3 className="div__container-div3--icons--h3">Tecnologías</h3>
+            <h2 className="div__container-div3--icons--h3">Tecnologías</h2>
             <div className="div__container__icons--container">
               {skills.map((skill) => (
                 <div className="iconoc" key={skill[1]}>
                   <Tooltip content={skill[1]} color="default" >
-                    <Button color="foreground" variant="flat">
+                    <Button color="foreground" variant="flat" aria-label={skill[1]}>
                       {skill[0]}
                     </Button>
                   </Tooltip>
@@ -192,12 +192,13 @@ function Section1({visiteWeb}) {
               <a
                 href="https://www.linkedin.com/in/juan-camilo-diaz-valencia-020840141"
                 target="blank"
+                aria-label="linkedin"
               >
                 <FaLinkedin />
               </a>
             </div>
             <div className="contact_icons">
-              <a href="mailto:juannavegante2010@gmail.com?subject=Greetings">
+              <a href="mailto:juannavegante2010@gmail.com?subject=Greetings" aria-label="E-mail">
                 <SiGmail />
               </a>
             </div>
@@ -205,12 +206,13 @@ function Section1({visiteWeb}) {
               <a
                 href="https://api.whatsapp.com/send?phone=573008080525&text=Hola%20Juan%20D%C3%ADaz%2C%20vi%20tu%20web"
                 target="blank"
+                aria-label="whatsapp"
               >
                 <SiWhatsapp />
               </a>
             </div>
             <div className="contact_icons">
-              <a href="https://github.com/JuanDiaz1992" target="blank">
+              <a href="https://github.com/JuanDiaz1992" target="blank" aria-label="github">
                 <FaGithub />
               </a>
             </div>

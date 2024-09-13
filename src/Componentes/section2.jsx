@@ -28,6 +28,7 @@ function Section2({visiteWeb}) {
                 <Button
                   onClick={() => visiteWeb(cvJuanDiaz)}
                   color="primary"
+                  aria-label="Download CV"
                 >
                   Descargar CV
                 </Button>
