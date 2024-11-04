@@ -33,25 +33,25 @@ function Slider({ visiteWeb }) {
               de renta según los datos ingresados.
             </p>
             <div className="flex gap-2">
-              <Tooltip content={"React Js"} color="default">
+              <Tooltip content={"React Js"} >
                 <Button
                   onClick={() =>
                     visiteWeb("https://github.com/JuanDiaz1992/alDiaFront")
                   }
                   isIconOnly
-                  color="default"
+                  color="warning"
                   aria-label="Al Día Front"
                 >
                   <FaReact />
                 </Button>
               </Tooltip>
-              <Tooltip content={"Spring Boot"} color="default">
+              <Tooltip content={"Spring Boot"} >
                 <Button
                   onClick={() =>
                     visiteWeb("https://github.com/JuanDiaz1992/AldiaBackJava")
                   }
                   isIconOnly
-                  color="default"
+                  color="primary"
                   aria-label="Al Día Back"
                 >
                   <SiSpring />

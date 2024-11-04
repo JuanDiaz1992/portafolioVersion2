@@ -38,7 +38,7 @@ function Slider() {
                     )
                   }
                   isIconOnly
-                  color="default"
+                  color="warning"
                   aria-label="Gestor Restaurante Frontend"
                 >
                   <FaReact />
@@ -52,7 +52,7 @@ function Slider() {
                     )
                   }
                   isIconOnly
-                  color="default"
+                  color="primary"
                   aria-label="Gestor Restaurante Back"
                 >
                   <FaPhp />

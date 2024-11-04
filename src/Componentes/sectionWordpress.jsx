@@ -63,7 +63,7 @@ function SectionWordpress({visiteWeb}){
                             <Button className="svg_tecnology_container"
                                 onClick={() =>
                                     visiteWeb(
-                                    "https://alfonsoq172.sg-host.com/"
+                                    "https://cepheus-properties.qadigitalpartners.com/"
                                     )
                                 }
                                 isIconOnly

@@ -2,7 +2,7 @@ import "../stylesheets/footer.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail, SiWhatsapp } from "react-icons/si";
 
-function Section2(props) {
+function Section2() {
   return (
     <>
       <section className="footer_container">
