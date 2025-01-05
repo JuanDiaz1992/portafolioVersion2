@@ -49,7 +49,7 @@ function SectionWordpress({visiteWeb}){
                         </Button>
                     </Tooltip>
                 </div>
-                <img src={hc} alt="hc" width="550" height="220" loading="lazy"/>
+                <img src={hc} alt="hc" width="550" height="220" />
             </div>
 
 
@@ -74,7 +74,7 @@ function SectionWordpress({visiteWeb}){
                             </Button>
                         </Tooltip>
                 </div>
-                <img src={cepheus} alt="cepheus" loading="lazy" />
+                <img src={cepheus} alt="cepheus"/>
             </div>
 
 
@@ -99,7 +99,7 @@ function SectionWordpress({visiteWeb}){
                         </Button>
                     </Tooltip>
                 </div>
-                <img src={kbFineArt} alt="kbFineArt" className="z-[2]" loading="lazy"/>
+                <img src={kbFineArt} alt="kbFineArt" className="z-[2]"/>
                 <motion.img
                     src={kb1}
                     alt=""
@@ -107,7 +107,6 @@ function SectionWordpress({visiteWeb}){
                     variants={createVariants(30, -18.67, -25)}
                     initial="offscreen"
                     whileInView="onscreen"
-                    loading="lazy"
                     />
 
                     <motion.img
@@ -117,7 +116,6 @@ function SectionWordpress({visiteWeb}){
                     variants={createVariants(50, 10, 15)}
                     initial="offscreen"
                     whileInView="onscreen"
-                    loading="lazy"
                     />
 
                     <motion.img
@@ -127,7 +125,6 @@ function SectionWordpress({visiteWeb}){
                     variants={createVariants(20, 30, 20)}
                     initial="offscreen"
                     whileInView="onscreen"
-                    loading="lazy"
                     />
 
                     <motion.img
@@ -137,7 +134,6 @@ function SectionWordpress({visiteWeb}){
                     variants={createVariants(40, -10, -8)} // Personaliza más valores
                     initial="offscreen"
                     whileInView="onscreen"
-                    loading="lazy"
                     />
 
             </div>
@@ -165,7 +161,7 @@ function SectionWordpress({visiteWeb}){
                         </Button>
                     </Tooltip>
                 </div>
-                <img src={bma} alt="bma" loading="lazy"/>
+                <img src={bma} alt="bma"/>
             </div>
 
         </section>
