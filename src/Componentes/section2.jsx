@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import "../stylesheets/section2.css";
 import { Button, Tooltip } from "@nextui-org/react";
 const cvJuanDiaz = "/Documentos/Juan Camilo Diaz Valencia HV.pdf";
-import SecondSlider from "./componentesNewHome/SecondSlider";
-import FourthSlider from "./componentesNewHome/fourthSlider";
-import NineSlider from "./componentesNewHome/nineSlider";
+const SecondSlider = lazy(() => import("./componentesNewHome/SecondSlider"));
+const FourthSlider = lazy(() => import("./componentesNewHome/fourthSlider"));
+const NineSlider = lazy(() => import("./componentesNewHome/nineSlider"));
 import { TbBrandNextjs } from "react-icons/tb";
 const invisualSign = "/img/newHome/section2/invisualSign.webp";
 const invisualSignM = "/img/newHome/section2/invisualSign-m.webp";
@@ -27,7 +27,9 @@ function Section2({ visiteWeb }) {
     <>
       <section className="section2_container">
         <div className="section2_container--div1">
-          <NineSlider visiteWeb={visiteWeb} />
+          <Suspense fallback={null}>
+            <NineSlider visiteWeb={visiteWeb} />
+          </Suspense>
         </div>
         <div className="section2_container--div2">
           <div
@@ -53,10 +55,14 @@ function Section2({ visiteWeb }) {
           </div>
         </div>
         <div className="section2_container--div3">
-          <FourthSlider visiteWeb={visiteWeb} />
+          <Suspense fallback={null}>
+            <FourthSlider visiteWeb={visiteWeb} />
+          </Suspense>
         </div>
         <div className="section2_container--div4">
-          <SecondSlider visiteWeb={visiteWeb} />
+          <Suspense fallback={null}>
+            <SecondSlider visiteWeb={visiteWeb} />
+          </Suspense>
         </div>
         <div
           className="section2_container--div5"

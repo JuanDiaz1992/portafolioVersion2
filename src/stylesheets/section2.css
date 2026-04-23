@@ -16,6 +16,7 @@
     display: grid;
   }
   .section2_container--div1{
+    height: 700px;
     grid-area: 1 / 1 / 3 / 6;
     border-radius: 20px;
     display: flex;
