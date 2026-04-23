@@ -18,8 +18,8 @@
 .footer_container--div {
   backdrop-filter: blur(20px) saturate(1.7);
   grid-area: 1 / 1 / 2 / 2;
-  border-radius: 16px 16px 0 0 ;
-  background-color: #ffffffa8;
+  border-radius: 20px 20px 0 0 ;
+  background-color: rgba(255, 255, 255, 0.8);
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -30,7 +30,8 @@
   gap: 15px;
   position: relative;
   text-align: center;
-
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 .footer_container--div div{
   display: flex;

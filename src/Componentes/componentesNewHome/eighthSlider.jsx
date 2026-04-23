@@ -21,7 +21,7 @@ function Slider() {
             rotateXMax={3}
             rotateYMax={3}
           >
-            <div className="header_fourth_slider--item1">
+            <div className="header_fourth_slider--item1 py-[40px] px-[24px]">
               <h2 data-atropos-offset="3">Interfaces</h2>
               <h3 data-atropos-offset="10">Diseño web</h3>
               <p data-atropos-offset="1" className="max-w-[290px] w-[100%] text-black mb-[15px]">

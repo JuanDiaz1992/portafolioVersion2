@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { FaJs,FaReact, FaPython   } from "react-icons/fa";
+import { FaJs, FaReact, FaPython } from "react-icons/fa";
 
 function Slider() {
   const navigate = (url) => {
@@ -33,8 +33,7 @@ function Slider() {
             <h2 className="h4_title bg-white text-black">WineSur</h2>
             <h3 className="h3_hiper_small_title">Landing tienda Vinos</h3>
             <p className="max-w-[290px] w-[100%] text-white mb-[15px]">
-              Proyecto de landing page para una tienda de vinos, donde el diseño y la pasión por el vino se combinan en una experiencia cautivadora.
-            </p>
+              Plataforma de bienestar personal que ofrece recursos y herramientas para alcanzar objetivos.            </p>
             <Button
               onClick={() =>
                 navigate("https://github.com/JuanDiaz1992/WineSur")
@@ -80,8 +79,7 @@ function Slider() {
             <h2 className="h4_title bg-black text-white">Imanku Solutions</h2>
             <h3 className="h3_hiper_small_title">Contador de votos</h3>
             <p className="max-w-[290px] w-[100%] text-white mb-[15px]">
-              Se ha creado un software para el conteo de votos de elecciones en los últimos años para Estados Unidos. Procesa datos de Excel o JSON, realiza conteos y estadísticas específicas para el cliente. Permite ingresar votos individuales. Para el ingreso, el usuario debe estar registrado.
-            </p>
+              Software de conteo electoral (EE. UU.) compatible con Excel/JSON; ofrece estadísticas personalizadas y requiere autenticación para registrar votos.            </p>
             <div>
               <Button
                 onClick={() =>
@@ -103,8 +101,7 @@ function Slider() {
             <h2 className="h4_title bg-black text-white">BOOCIC</h2>
             <h3 className="h3_hiper_small_title">Bienestar personal</h3>
             <p className="max-w-[290px] w-[100%] text-white mb-[15px]">
-            Landing page cuya finalidad es ser una plataforma que ofrece recursos y herramientas para mejorar el bienestar personal y ayudar a los usuarios a alcanzar sus objetivos.
-            </p>
+              Plataforma de bienestar personal que ofrece recursos y herramientas para alcanzar objetivos.            </p>
             <Button
               onClick={() => navigate("https://github.com/JuanDiaz1992/BOOCIC")}
               isIconOnly

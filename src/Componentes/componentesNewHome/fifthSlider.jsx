@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 
 import woman from "../../img/newHome/section3/dani.webp";
 import plants from "../../img/newHome/section3/daniPlants.webp";
-function Slider({visiteWeb}) {
+function Slider({ visiteWeb }) {
   const objects = {
     offscreen: {
       scale: 0.9,
@@ -21,13 +21,10 @@ function Slider({visiteWeb}) {
 
   return (
     <>
-      <Swiper
-        navigation={true}
-        modules={[Navigation]}
-        className="mySwiper fifth_slider_container"
-        viewport={{ once: true, amount: 1 }}
+      <div
+        className=" fifth_slider_container"
       >
-        <SwiperSlide className="fifth_slider_container--item1">
+        <div className="fifth_slider_container--item1">
           <div className="header_card_slider fifth_slider_container-header_card ">
             <h2 className="h4_title bg-black text-white">Mango Biche Mía</h2>
             <h3 className="h3_small_title">Franquicia</h3>
@@ -54,10 +51,8 @@ function Slider({visiteWeb}) {
             initial="offscreen"
             whileInView="onscreen"
           />
-        </SwiperSlide>
-        <SwiperSlide className="fifth_slider_container--item2"></SwiperSlide>
-        <SwiperSlide className="fifth_slider_container--item3"></SwiperSlide>
-      </Swiper>
+        </div>
+      </div>
     </>
   );
 }

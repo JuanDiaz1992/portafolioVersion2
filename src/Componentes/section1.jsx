@@ -25,7 +25,6 @@ import {
   SiWhatsapp,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import logo from "../img/newHome/section1/Logo-JuanDiaz-4.webp";
 import logoFondo from "../img/newHome/section1/LogofondoClaro.webp";
@@ -38,11 +37,10 @@ import logo6 from "../img/newHome/section1/logosFlotantes/6.webp";
 import logo7 from "../img/newHome/section1/logosFlotantes/7.webp";
 import Slider from "./componentesNewHome/Firstslider";
 
-function Section1({visiteWeb}) {
+function Section1({visiteWeb, openNewPage}) {
   const logos = [
     logo1,logo2,logo3,logo4,logo5,logo6,logo7
   ]
-  const navigateTo = useNavigate();
   const skills = [
     [<FaJs />, "JavaScript"],
     [<FaReact />, "React JS"],
@@ -63,13 +61,6 @@ function Section1({visiteWeb}) {
   });
 
 
-  const [changePage, setChangePage] = useState(false);
-  const openNewPage = () => {
-    setChangePage(true);
-    setTimeout(() => {
-      navigateTo("/ImgCorporativa");
-    }, 1000);
-  };
   const animationVariants = {
     initial: {
       opacity: 0,
@@ -86,7 +77,7 @@ function Section1({visiteWeb}) {
       <motion.section
         className="section_container"
         initial="initial"
-        animate={changePage === true ? "initial" : "animate"}
+        animate="animate"
         variants={animationVariants}
         transition={{
           duration: 0.7,

@@ -46,7 +46,21 @@ function ImgCorporativa(){
           y: 0,
         },
       };
+
+    const logosArray = [ palacios, PaolaLeon, pae, Corma, astracol, Dani, gesthor, haddy ];
     
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1 }
+        }
+    };
+    
+    const itemVariants = {
+        hidden: { opacity: 0, scale: 0.9, y: 30 },
+        show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    };    
 
     return(
         <>
@@ -80,57 +94,38 @@ function ImgCorporativa(){
 
             
 
-            <section className="title">
-                <div className="title__div--container">
-                    <h2>Diseño Gráfico</h2>
-                    <p className="corpo">Esta es una colección de diseños que he realizado durante los últimos años. <br/>
-                    Aquí es donde cobran vida con la magia de los vectores. <br/>
-                    Una gran parte del trabajo a continuación fue realizado a mano y hecho a medida para adaptarse adecuadamente a las necesidades estéticas del cliente.</p>
+            <section className="designer_hero">
+                <div className="designer_hero_bg">
+                    <img src={img1} alt="Hero Banner" className="hero_image"/>
+                    <div className="hero_overlay"></div>
+                </div>
+                <div className="designer_hero_content">
+                    <motion.h2 initial={{ y: -50, opacity: 0 }} animate={{ y:0, opacity: 1 }} transition={{ delay: 0.3, duration: 0.6 }}>Diseño Gráfico</motion.h2>
+                    <motion.p initial={{ y: 50, opacity: 0 }} animate={{ y:0, opacity: 1 }} transition={{ delay: 0.5, duration: 0.6 }} className="corpo">
+                        Esta es una colección de diseños que he realizado durante los últimos años. <br/>
+                        Aquí es donde cobran vida con la magia de los vectores. <br/>
+                        Una gran parte del trabajo a continuación fue realizado a mano y hecho a medida para adaptarse adecuadamente a las necesidades estéticas del cliente.
+                    </motion.p>
                 </div>
             </section>
-            
-            <picture className="Banner1">
-                <Image src={img1} alt="" />
-            </picture>
             <div className="imgCorporativa__title--containter">
             <h3 className="">Logos</h3>
             <p className="textIntros--p">En esta sección, presento una selección de mis diseños de logotipos. Cada logotipo ha sido diseñado para reflejar la personalidad y los valores de la empresa o marca correspondiente. He utilizado mi experiencia en diseño gráfico y mi creatividad para crear logotipos únicos y memorables que destacan en el mercado y atraen a su público objetivo. Espero que disfrutes viendo mis diseños de logotipos y encuentres inspiración para tu próximo proyecto de branding.</p>
             </div>
 
-            <section className="section2__logos">
-                <div className="logo_containerItem">
-                    <picture className="LogoItem">
-                        <img src={palacios} alt="" />
-                    </picture>
-                    <picture className="LogoItem">
-                        <img src={PaolaLeon} alt="" />
-                    </picture>
-                </div>
-                <div className="logo_containerItem">
-                    <picture className="LogoItem">
-                        <img src={pae} alt="" />
-                    </picture>
-                    <picture className="LogoItem">
-                        <img src={Corma} alt="" />
-                    </picture>
-                </div>
-                <div className="logo_containerItem">
-                    <picture className="LogoItem">
-                        <img src={astracol} alt="" />
-                    </picture>
-                    <picture className="LogoItem">
-                        <img src={Dani} alt="" />
-                    </picture>
-                </div>
-                <div className="logo_containerItem">
-                    <picture className="LogoItem">
-                        <img src={gesthor} alt="" />
-                    </picture>
-                    <picture className="LogoItem">
-                        <img src={haddy} alt="" />
-                    </picture>
-                </div>                
-            </section>
+            <motion.section 
+                className="section2__logos"
+                variants={containerVariants} 
+                initial="hidden" 
+                whileInView="show" 
+                viewport={{ once: true, amount: 0.1 }}
+            >
+                {logosArray.map((logo, index) => (
+                    <motion.picture variants={itemVariants} className="LogoItem" key={index}>
+                        <img src={logo} alt={`Logo ${index}`} />
+                    </motion.picture>
+                ))}
+            </motion.section>
 
 
 
@@ -149,9 +144,9 @@ function ImgCorporativa(){
 
             <PapeleriaPlantilla
                 titulo ={<h3>Brochure Noel</h3>}
-                img1 = {<img className="imgPapeleria" src={img_1} alt="img" />}
-                imgOvideo={<video className="videoNoel" src={videoNoel} autoPlay={true} muted={true} loop={true}></video>}
-                p2 = {<>Uno de mis primeros trabajos fue crear un brochure para la empresa <strong>Noel</strong>. Mi objetivo era mostrar los productos de la empresa de forma clara y atractiva. Trabajé en colaboración con el equipo de marketing de Noel para asegurarme de que el contenido fuera relevante para el público objetivo. Esta experiencia me permitió desarrollar mis habilidades en diseño gráfico y trabajar en equipo.</>}
+                img1={<video className="videoNoel" src={videoNoel} autoPlay={true} muted={true} loop={true}></video>}
+                imgOvideo={<img className="imgPapeleria" src={img_1} alt="img" />}
+                p2={<>Uno de mis primeros trabajos fue crear un brochure para la empresa <strong>Noel</strong>. Mi objetivo era mostrar los productos de la empresa de forma clara y atractiva. Trabajé en colaboración con el equipo de marketing de Noel para asegurarme de que el contenido fuera relevante para el público objetivo. Esta experiencia me permitió desarrollar mis habilidades en diseño gráfico y trabajar en equipo.</>}
             />
 
 

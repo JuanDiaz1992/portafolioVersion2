@@ -17,14 +17,14 @@
   grid-area: 1 / 1 / 2 / 4;
   overflow: hidden;
   background-color: #0E2E52;
-  border-radius: 16px;
-  padding: 27px 32px 0 36px;
+  border-radius: 20px;
+  padding: 40px 32px 0 36px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .sectionWordpress_container--div1 div:nth-child(1){
   padding-bottom: 32px;
-}
-.sectionWordpress_container--div1 img{
-  height: 220px !important;
 }
 
 /***********************div2***********************/
@@ -32,10 +32,12 @@
 .sectionWordpress_container--div2{
   background-color: #FFFCF3;
   grid-area: 2 / 1 / 5 / 2;
-  padding: 40px 32px 60px 36px;
-  background-color: #FFFCF3;
-  border-radius: 16px;
+  padding: 40px 32px 0 36px;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .sectionWordpress_container--div2 .h4_title{
@@ -47,12 +49,15 @@
   grid-area: 2 / 2 / 5 / 4;
   padding: 40px 0px 39px 26px;
   background-color: #EBB481;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .sectionWordpress_container--div3 img:nth-child(2){
   width: 484px;
@@ -84,25 +89,34 @@
 /***********************div4***********************/
 .sectionWordpress_container--div4{
   grid-area: 1 / 4 / 5 / 5;
-  padding: 77px 30px 48px 26px;
-  background-color: #252A2F;
-  border-radius: 16px;
+
+}
+.sectionWordpress_container--div4-1, .sectionWordpress_container--div4-2{
   overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sectionWordpress_container--div1:hover,
+.sectionWordpress_container--div2:hover,
+.sectionWordpress_container--div3:hover,
+.sectionWordpress_container--div4-1:hover,
+.sectionWordpress_container--div4-2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 /*******************************************Estilos moviles *******************************/
-/*Modo Tableta*/
-@media only screen and (max-width: 1290px) {
+@media only screen and (max-width: 1080px) {
   .sectionWordpress_container{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5);
   }
   .sectionWordpress_container--div1{
     grid-area: 1 / 1 / 2 / 4;
-    padding: 27px 24px 0 24px;
+    padding: 40px 24px 0 24px;
   }
   .sectionWordpress_container--div2{
     grid-area: 2 / 1 / 5 / 2;
-    padding: 27px 24px 80px 24px;
+    padding: 40px 24px 0 24px;
   }
   .sectionWordpress_container--div3{
     grid-area: 2 / 2 / 5 / 4;
@@ -113,12 +127,8 @@
 
   .sectionWordpress_container--div4{
     flex-direction: row;
-    padding: 27px 32px 20px 36px;
   }
-  .sectionWordpress_container--div4 img{
-    object-fit: contain;
-    height: 280px;
-  }
+
 
 }
 
@@ -144,9 +154,6 @@
     flex-direction: column;
   }
 
-  .sectionWordpress_container--div1 img {
-    height: 167px !important;
-  }
   .sectionWordpress_container--div3 img:nth-child(2) {
     height: 252px;
   }

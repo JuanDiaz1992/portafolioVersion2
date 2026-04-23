@@ -4,16 +4,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-function Slider({visiteWeb}) {
+function Slider({ visiteWeb }) {
 
   return (
     <>
-      <Swiper
-        navigation={true}
-        modules={[Navigation]}
-        className="mySwiper seventh_slider_container"
+      <div
+        className="seventh_slider_container"
       >
-        <SwiperSlide className="seventh_slider_container--item1">
+        <div className="seventh_slider_container--item1">
           <div className="header_fourth_slider--item1">
             <h2>Crediart</h2>
             <h3>Cooperativa</h3>
@@ -28,10 +26,8 @@ function Slider({visiteWeb}) {
               Visitar web
             </Button>
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="seventh_slider_container--item2"></SwiperSlide>
-        <SwiperSlide className="seventh_slider_container--item3"></SwiperSlide>
-      </Swiper>
+        </div>
+      </div>
     </>
   );
 }
