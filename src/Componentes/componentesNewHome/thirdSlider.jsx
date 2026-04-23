@@ -7,8 +7,8 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
 
-import img1 from "../../img/newHome/section2/bannerf-3.webp";
-import img2 from "../../img/newHome/section2/personal.webp";
+const img1 = "/img/newHome/section2/bannerf-3.webp";
+const img2 = "/img/newHome/section2/personal.webp";
 function Slider({visiteWeb}) {
   const objects = {
     offscreen: {
@@ -64,7 +64,7 @@ function Slider({visiteWeb}) {
             </div>
           </div>
           <div className="firstSliderOf_thirty_slider--div2">
-            <img src={img1} alt=""  loading="lazy"/>
+            <img src={img1} alt=""  loading="lazy" draggable={false} onDragStart={(e)=>e.preventDefault()} />
             <motion.img
               className="img_slider3_first_slider"
               src={img2}
@@ -72,7 +72,8 @@ function Slider({visiteWeb}) {
               variants={objects}
               initial="offscreen"
               whileInView="onscreen"
-
+              draggable={false}
+              onDragStart={(e)=>e.preventDefault()}
             />
           </div>
         </SwiperSlide>

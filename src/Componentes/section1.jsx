@@ -1,4 +1,4 @@
-import { useState } from "react";
+// removed unused `useState`
 import "../stylesheets/section1.css";
 import {
   Tooltip,
@@ -26,15 +26,15 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import logo from "../img/newHome/section1/Logo-JuanDiaz-4.webp";
-import logoFondo from "../img/newHome/section1/LogofondoClaro.webp";
-import logo1 from "../img/newHome/section1/logosFlotantes/1.webp";
-import logo2 from "../img/newHome/section1/logosFlotantes/2.webp";
-import logo3 from "../img/newHome/section1/logosFlotantes/3.webp";
-import logo4 from "../img/newHome/section1/logosFlotantes/4.webp";
-import logo5 from "../img/newHome/section1/logosFlotantes/5.webp";
-import logo6 from "../img/newHome/section1/logosFlotantes/6.webp";
-import logo7 from "../img/newHome/section1/logosFlotantes/7.webp";
+const logo = "/img/newHome/section1/Logo-JuanDiaz-4.webp";
+const logoFondo = "/img/newHome/section1/LogofondoClaro.webp";
+const logo1 = "/img/newHome/section1/logosFlotantes/1.webp";
+const logo2 = "/img/newHome/section1/logosFlotantes/2.webp";
+const logo3 = "/img/newHome/section1/logosFlotantes/3.webp";
+const logo4 = "/img/newHome/section1/logosFlotantes/4.webp";
+const logo5 = "/img/newHome/section1/logosFlotantes/5.webp";
+const logo6 = "/img/newHome/section1/logosFlotantes/6.webp";
+const logo7 = "/img/newHome/section1/logosFlotantes/7.webp";
 import Slider from "./componentesNewHome/Firstslider";
 
 function Section1({visiteWeb, openNewPage}) {

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "../stylesheets/section2.css";
 import { Button, Tooltip } from "@nextui-org/react";
-import cvJuanDiaz from "../Documentos/Juan Camilo Diaz Valencia HV.pdf";
+const cvJuanDiaz = "/Documentos/Juan Camilo Diaz Valencia HV.pdf";
 import SecondSlider from "./componentesNewHome/SecondSlider";
 import FourthSlider from "./componentesNewHome/fourthSlider";
 import NineSlider from "./componentesNewHome/nineSlider";
 import { TbBrandNextjs } from "react-icons/tb";
-import invisualSign from "../img/newHome/section2/invisualSign.webp";
-import invisualSignM from "../img/newHome/section2/invisualSign-m.webp";
+const invisualSign = "/img/newHome/section2/invisualSign.webp";
+const invisualSignM = "/img/newHome/section2/invisualSign-m.webp";
 
 function Section2({ visiteWeb }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

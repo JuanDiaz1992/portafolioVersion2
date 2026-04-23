@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../stylesheets/Portafolio/ImgCorp.css"
 import { useNavigate } from "react-router-dom";
 import GoToTop from "../funciones/OnTop.js"
@@ -8,22 +8,22 @@ import { Image } from "@nextui-org/react"
 
 import PapeleriaPlantilla from "./Papeleria"
 
-import img1 from "../../img/Portafolio/Diseño de imagen/img1.webp"
-import palacios from "../../img/Portafolio/Diseño de imagen/palacios.jpg"
-import PaolaLeon from "../../img/Portafolio/Diseño de imagen/PaolaLeon.jpg"
-import Corma from "../../img/Portafolio/Diseño de imagen/Corma.jpg"
-import pae from "../../img/Portafolio/Diseño de imagen/PAE.jpg"
-import astracol from "../../img/Portafolio/Diseño de imagen/Astracol.jpg"
-import Dani from "../../img/Portafolio/Diseño de imagen/Dani.jpg"
-import gesthor from "../../img/Portafolio/Diseño de imagen/gesthor.jpg"
-import haddy from "../../img/Portafolio/Diseño de imagen/haddy.jpg"
-import videoNoel from "../../img/Portafolio/Diseño de imagen/noel.1.mp4"
-import img_1 from "../../img/Portafolio/Diseño de imagen/img3.1.jpg"
-import img2 from "../../img/Portafolio/Diseño de imagen/img3.jpg"
-import img3 from "../../img/Portafolio/Diseño de imagen/img3.2.jpg"
-import img4 from "../../img/Portafolio/Diseño de imagen/img4.jpg"
-import img4_3 from "../../img/Portafolio/Diseño de imagen/img4.3.jpg"
-import img5 from "../../img/Portafolio/Diseño de imagen/img4.2.jpg"
+const img1 = "/img/Portafolio/Diseño de imagen/img1.webp";
+const palacios = "/img/Portafolio/Diseño de imagen/palacios.jpg";
+const PaolaLeon = "/img/Portafolio/Diseño de imagen/PaolaLeon.jpg";
+const Corma = "/img/Portafolio/Diseño de imagen/Corma.jpg";
+const pae = "/img/Portafolio/Diseño de imagen/PAE.jpg";
+const astracol = "/img/Portafolio/Diseño de imagen/Astracol.jpg";
+const Dani = "/img/Portafolio/Diseño de imagen/Dani.jpg";
+const gesthor = "/img/Portafolio/Diseño de imagen/gesthor.jpg";
+const haddy = "/img/Portafolio/Diseño de imagen/haddy.jpg";
+const videoNoel = "/img/Portafolio/Diseño de imagen/noel.1.mp4";
+const img_1 = "/img/Portafolio/Diseño de imagen/img3.1.jpg";
+const img2 = "/img/Portafolio/Diseño de imagen/img3.jpg";
+const img3 = "/img/Portafolio/Diseño de imagen/img3.2.jpg";
+const img4 = "/img/Portafolio/Diseño de imagen/img4.jpg";
+const img4_3 = "/img/Portafolio/Diseño de imagen/img4.3.jpg";
+const img5 = "/img/Portafolio/Diseño de imagen/img4.2.jpg";
 import { motion } from "framer-motion";
 
 function ImgCorporativa(){

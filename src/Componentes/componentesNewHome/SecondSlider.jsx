@@ -1,14 +1,13 @@
 import { Button, Tooltip } from "@nextui-org/react";
-import { BiStore } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import logo from "../../img/newHome/section2/logo-catleya.svg"
-import img2 from "../../img/newHome/section2/img3-2.webp";
-import img3 from "../../img/newHome/section2/img3-3.webp"
-import img4 from "../../img/newHome/section2/img3-4.webp"
+const logo = "/img/newHome/section2/logo-catleya.svg";
+const img2 = "/img/newHome/section2/img3-2.webp";
+const img3 = "/img/newHome/section2/img3-3.webp";
+const img4 = "/img/newHome/section2/img3-4.webp";
 function Slider({ visiteWeb }) {
 
   return (
@@ -19,7 +18,7 @@ function Slider({ visiteWeb }) {
         className="mySwiper second_slider_container"
       >
         <SwiperSlide className="second_slider_container--item p-[40px] flex items-start justify-center">
-          <img src={logo} alt="" className="w-[200px] hidden md:block" />
+          <img src={logo} alt="" className="w-[200px] hidden md:block" draggable={false} onDragStart={(e)=>e.preventDefault()} />
         </SwiperSlide>
         <SwiperSlide className="">
           <div className="header_card_slider header_second_slider">
@@ -49,17 +48,17 @@ function Slider({ visiteWeb }) {
 
         <SwiperSlide className="bg-[#D9D9D9] hidden md:block">
           <div className="w-full h-full flex justify-center items-center">
-            <img src={img2} alt="" className="w-[90%] contain rounded-xl" />
+            <img src={img2} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e)=>e.preventDefault()} />
           </div>
         </SwiperSlide>
         <SwiperSlide className="bg-[#D9D9D9] hidden md:block">
           <div className="w-full h-full flex justify-center items-center">
-            <img src={img3} alt="" className="w-[90%] contain rounded-xl" />
+            <img src={img3} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e)=>e.preventDefault()} />
           </div>
         </SwiperSlide>
         <SwiperSlide className="bg-[#D9D9D9] hidden md:block">
           <div className="w-full h-full flex justify-center items-center">
-            <img src={img4} alt="" className="w-[90%] contain rounded-xl" />
+            <img src={img4} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e)=>e.preventDefault()} />
           </div>
         </SwiperSlide>
       </Swiper>

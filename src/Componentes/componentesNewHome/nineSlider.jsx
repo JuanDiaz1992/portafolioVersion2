@@ -6,11 +6,11 @@ import { Navigation } from "swiper/modules";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { SiSpring } from "react-icons/si";
-import img2 from "../../img/newHome/section2/button1.webp";
-import img3 from "../../img/newHome/section2/button2.webp";
-import img4 from "../../img/newHome/section2/icon3.webp";
-import img5 from "../../img/newHome/section2/aquamovil-2-m.webp";
-import img6 from "../../img/newHome/section2/aquamovil-3-m.webp";
+const img2 = "/img/newHome/section2/button1.webp";
+const img3 = "/img/newHome/section2/button2.webp";
+const img4 = "/img/newHome/section2/icon3.webp";
+const img5 = "/img/newHome/section2/aquamovil-2-m.webp";
+const img6 = "/img/newHome/section2/aquamovil-3-m.webp";
 
 
 
@@ -68,29 +68,33 @@ function Slider({ visiteWeb }) {
         </SwiperSlide>
         <SwiperSlide className="block md:hidden p-[20px] md:p-[50px] flex justify-end">
           <div className="flex flex-col gap-3 justify-center">
-            <img src={img5} alt="" className="w-full object-contain" />
+              <img src={img5} alt="" className="w-full object-contain" draggable={false} onDragStart={(e)=>e.preventDefault()} />
           </div>
         </SwiperSlide>
         <SwiperSlide className="nine_slider_container--item3 p-[20px] md:p-[50px] flex justify-end">
           <div className="group relative bg-white/80 backdrop-blur-md border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-3xl p-8 md:p-10 max-w-[550px] relative z-10 transition-transform hover:-translate-y-2 duration-300">
-            <img
-              src={img4}
-              alt=""
-              className="w-[90px] md:w-[141px] absolute left-[-144px] top-[-10px] transition-transform duration-300 group-hover:translate-y-[-30px]"
-            />
+              <img
+                src={img4}
+                alt=""
+                draggable={false}
+                onDragStart={(e)=>e.preventDefault()}
+                className="w-[90px] md:w-[141px] absolute left-[-144px] top-[-10px] transition-transform duration-300 group-hover:translate-y-[-30px]"
+              />
             <h3 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#0f172a]">Características del Ecosistema</h3>
             <p className="text-base md:text-lg leading-relaxed text-[#334155] w-full">
               El sistema fue diseñado bajo una arquitectura offline-first, garantizando que la operación no dependa de una conexión constante a internet. Los operarios pueden descargar sus rutas, realizar lecturas y gestionar datos en zonas de baja cobertura, sincronizando la información automáticamente en cuanto detectan señal. Además, integramos un módulo de validación inteligente (Crítica), que detecta consumos atípicos en tiempo real y asigna visitas de verificación al operario, convirtiendo el sistema en una herramienta proactiva que mejora la precisión de la facturación y la experiencia del usuario final.            </p>
-            <img
-              src={img3}
-              alt=""
-              className="absolute hidden md:block left-[-237px] bottom-[-57px] transition-transform duration-300 group-hover:translate-y-5"
-            />
+              <img
+                src={img3}
+                alt=""
+                draggable={false}
+                onDragStart={(e)=>e.preventDefault()}
+                className="absolute hidden md:block left-[-237px] bottom-[-57px] transition-transform duration-300 group-hover:translate-y-5"
+              />
           </div>
         </SwiperSlide>
         <SwiperSlide className="block md:hidden p-[20px] md:p-[50px] flex justify-end">
           <div className="flex flex-col gap-3 justify-center">
-            <img src={img6} alt="" className="w-full object-contain" />
+              <img src={img6} alt="" className="w-full object-contain" draggable={false} onDragStart={(e)=>e.preventDefault()} />
           </div>
         </SwiperSlide>
       </Swiper>

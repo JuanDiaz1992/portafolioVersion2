@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@nextui-org/react";
 import { BiStore } from "react-icons/bi";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
 
-import woman from "../../img/newHome/section3/dani.webp";
-import plants from "../../img/newHome/section3/daniPlants.webp";
+
+const woman = "/img/newHome/section3/dani.webp";
+const plants = "/img/newHome/section3/daniPlants.webp";
 function Slider({ visiteWeb }) {
   const objects = {
     offscreen: {
@@ -43,13 +40,15 @@ function Slider({ visiteWeb }) {
               Visita la web
             </Button>
           </div>
-          <img className="principal_img" src={woman} alt="" />
+          <img className="w-[350px] md:w-[500px]" src={woman} alt="" draggable={false} onDragStart={(e)=>e.preventDefault()} />
           <motion.img
             src={plants}
             alt=""
             variants={objects}
             initial="offscreen"
             whileInView="onscreen"
+            draggable={false}
+            onDragStart={(e)=>e.preventDefault()}
           />
         </div>
       </div>

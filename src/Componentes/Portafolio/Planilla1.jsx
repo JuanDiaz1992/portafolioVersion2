@@ -1,4 +1,4 @@
-import React from "react";
+// React import removed (automatic JSX runtime)
 import "../../stylesheets/Portafolio/Plantilla1.css"
 
 function Planilla1 ({titulo,img1,p2,links,imgOvideo}){

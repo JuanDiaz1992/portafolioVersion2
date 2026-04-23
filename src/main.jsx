@@ -4,7 +4,6 @@ import {NextUIProvider} from '@nextui-org/react'
 import App from './App.jsx';
 import './index.css';
 import "./stylesheets/normalize.css"
-import 'atropos/css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -1,5 +1,4 @@
-import React from "react";
-
+// React import removed (automatic JSX runtime)
 
 import "../../stylesheets/Portafolio/papelria.css"
 

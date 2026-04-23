@@ -2,15 +2,15 @@ import "../stylesheets/sectionWordpress.css";
 import { Button, Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { FaWordpress } from "react-icons/fa";
-import tech from "../img/newHome/wordpressSection/tech-camp-explorers.webp";
-import bma from "../img/newHome/wordpressSection/bma.webp";
-import attics from "../img/newHome/wordpressSection/attics-express.webp";
-import cepheus from "../img/newHome/wordpressSection/cepheus.webp";
-import kbFineArt from "../img/newHome/wordpressSection/kb_fine_art.webp";
-import kb1 from "../img/newHome/wordpressSection/eryi_6.webp";
-import kb2 from "../img/newHome/wordpressSection/Banner2.webp";
-import kb3 from "../img/newHome/wordpressSection/suzanne_howes_k_b_fine_art_5.webp";
-import kb4 from "../img/newHome/wordpressSection/suzanne_howes_k_b_fine_art_1.webp";
+const tech = "/img/newHome/wordpressSection/tech-camp-explorers.webp";
+const bma = "/img/newHome/wordpressSection/bma.webp";
+const attics = "/img/newHome/wordpressSection/attics-express.webp";
+const cepheus = "/img/newHome/wordpressSection/cepheus.webp";
+const kbFineArt = "/img/newHome/wordpressSection/kb_fine_art.webp";
+const kb1 = "/img/newHome/wordpressSection/eryi_6.webp";
+const kb2 = "/img/newHome/wordpressSection/Banner2.webp";
+const kb3 = "/img/newHome/wordpressSection/suzanne_howes_k_b_fine_art_5.webp";
+const kb4 = "/img/newHome/wordpressSection/suzanne_howes_k_b_fine_art_1.webp";
 function SectionWordpress({ visiteWeb }) {
     const createVariants = (x, rotate, rotate_final) => ({
         offscreen: {

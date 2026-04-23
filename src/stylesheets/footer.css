@@ -1,6 +1,6 @@
 @font-face {
   font-family: Oswald;
-  src: url("../fuentes/Oswald/Oswald-VariableFont_wght.ttf");
+  src: url("/fuentes/Oswald/Oswald-VariableFont_wght.ttf");
 }
 
 .footer_container {

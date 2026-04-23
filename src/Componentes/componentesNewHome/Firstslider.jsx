@@ -1,7 +1,7 @@
-import slider1 from "../../img/newHome/section1/sliders/slider1.webp";
-import slider2 from "../../img/newHome/section1/sliders/slider2.webp";
-import slider3 from "../../img/newHome/section1/sliders/video1.mp4";
-import video2 from "../../img/newHome/section1/sliders/video3.mp4";
+const slider1 = "/img/newHome/section1/sliders/slider1.webp";
+const slider2 = "/img/newHome/section1/sliders/slider2.webp";
+const slider3 = "/img/newHome/section1/sliders/video1.mp4";
+const video2 = "/img/newHome/section1/sliders/video3.mp4";
 import { Button, Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { FaReact } from "react-icons/fa";
@@ -64,6 +64,8 @@ function Slider({ visiteWeb }) {
               className="imgSlider"
               src={slider1}
               alt=""
+              draggable={false}
+              onDragStart={(e) => e.preventDefault()}
               initial={{ y: 50 }}
               animate={{ y: 1 }}
               exit={{ y: 50 }}
@@ -77,7 +79,7 @@ function Slider({ visiteWeb }) {
         </SwiperSlide>
         <SwiperSlide>
           <div className="img_slider_container--2">
-            <img className="imgSlider_2" src={slider2} alt="" />
+            <img className="imgSlider_2" src={slider2} alt="" draggable={false} onDragStart={(e) => e.preventDefault()} />
           </div>
         </SwiperSlide>
         <SwiperSlide className="video-container--firstSlider">

@@ -49,6 +49,20 @@ p{
   width: fit-content;
 }
 
+/* Prevent text/image selection and dragging inside sliders */
+.swiper, .mySwiper, .swiper-slide, .slider, .second_slider_container, .nine_slider_container, .eighth_slider_container, .fifth_slider_container, .sixth_slider_container, .seventh_slider_container, .first_slider_container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.swiper-slide img, .mySwiper img, .slider img, .second_slider_container img, .nine_slider_container img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
 
 @media only screen and (max-width: 600px) {
   *{

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import video from "../../img/newHome/section2/foodEasy.mp4";
+const video = "/img/newHome/section2/foodEasy.mp4";
 function Slider() {
   const navigate = (url) => {
     setTimeout(() => {
