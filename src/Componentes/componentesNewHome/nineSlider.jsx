@@ -54,7 +54,7 @@ function Slider({ visiteWeb }) {
                 aria-label="gesthordesign code"
                 onClick={() => visiteWeb("https://aquamovildesk.com/")}
               >
-                Visita la web
+                Ir a AquaMovilDesk
               </Button>
               <Tooltip content={"React Native"} color="default">
                 <Button

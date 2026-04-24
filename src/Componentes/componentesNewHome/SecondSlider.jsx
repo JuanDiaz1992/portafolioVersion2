@@ -18,7 +18,7 @@ function Slider({ visiteWeb }) {
         className="mySwiper second_slider_container"
       >
         <SwiperSlide className="second_slider_container--item p-[40px] flex items-start justify-center">
-          <img src={logo} alt="" className="w-[200px] hidden md:block" draggable={false} onDragStart={(e)=>e.preventDefault()} />
+          <img src={logo} alt="" className="w-[200px] hidden md:block" draggable={false} onDragStart={(e) => e.preventDefault()} />
         </SwiperSlide>
         <SwiperSlide className="">
           <div className="header_card_slider header_second_slider">
@@ -35,7 +35,7 @@ function Slider({ visiteWeb }) {
                 color="default"
                 aria-label="web"
               >
-                Visita la web
+                Ir a Catleya Royal Club
               </Button>
               <Tooltip content={"React Js"} color="default">
                 <Button isIconOnly color="primary" aria-label="gesthordesign" className="cursor-default">
@@ -48,17 +48,17 @@ function Slider({ visiteWeb }) {
 
         <SwiperSlide className="bg-[#D9D9D9] hidden md:block">
           <div className="w-full h-full flex justify-center items-center">
-            <img src={img2} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e)=>e.preventDefault()} />
+            <img src={img2} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e) => e.preventDefault()} />
           </div>
         </SwiperSlide>
         <SwiperSlide className="bg-[#D9D9D9] hidden md:block">
           <div className="w-full h-full flex justify-center items-center">
-            <img src={img3} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e)=>e.preventDefault()} />
+            <img src={img3} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e) => e.preventDefault()} />
           </div>
         </SwiperSlide>
         <SwiperSlide className="bg-[#D9D9D9] hidden md:block">
           <div className="w-full h-full flex justify-center items-center">
-            <img src={img4} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e)=>e.preventDefault()} />
+            <img src={img4} alt="" className="w-[90%] contain rounded-xl" draggable={false} onDragStart={(e) => e.preventDefault()} />
           </div>
         </SwiperSlide>
       </Swiper>

@@ -37,10 +37,10 @@ function Slider({ visiteWeb }) {
               aria-label="Mango Biche Mía"
               endContent={<BiStore />}
             >
-              Visita la web
+              Ir a Mango Biche Mía
             </Button>
           </div>
-          <img className="w-[350px] md:w-[500px]" src={woman} alt="" draggable={false} onDragStart={(e)=>e.preventDefault()} />
+          <img className="w-[350px] md:w-[500px]" src={woman} alt="" draggable={false} onDragStart={(e) => e.preventDefault()} />
           <motion.img
             src={plants}
             alt=""
@@ -48,7 +48,7 @@ function Slider({ visiteWeb }) {
             initial="offscreen"
             whileInView="onscreen"
             draggable={false}
-            onDragStart={(e)=>e.preventDefault()}
+            onDragStart={(e) => e.preventDefault()}
           />
         </div>
       </div>

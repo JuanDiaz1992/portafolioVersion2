@@ -36,19 +36,24 @@ function SectionWordpress({ visiteWeb }) {
                     <p className="w-full max-w-[600px] text-white mb-[15px]">
                         Desarrollé la plataforma digital para Tech Camp Explorers, una academia tecnológica de verano. El reto principal fue estructurar una oferta educativa diversa (robótica VEX, Minecraft, Java) y segmentarla de manera intuitiva según edades y niveles de habilidad. Implementé una navegación fluida que guía al usuario desde la exploración de programas hasta la inscripción, logrando una interfaz que equilibra la información técnica con un tono divertido y educativo.
                     </p>
-                    <Tooltip content={"Visitar la web"} color="default">
-                        <Button className="svg_tecnology_container" aria-label="hc page"
-                            onClick={() =>
-                                visiteWeb(
-                                    "https://techexplorerscamps.com/"
-                                )
-                            }
-                            isIconOnly
-                            color="default"
+                    <div className="flex flex-wrap gap-4">
+                        <Button
+                            onClick={() => visiteWeb("https://techexplorerscamps.com/")}
+                            color="primary"
+                            aria-label="Ir a Tech Camp Explorers"
                         >
-                            <FaWordpress />
+                            Ir a Tech Camp Explorers
                         </Button>
-                    </Tooltip>
+                        <Tooltip content={"Wordpress / Elementor"} color="default">
+                            <Button className="svg_tecnology_container cursor-default" aria-label="hc page"
+                                isIconOnly
+                                color="default"
+                            >
+                                <FaWordpress />
+                            </Button>
+                        </Tooltip>
+                    </div>
+
                 </div>
                 <img src={tech} alt="hc" width="1200" height="1800" />
             </div>
@@ -60,20 +65,24 @@ function SectionWordpress({ visiteWeb }) {
                     <h3 className="h3_hiper_small_title text-black">Inmoviliaria</h3>
                     <p className="max-w-xs text-black mb-[15px]">
                         Desarrollo web para inmoviliaria en Whasintong, donde enseñan algunos de sus departamentos disponibles.                    </p>
-                    <Tooltip content={"Visitar la web"} color="default" >
-                        <Button className="svg_tecnology_container"
-                            onClick={() =>
-                                visiteWeb(
-                                    "https://cepheus-properties.qadigitalpartners.com/"
-                                )
-                            }
-                            isIconOnly
-                            color="default"
-                            aria-label="cepheus page"
+
+                    <div className="flex flex-wrap gap-4">
+                        <Button
+                            onClick={() => visiteWeb("https://cepheus-properties.qadigitalpartners.com/")}
+                            color="primary"
+                            aria-label="Ir a Cepheus"
                         >
-                            <FaWordpress />
+                            Ir a Cepheus
                         </Button>
-                    </Tooltip>
+                        <Tooltip content={"Wordpress / Elementor"} color="default">
+                            <Button className="svg_tecnology_container cursor-default" aria-label="hc page"
+                                isIconOnly
+                                color="default"
+                            >
+                                <FaWordpress />
+                            </Button>
+                        </Tooltip>
+                    </div>
                 </div>
                 <img src={cepheus} alt="cepheus" />
             </div>
@@ -86,19 +95,23 @@ function SectionWordpress({ visiteWeb }) {
                     <p className="max-w-xs text-black mb-[15px]">
                         Desarrollo web para una tienda de arte, diseñada para exhibir una amplia y variada colección de obras de arte originales y únicas.
                     </p>
-                    <Tooltip content={"Visitar la web"} color="default">
-                        <Button className="svg_tecnology_container" aria-label="kb fine art page"
-                            onClick={() =>
-                                visiteWeb(
-                                    "https://kbfineartgallery.com/"
-                                )
-                            }
-                            isIconOnly
-                            color="default"
+                    <div className="flex flex-wrap gap-4">
+                        <Button
+                            onClick={() => visiteWeb("https://kbfineartgallery.com/")}
+                            color="primary"
+                            aria-label="Ir a KB FINE ART"
                         >
-                            <FaWordpress />
+                            Ir a KB FINE ART
                         </Button>
-                    </Tooltip>
+                        <Tooltip content={"Wordpress / Elementor"} color="default">
+                            <Button className="svg_tecnology_container cursor-default" aria-label="hc page"
+                                isIconOnly
+                                color="default"
+                            >
+                                <FaWordpress />
+                            </Button>
+                        </Tooltip>
+                    </div>
                 </div>
                 <img src={kbFineArt} alt="kbFineArt" className="z-[2]" />
                 <motion.img
@@ -148,20 +161,23 @@ function SectionWordpress({ visiteWeb }) {
                         <p className="max-w-xs text-white mb-[15px]">
                             Desarrollo de una página web para mostrar los productos de la empresa, con un enfoque especial en su servicio destacado, la creación de piscinas.
                         </p>
-                        <Tooltip content={"Visitar la web"} color="default">
-                            <Button className="svg_tecnology_container"
-                                onClick={() =>
-                                    visiteWeb(
-                                        "https://bmalandscaping.com/"
-                                    )
-                                }
-                                isIconOnly
-                                color="default"
-                                aria-label="BMA page"
+                        <div className="flex flex-wrap gap-4">
+                            <Button
+                                onClick={() => visiteWeb("https://bmalandscaping.com/")}
+                                color="primary"
+                                aria-label="Ir a BMA"
                             >
-                                <FaWordpress />
+                                Ir a BMA
                             </Button>
-                        </Tooltip>
+                            <Tooltip content={"Wordpress / Elementor"} color="default">
+                                <Button className="svg_tecnology_container cursor-default" aria-label="hc page"
+                                    isIconOnly
+                                    color="default"
+                                >
+                                    <FaWordpress />
+                                </Button>
+                            </Tooltip>
+                        </div>
                     </div>
                     <img src={bma} alt="bma" />
                 </div>
@@ -172,20 +188,23 @@ function SectionWordpress({ visiteWeb }) {
                         <p className="max-w-xs text-white mb-[15px]">
                             Desarrollé la plataforma web para Attics Express, una empresa especializada en servicios de mantenimiento y aislamiento de áticos. El proyecto se construyó con un enfoque técnico robusto en SEO On-Page y rendimiento web, implementando una estructura semántica limpia y estrategias de carga optimizada para captar tráfico local.
                         </p>
-                        <Tooltip content={"Visitar la web"} color="default">
-                            <Button className="svg_tecnology_container"
-                                onClick={() =>
-                                    visiteWeb(
-                                        "https://atticsexpress.com"
-                                    )
-                                }
-                                isIconOnly
-                                color="default"
-                                aria-label="BMA page"
+                        <div className="flex flex-wrap gap-4">
+                            <Button
+                                onClick={() => visiteWeb("https://atticsexpress.com")}
+                                color="primary"
+                                aria-label="Ir a Attics Express"
                             >
-                                <FaWordpress />
+                                Ir a Attics Express
                             </Button>
-                        </Tooltip>
+                            <Tooltip content={"Wordpress / Elementor"} color="default">
+                                <Button className="svg_tecnology_container cursor-default" aria-label="hc page"
+                                    isIconOnly
+                                    color="default"
+                                >
+                                    <FaWordpress />
+                                </Button>
+                            </Tooltip>
+                        </div>
                     </div>
                     <img src={attics} alt="bma" />
                 </div>

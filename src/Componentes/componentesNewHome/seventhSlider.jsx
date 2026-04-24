@@ -1,4 +1,6 @@
-import { Button } from "@nextui-org/react";
+import { Button, Tooltip } from "@nextui-org/react";
+import { FaWordpress } from "react-icons/fa";
+
 
 function Slider({ visiteWeb }) {
 
@@ -13,13 +15,23 @@ function Slider({ visiteWeb }) {
             <h3>Cooperativa</h3>
             <p className="max-w-[400px] mb-[15px]">
               Modernización de la plataforma Crediart. Simplifiqué la interfaz para agilizar la solicitud de créditos, mejorando la usabilidad y la confianza del usuario.            </p>
-            <Button
-              onClick={() => visiteWeb("https://crediar.com.co/")}
-              color="primary"
-              aria-label="crediar"
-            >
-              Visitar web
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button
+                onClick={() => visiteWeb("https://crediar.com/")}
+                color="primary"
+                aria-label="Ir a BMA"
+              >
+                Ir a Crediart
+              </Button>
+              <Tooltip content={"Wordpress / Elementor"} color="default">
+                <Button className="svg_tecnology_container cursor-default" aria-label="hc page"
+                  isIconOnly
+                  color="default"
+                >
+                  <FaWordpress />
+                </Button>
+              </Tooltip>
+            </div>
           </div>
         </div>
       </div>

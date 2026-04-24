@@ -38,9 +38,9 @@ const logo6 = "/img/newHome/section1/logosFlotantes/6.webp";
 const logo7 = "/img/newHome/section1/logosFlotantes/7.webp";
 const Slider = lazy(() => import("./componentesNewHome/Firstslider"));
 
-function Section1({visiteWeb, openNewPage}) {
+function Section1({ visiteWeb, openNewPage }) {
   const logos = [
-    logo1,logo2,logo3,logo4,logo5,logo6,logo7
+    logo1, logo2, logo3, logo4, logo5, logo6, logo7
   ]
   const skills = [
     [<FaJs />, "JavaScript"],
@@ -127,8 +127,7 @@ function Section1({visiteWeb, openNewPage}) {
         <div className="section_container-div2">
           <h1 className="text-2xl">Desarrollador de software</h1>
           <p>
-            ¡Hola👋! Bienvenido a mi portafolio. Soy <strong>Juan Díaz</strong>, un desarrollador de software especializado en crear experiencias digitales excepcionales y accesibles.
-          </p>
+            ¡Hola👋! Bienvenido a mi portafolio. Soy Juan Díaz. Me especializo en el ciclo completo de creación de software: desde la arquitectura técnica hasta el diseño de la interfaz, asegurando que cada producto sea tan funcional como intuitivo.          </p>
         </div>
         <div className="section_container-div3">
           <div className="div__container-div3--icons">
@@ -148,9 +147,9 @@ function Section1({visiteWeb, openNewPage}) {
         </div>
         <div className="section_container-div4">
           <div className="section_container-div4--principalContainer" ref={ref}>
-              {logos.map((logo,index)=>
-                <img src={logo} alt="logo1" className={"logo_design"+index} key={index}/>
-              )}
+            {logos.map((logo, index) =>
+              <img src={logo} alt="logo1" className={"logo_design" + index} key={index} />
+            )}
           </div>
           <div className="section_container-div4--text_container">
             <div className="text_container--title_container">

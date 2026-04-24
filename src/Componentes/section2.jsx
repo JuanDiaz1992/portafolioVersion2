@@ -105,7 +105,7 @@ function Section2({ visiteWeb }) {
               </p>
               <div className="flex gap-2">
                 <Button color="success" aria-label="gesthordesign code" onClick={() => visiteWeb("https://invisualsign.com")}>
-                  Visita la web
+                  Ir a Invisual Signs
                 </Button>
                 <Tooltip content={"Next Js"} color="default">
                   <Button isIconOnly color="primary" aria-label="gesthordesign" className="cursor-default">
