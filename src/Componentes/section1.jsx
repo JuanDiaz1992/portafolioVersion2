@@ -27,6 +27,7 @@ import {
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { lazy, Suspense } from "react";
+import RobotViewer from "./componentesNewHome/ThreeJsVisor/robotViewer";
 const logo = "/img/newHome/section1/Logo-JuanDiaz-4.webp";
 const logoFondo = "/img/newHome/section1/LogofondoClaro.webp";
 const logo1 = "/img/newHome/section1/logosFlotantes/1.webp";
@@ -146,32 +147,7 @@ function Section1({ visiteWeb, openNewPage }) {
           </div>
         </div>
         <div className="section_container-div4">
-          <div className="section_container-div4--principalContainer" ref={ref}>
-            {logos.map((logo, index) =>
-              <img src={logo} alt="logo1" className={"logo_design" + index} key={index} />
-            )}
-          </div>
-          <div className="section_container-div4--text_container">
-            <div className="text_container--title_container">
-              <h3>Diseño</h3>
-              <h4>Gráfico</h4>
-            </div>
-            <p>
-              Aquí encontrarás una colección de proyectos en los que e
-              participado como diseñador gráfico.
-            </p>
-
-            <Link
-              onClick={() => {
-                openNewPage();
-              }}
-              isBlock
-              showAnchorIcon
-              color="success"
-            >
-              Ver más
-            </Link>
-          </div>
+            <RobotViewer />
         </div>
         <div className="section_container-div5">
           <Suspense fallback={null}>
