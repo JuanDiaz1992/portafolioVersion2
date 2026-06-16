@@ -35,7 +35,7 @@ export default function Robot() {
       // Forzamos el color cyan
       nodes.Cube012.material.emissive = new THREE.Color("#00f3ff");
       // Subimos la intensidad directo en la propiedad de Three.js (¡Esto no rompe!)
-      nodes.Cube012.material.emissiveIntensity = 3.0;
+      nodes.Cube012.material.emissiveIntensity = 8.0;
     }
 
     // Reproducir todas las animaciones del robot automáticamente
