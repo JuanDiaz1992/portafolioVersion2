@@ -1,11 +1,11 @@
-import { useEffect, useRef } from 'react';
-import { useGLTF, useAnimations } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
+import { useEffect, useRef } from "react";
+import { useGLTF, useAnimations } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
 export default function Robot() {
   // 1. Cargamos el modelo GLB (Drei maneja el Loader por debajo de forma óptima)
-  const { scene, animations, nodes } = useGLTF('/Robot-final.glb');
+  const { scene, animations, nodes } = useGLTF("/Robot-final.glb");
   // 2. Extraemos las animaciones del modelo
   const { actions } = useAnimations(animations, scene);
 
@@ -17,17 +17,25 @@ export default function Robot() {
   // Asignamos el orden de rotación a los huesos una vez que el modelo esté listo
   useEffect(() => {
     // R3F te da los nodos directamente por su nombre en Blender
+    console.log("Nodos del modelo:", nodes);
     if (nodes.Bone010) {
       cabezaRef.current = nodes.Bone010;
-      cabezaRef.current.rotation.order = 'YXZ';
+      cabezaRef.current.rotation.order = "YXZ";
     }
     if (nodes.Bone001) {
       cuelloRef.current = nodes.Bone001;
-      cuelloRef.current.rotation.order = 'YXZ';
+      cuelloRef.current.rotation.order = "YXZ";
     }
     if (nodes.Bone) {
       torsoRef.current = nodes.Bone;
-      torsoRef.current.rotation.order = 'YXZ';
+      torsoRef.current.rotation.order = "YXZ";
+    }
+
+    if (nodes.Cube012 && nodes.Cube012.material) {
+      // Forzamos el color cyan
+      nodes.Cube012.material.emissive = new THREE.Color("#00f3ff");
+      // Subimos la intensidad directo en la propiedad de Three.js (¡Esto no rompe!)
+      nodes.Cube012.material.emissiveIntensity = 3.0;
     }
 
     // Reproducir todas las animaciones del robot automáticamente
@@ -50,20 +58,32 @@ export default function Robot() {
       const targetX = -mouseY * rotationLimitX;
 
       // Limitamos y aplicamos interpolación suave (Lerp)
-      const clampedY = Math.max(-rotationLimitY, Math.min(rotationLimitY, targetY));
-      const clampedX = Math.max(-rotationLimitX, Math.min(rotationLimitX, targetX));
+      const clampedY = Math.max(
+        -rotationLimitY,
+        Math.min(rotationLimitY, targetY),
+      );
+      const clampedX = Math.max(
+        -rotationLimitX,
+        Math.min(rotationLimitX, targetX),
+      );
 
       // Creamos los cuaterniones para el suavizado seguro
-      const targetQuat = new THREE.Quaternion().setFromEuler(new THREE.Euler(clampedX, clampedY, 0, 'YXZ'));
+      const targetQuat = new THREE.Quaternion().setFromEuler(
+        new THREE.Euler(clampedX, clampedY, 0, "YXZ"),
+      );
       cabezaRef.current.quaternion.slerp(targetQuat, lerpFactor);
 
       if (cuelloRef.current) {
-        const neckQuat = new THREE.Quaternion().setFromEuler(new THREE.Euler(clampedX * 0.4, clampedY * 0.4, 0, 'YXZ'));
+        const neckQuat = new THREE.Quaternion().setFromEuler(
+          new THREE.Euler(clampedX * 0.4, clampedY * 0.4, 0, "YXZ"),
+        );
         cuelloRef.current.quaternion.slerp(neckQuat, lerpFactor);
       }
 
       if (torsoRef.current) {
-        const torsoQuat = new THREE.Quaternion().setFromEuler(new THREE.Euler(clampedX * 0.25, clampedY * 0.1, 0, 'YXZ'));
+        const torsoQuat = new THREE.Quaternion().setFromEuler(
+          new THREE.Euler(clampedX * 0.25, clampedY * 0.1, 0, "YXZ"),
+        );
         torsoRef.current.quaternion.slerp(torsoQuat, lerpFactor);
       }
     }
@@ -73,4 +93,4 @@ export default function Robot() {
 }
 
 // Pre-cargamos el modelo para que no de tirones visuales
-useGLTF.preload('/Robot-final.glb');
+useGLTF.preload("/Robot-final.glb");

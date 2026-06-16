@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, Grid } from "@react-three/drei";
 import Robot from "./Robot";
 import FloatingCubes from "./FloatingCubes";
+import * as THREE from 'three';
 
 export default function RobotViewer() {
   return (
@@ -12,6 +13,7 @@ export default function RobotViewer() {
         gl={{
           antialias: true,
           alpha: true,
+          toneMapping: THREE.ACESFilmicToneMapping,
           toneMappingExposure: 1.4,
         }}
       >
@@ -35,7 +37,7 @@ export default function RobotViewer() {
 
         {/* Cuadrícula estilizada en el piso usando Drei (Súper optimizada) */}
         <Grid
-          position={[0, -1.5, 0]}
+          position={[0, -2.5, 0]}
           args={[10, 10]}
           cellSize={1}
           cellThickness={1}
@@ -46,7 +48,8 @@ export default function RobotViewer() {
         />
 
         {/* Mapa de entorno HDR (Drei lo descarga y lo aplica a la escena por ti) */}
-        <Environment files="/ferndale_studio_04_1k.hdr" />
+        {/* <Environment files="/ferndale_studio_07_1k.hdr" /> */}
+        <Environment preset="city" />
 
         {/* Controles del Mouse */}
         <OrbitControls
